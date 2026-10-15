@@ -17,6 +17,13 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`threshold-guardian/`](threshold-guardian/) | Threshold Guardian (Medium) | Fires an action only when several on-chain conditions all pass; decision trace |
 | [`docs-chain-mcp-agent/`](docs-chain-mcp-agent/) | Docs MCP + Chain MCP Agent (Medium) | Explains a function from the docs, calls it, interprets the result, flags docs/contract mismatches |
 | [`audit-log-agent/`](audit-log-agent/) | Audit-Log Agent (Medium) | A plain-language activity report for a wallet over a date range (Markdown + CSV) |
+| [`wallet-risk-checker/`](wallet-risk-checker/) | Wallet Risk Checker (Medium) | Nine red-flag signals before you interact with an address; LOW / MEDIUM / HIGH with reasons |
+| [`whale-watching-agent/`](whale-watching-agent/) | Whale-Watching Agent (Medium) | Significant moves of a watch list, explained from receipts; cross-wallet patterns |
+| [`trend-watcher/`](trend-watcher/) | Trend Watcher (Hard) | Persistent observations; fires only on a trend confirmed over several runs, never on one spike |
+
+**Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state
+(4 of 80 reads through Chain MCP, 1 of 40 through `rpc.pharos.xyz`). Values that drive a decision are read
+with `readAgreed` (two identical answers required). Details in [`trend-watcher/`](trend-watcher/README.md).
 
 Requirements of every task, copied from the arena: [`TASKS.md`](TASKS.md).
 

@@ -1,0 +1,176 @@
+$ node trend-watcher/trend.mjs observe --at-block 20296345
+#1 block 20296345 2026-10-15T09:40:37.000Z  WPROS/USDC pool price (USDC per PROS) = 0.584243
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20296945
+#2 block 20296945 2026-10-15T09:50:45.000Z  WPROS/USDC pool price (USDC per PROS) = 0.584095
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20297545
+#3 block 20297545 2026-10-15T10:00:42.000Z  WPROS/USDC pool price (USDC per PROS) = 0.583873
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20298145
+#4 block 20298145 2026-10-15T10:09:44.000Z  WPROS/USDC pool price (USDC per PROS) = 0.590753
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20298745
+#5 block 20298745 2026-10-15T10:19:11.000Z  WPROS/USDC pool price (USDC per PROS) = 0.589557
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20299345
+#6 block 20299345 2026-10-15T10:28:37.000Z  WPROS/USDC pool price (USDC per PROS) = 0.586041
+no trigger: current down streak: 2 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20299945
+#7 block 20299945 2026-10-15T10:38:08.000Z  WPROS/USDC pool price (USDC per PROS) = 0.587213
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20300545
+#8 block 20300545 2026-10-15T10:47:45.000Z  WPROS/USDC pool price (USDC per PROS) = 0.588199
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20301145
+#9 block 20301145 2026-10-15T10:57:37.000Z  WPROS/USDC pool price (USDC per PROS) = 0.588352
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20301745
+#10 block 20301745 2026-10-15T11:06:49.000Z  WPROS/USDC pool price (USDC per PROS) = 0.588319
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20302345
+#11 block 20302345 2026-10-15T11:15:45.000Z  WPROS/USDC pool price (USDC per PROS) = 0.590504
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20302945
+#12 block 20302945 2026-10-15T11:25:10.000Z  WPROS/USDC pool price (USDC per PROS) = 0.591862
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20303545
+#13 block 20303545 2026-10-15T11:35:06.000Z  WPROS/USDC pool price (USDC per PROS) = 0.589914
+no trigger: current down streak: 2 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20304145
+#14 block 20304145 2026-10-15T11:45:57.000Z  WPROS/USDC pool price (USDC per PROS) = 0.591631
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20304745
+#15 block 20304745 2026-10-15T11:56:22.000Z  WPROS/USDC pool price (USDC per PROS) = 0.591605
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20305345
+#16 block 20305345 2026-10-15T12:07:27.000Z  WPROS/USDC pool price (USDC per PROS) = 0.590530
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20305945
+#17 block 20305945 2026-10-15T12:17:09.000Z  WPROS/USDC pool price (USDC per PROS) = 0.590977
+no trigger: current down streak: 1 of 4 observations
+# simulated restart: the scheduler re-runs the last block after a crash
+$ node trend-watcher/trend.mjs observe --at-block 20305945
+block 20305945 already observed; nothing added (store has 17 observations)
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20306545
+#18 block 20306545 2026-10-15T12:27:45.000Z  WPROS/USDC pool price (USDC per PROS) = 0.588860
+no trigger: current down streak: 2 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20307145
+#19 block 20307145 2026-10-15T12:37:28.000Z  WPROS/USDC pool price (USDC per PROS) = 0.589072
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20307745
+#20 block 20307745 2026-10-15T12:46:48.000Z  WPROS/USDC pool price (USDC per PROS) = 0.583106
+no trigger: current down streak: 2 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20308345
+#21 block 20308345 2026-10-15T12:57:14.000Z  WPROS/USDC pool price (USDC per PROS) = 0.583426
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20308945
+#22 block 20308945 2026-10-15T13:07:33.000Z  WPROS/USDC pool price (USDC per PROS) = 0.584017
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20309545
+#23 block 20309545 2026-10-15T13:17:50.000Z  WPROS/USDC pool price (USDC per PROS) = 0.584746
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20310145
+#24 block 20310145 2026-10-15T13:27:11.000Z  WPROS/USDC pool price (USDC per PROS) = 0.583886
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20310745
+#25 block 20310745 2026-10-15T13:36:25.000Z  WPROS/USDC pool price (USDC per PROS) = 0.583573
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20311345
+#26 block 20311345 2026-10-15T13:45:44.000Z  WPROS/USDC pool price (USDC per PROS) = 0.587010
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20311945
+#27 block 20311945 2026-10-15T13:54:50.000Z  WPROS/USDC pool price (USDC per PROS) = 0.584865
+no trigger: current down streak: 2 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20312545
+#28 block 20312545 2026-10-15T14:04:15.000Z  WPROS/USDC pool price (USDC per PROS) = 0.591045
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20313145
+#29 block 20313145 2026-10-15T14:13:46.000Z  WPROS/USDC pool price (USDC per PROS) = 0.601708
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20313745
+#30 block 20313745 2026-10-15T14:23:08.000Z  WPROS/USDC pool price (USDC per PROS) = 0.602677
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20314345
+#31 block 20314345 2026-10-15T14:33:01.000Z  WPROS/USDC pool price (USDC per PROS) = 0.602146
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20314945
+#32 block 20314945 2026-10-15T14:42:16.000Z  WPROS/USDC pool price (USDC per PROS) = 0.605918
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20315545
+#33 block 20315545 2026-10-15T14:51:21.000Z  WPROS/USDC pool price (USDC per PROS) = 0.605552
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20316145
+node:internal/deps/undici/undici:16416
+      Error.captureStackTrace(err);
+            ^
+
+TypeError: fetch failed
+    at node:internal/deps/undici/undici:16416:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async StreamableHTTPClientTransport.send (file:///C:/Users/lenovo/dev/pharos-arena/node_modules/@modelcontextprotocol/sdk/dist/esm/client/streamableHttp.js:320:30)
+    at async Client.notification (file:///C:/Users/lenovo/dev/pharos-arena/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js:907:9)
+    at async Client.connect (file:///C:/Users/lenovo/dev/pharos-arena/node_modules/@modelcontextprotocol/sdk/dist/esm/client/index.js:303:13)
+    at async connect (file:///C:/Users/lenovo/dev/pharos-arena/lib/mcp.mjs:14:3)
+    at async file:///C:/Users/lenovo/dev/pharos-arena/trend-watcher/trend.mjs:44:15 {
+  [cause]: Error: Client network socket disconnected before secure TLS connection was established
+      at TLSSocket.onConnectEnd (node:_tls_wrap:1702:19)
+      at TLSSocket.emit (node:events:520:35)
+      at endReadableNT (node:internal/streams/readable:1701:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+    code: 'ECONNRESET',
+    path: undefined,
+    host: 'mcp.pharos.xyz',
+    port: 443,
+    localAddress: null
+  }
+}
+
+Node.js v24.13.0
+$ node trend-watcher/trend.mjs observe --at-block 20316745
+#34 block 20316745 2026-10-15T15:09:59.000Z  WPROS/USDC pool price (USDC per PROS) = 0.604750
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20317345
+#35 block 20317345 2026-10-15T15:19:36.000Z  WPROS/USDC pool price (USDC per PROS) = 0.606033
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20317945
+#36 block 20317945 2026-10-15T15:29:13.000Z  WPROS/USDC pool price (USDC per PROS) = 0.605681
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20318545
+#37 block 20318545 2026-10-15T15:38:25.000Z  WPROS/USDC pool price (USDC per PROS) = 0.606606
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20319145
+#38 block 20319145 2026-10-15T15:48:45.000Z  WPROS/USDC pool price (USDC per PROS) = 0.605463
+no trigger: current down streak: 1 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20319745
+#39 block 20319745 2026-10-15T16:00:03.000Z  WPROS/USDC pool price (USDC per PROS) = 0.603114
+no trigger: current down streak: 2 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20320345
+#40 block 20320345 2026-10-15T16:11:23.000Z  WPROS/USDC pool price (USDC per PROS) = 0.600925
+no trigger: current down streak: 3 of 4 observations
+$ node trend-watcher/trend.mjs observe --at-block 20320945
+#41 block 20320945 2026-10-15T16:21:00.000Z  WPROS/USDC pool price (USDC per PROS) = 0.598815
+
+>>> TREND CONFIRMED at observation #41 (block 20320945, 2026-10-15T16:21:00.000Z): 4 consecutive down observations, -1.098% in total
+>>> action: alert: sustained PROS sell-off confirmed; pause new PROS buys and review exposure
+$ node trend-watcher/trend.mjs observe --at-block 20321545
+#42 block 20321545 2026-10-15T16:30:53.000Z  WPROS/USDC pool price (USDC per PROS) = 0.596897
+trend already fired for the window starting at block 20319145; not firing again
+$ node trend-watcher/trend.mjs observe --at-block 20322145
+#43 block 20322145 2026-10-15T16:41:12.000Z  WPROS/USDC pool price (USDC per PROS) = 0.598375
+trend already fired for the window starting at block 20319145; not firing again
+$ node trend-watcher/trend.mjs observe --at-block 20322745
+#44 block 20322745 2026-10-15T16:51:30.000Z  WPROS/USDC pool price (USDC per PROS) = 0.597047
+trend already fired for the window starting at block 20319145; not firing again
+$ node trend-watcher/trend.mjs observe --at-block 20323345
+#45 block 20323345 2026-10-15T17:01:06.000Z  WPROS/USDC pool price (USDC per PROS) = 0.594927
+trend already fired for the window starting at block 20319145; not firing again
+$ node trend-watcher/trend.mjs observe --at-block 20323945
+#46 block 20323945 2026-10-15T17:10:35.000Z  WPROS/USDC pool price (USDC per PROS) = 0.596913
+trend already fired for the window starting at block 20319145; not firing again
+
+# recovery: the run for block 20316145 crashed above (network error before anything was stored); re-run it
+$ node trend-watcher/trend.mjs observe --at-block 20316145
+#47 block 20316145 2026-10-15T15:00:39.000Z  WPROS/USDC pool price (USDC per PROS) = 0.603687
+trend already fired for the window starting at block 20319145; not firing again

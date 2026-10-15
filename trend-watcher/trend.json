@@ -1,0 +1,7 @@
+{
+  "name": "WPROS/USDC sustained sell-off watch",
+  "metric": { "type": "poolPrice", "pool": "0x912c9ade24d44d8922f0866d8dcb079f1363f647", "label": "WPROS/USDC pool price (USDC per PROS)" },
+  "rule": { "direction": "down", "observations": 4, "minStepPct": 0.3, "minTotalPct": 1.0 },
+  "action": "alert: sustained PROS sell-off confirmed; pause new PROS buys and review exposure",
+  "store": "state/wpros-usdc.jsonl"
+}
