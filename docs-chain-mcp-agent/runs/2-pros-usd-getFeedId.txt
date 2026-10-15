@@ -1,0 +1,36 @@
+## 1. What the docs say about getFeedId on Chainlink PROS/USD price feed proxy
+
+  `getFeedId()` is a read-only getter with **no parameters**. It returns a `bytes32` identifying the feed associated with this proxy.
+  
+  For the PROS/USD proxy on Pacific Mainnet, the expected value is:
+  
+  ```
+  0x0003f73a1abb2eec1ecdde915c659cbb8f0cbb030156b75dd401fbfd5281e246
+  ```
+  
+  This is an **identifier**, not a price, so it has no units or decimal scaling. The feed’s price values use 18 decimals; that applies to price-reading functions such as `latestAnswer()`, not to `getFeedId()`.
+  
+  See the [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe).
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>; Oracle <https://docs.pharos.xyz/tooling-and-infrastructure/oracles>
+
+## 2. Calling it on chain (Chain MCP eth_call)
+
+  Chainlink PROS/USD price feed proxy 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  https://www.pharosscan.xyz/address/0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  block 20,321,841 (2026-10-15T16:36:05.000Z)
+  getFeedId() → 0x0003f73a1abb2eec1ecdde915c659cbb8f0cbb030156b75dd401fbfd5281e246
+
+## 3. What the result means
+
+  Checked against the explanation:
+  - 0x0003f73a1abb2eec1ecdde915c659cbb8f0cbb030156b75dd401fbfd5281e246 matches the value listed in the docs.
+
+  That `bytes32` value is the **identifier for the PROS/USD price feed**. In plain terms, it tells the self-managed feed cache which feed’s data to look up; it is **not the price itself**. The documentation lists this ID for the PROS/USD proxy at that address on Pacific Mainnet. [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe)
+  
+  The block and timestamp describe when you made the call; they don’t change what the feed ID represents.
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>; Chainlink CCIP <https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain/chainlink-ccip>
+
+  Functions the docs point to, tried on this contract (no-argument calls):
+  - latestAnswer(): responds (0x0000000000000000000000000000000000000000000000000849567280585738)

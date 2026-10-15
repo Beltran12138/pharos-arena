@@ -1,0 +1,36 @@
+## 1. What the docs say about latestAnswer on Chainlink PROS/USD price feed proxy
+
+  On Pharos Pacific Mainnet, `latestAnswer()` reads the latest cached **PROS/USD** price from the proxy at `0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466`.
+  
+  ```solidity
+  function latestAnswer() external view returns (int256);
+  ```
+  
+  * **Parameters:** None.
+  * **Return value:** A signed integer representing the price, scaled to **18 decimals**. Divide the returned value by `10^18` to get USD per PROS. For example, a return value of `2500000000000000000` means **$2.50 per PROS**.
+  * **Timestamp:** The answer itself does not include a timestamp. Use the proxy’s `latestTimestamp()` to check when the latest observation was recorded. The timestamp is the observation time, not the transaction’s on-chain inclusion time; check freshness for your use case.
+  
+  The feed address, interface, and decimal setting are listed in [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe).
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>
+
+## 2. Calling it on chain (Chain MCP eth_call)
+
+  Chainlink PROS/USD price feed proxy 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  https://www.pharosscan.xyz/address/0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  block 20,321,938 (2026-10-15T16:37:48.000Z)
+  latestAnswer() → 597103475382835000
+
+## 3. What the result means
+
+  Checked against the explanation:
+  - The docs say values use 18 decimals, so 597103475382835000 = 0.59710348.
+
+  The value represents a PROS/USD price of **$0.597103475382835 per PROS** — about **$0.5971 for one PROS**.
+  
+  The feed uses **18 decimals**, so divide the returned integer by `10^18` to read it as a dollar price. This is the price answer, not a token balance. See [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe).
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>; Get PROS Gas <https://docs.pharos.xyz/getting-started/get-pros-gas>
+
+  Functions the docs point to, tried on this contract (no-argument calls):
+  - latestTimestamp(): responds (0x000000000000000000000000000000000000000000000000000000006ad0ffcb)

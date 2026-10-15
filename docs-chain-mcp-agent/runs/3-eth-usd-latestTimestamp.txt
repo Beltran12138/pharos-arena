@@ -1,0 +1,25 @@
+## 1. What the docs say about latestTimestamp on Chainlink ETH/USD price feed proxy
+
+  On the Pacific Mainnet ETH/USD proxy, `latestTimestamp()` takes **no parameters** and returns a `uint256`. It gives the timestamp of the latest price report’s **observation** — when Chainlink’s DON observed the price, not when its update transaction was included on-chain.
+  
+  The return value is a timestamp, **not a price**, so the feed’s 18 price decimals do not apply. The docs recommend comparing it with the current block timestamp to check staleness, but don’t explicitly specify the timestamp’s epoch or numeric unit. See [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe) for the interface and feed details.
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>; Pharos MCP <https://docs.pharos.xyz/tooling-and-infrastructure/mcp>
+
+## 2. Calling it on chain (Chain MCP eth_call)
+
+  Chainlink ETH/USD price feed proxy 0x1Ed3e8CdC173363593BfAD9bF77aa2A0e7351DB8
+  https://www.pharosscan.xyz/address/0x1Ed3e8CdC173363593BfAD9bF77aa2A0e7351DB8
+  block 20,321,978 (2026-10-15T16:38:35.000Z)
+  latestTimestamp() → 1792081595
+
+## 3. What the result means
+
+  Checked against the explanation:
+  - 1792081595 is a unix timestamp: 2026-10-15T16:26:35.000Z, 720 s before this block.
+
+  `1792081595` is when Chainlink’s DON **observed the ETH/USD price** — not when an update transaction was included on Pharos. Compared with the block timestamp, that observation was **720 seconds (12 minutes) earlier**.
+  
+  In plain terms: the feed’s reported price came from an observation made 12 minutes before that block. The [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe) recommends checking this age against a staleness limit appropriate for your application.
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>; Chainlink CCIP <https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain/chainlink-ccip>

@@ -1,0 +1,20 @@
+## 1. What the docs say about getBasefee on MultiCall3 canonical contract
+
+  `getBasefee()` takes **no Solidity arguments** and returns the base fee per gas for the block used by the call. For the standard Multicall3 implementation, it returns `block.basefee` as a `uint256`.
+  
+  The returned integer is in **wei per gas**, not whole PROS. Pharos uses 18 decimal places for PROS, so convert it to PROS/gas by dividing by `10^18`. For example, `1,000,000,000` wei/gas equals `0.000000001` PROS/gas.
+  
+  The result reflects the block context of your read call. Pharos documents its base fee as dynamic and its JSON-RPC fee values as denominated in Wei. See [Gas Model](/getting-started/gas-model) and [JSON-RPC API Methods](/api-and-sdk/json-rpc-methods). The Pharos docs don’t specify this Multicall3 method’s ABI directly; verify the deployed contract’s code or ABI if you need to confirm its implementation.
+
+  Sources: Gas Model <https://docs.pharos.xyz/getting-started/gas-model>; JSON-RPC API Methods <https://docs.pharos.xyz/api-and-sdk/json-rpc-methods>; About Pharos <https://docs.pharos.xyz/introduction/readme>
+
+## 2. Calling it on chain (Chain MCP eth_call)
+
+  MultiCall3 canonical contract 0xcA11bde05977b3631167028862bE2a173976CA11
+  https://www.pharosscan.xyz/address/0xcA11bde05977b3631167028862bE2a173976CA11
+  block 20,321,798 (2026-10-15T16:35:11.000Z)
+  getBasefee() → 0
+
+## 3. What the result means
+
+  The docs don't explain this function, so I won't interpret 0 beyond the raw value.

@@ -1,0 +1,22 @@
+## 1. What the docs say about latestReportTimestamp on Chainlink PROS/USD price feed proxy
+
+  `latestReportTimestamp()` reads the observation time for the latest PROS/USD report. It is a timestamp, not a price value; the feed’s price uses 18 decimals.
+  
+  * **Parameters:** None are documented for this getter.
+  * **Meaning:** The timestamp records when the Chainlink DON observed the price, not when its update transaction landed on Pharos. The docs say `startedAt` and `updatedAt` both represent this same observation time.
+  * **Units:** Use it as a time value and compare it with the current block timestamp when checking freshness. The docs do not explicitly state the getter’s ABI return type or timestamp unit.
+  
+  The [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe) lists this proxy as the Pacific Mainnet PROS/USD feed and recommends enforcing an application-specific staleness limit.
+
+  Sources: Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Chainlink Data Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds>; Get PROS Gas <https://docs.pharos.xyz/getting-started/get-pros-gas>
+
+## 2. Calling it on chain (Chain MCP eth_call)
+
+  Chainlink PROS/USD price feed proxy 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  https://www.pharosscan.xyz/address/0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  block 20,321,902 (2026-10-15T16:37:13.000Z)
+  latestReportTimestamp() → REVERTED (execution reverted: )
+
+## 3. What the result means
+
+  The docs describe latestReportTimestamp() for this contract, but on chain the call reverts. The docs and the deployed contract disagree; don't build on this function until that is resolved.
