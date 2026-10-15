@@ -1,0 +1,11 @@
+$ pharos-docs "what is the chain id and RPC of Pharos mainnet?"
+Pharos Pacific Mainnet uses **Chain ID `1672`** and RPC URL **`https://rpc.pharos.xyz`**. See [Pacific Mainnet](/getting-started/network/pacific-mainnet).
+
+Sources:
+  - Pacific Mainnet: https://docs.pharos.xyz/getting-started/network/pacific-mainnet
+  - Node Debugging & Configuration: https://docs.pharos.xyz/node-and-validator-guide/node-debugging-and-configuration
+  - RPC Infrastructure: https://docs.pharos.xyz/tooling-and-infrastructure/rpc
+  - Cross Chain Infrastructure: https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain
+
+(via Developer Docs MCP https://docs.pharos.xyz/~gitbook/mcp)
+[exit 0]

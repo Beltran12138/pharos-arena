@@ -14,5 +14,8 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",
     "viem": "^2.57.7"
+  },
+  "bin": {
+    "pharos-docs": "doc-search-cli/pharos-docs.mjs"
   }
 }

@@ -1,0 +1,26 @@
+$ pharos-docs "how do I use Chainlink price feeds on Pharos?"
+For normal on-chain reads, call the **price-pair proxy** for your network. For example, the Pacific Mainnet `ETH/USD` proxy is `0x1Ed3e8CdC173363593BfAD9bF77aa2A0e7351DB8`. The feeds use **18 decimals**, so divide the answer by `1e18` to display the price.
+
+```solidity
+interface IPharosPriceFeed {
+    function latestAnswer() external view returns (int256);
+    function latestTimestamp() external view returns (uint256);
+}
+
+function readPrice(IPharosPriceFeed feed, uint256 maxAge)
+    external view returns (int256)
+{
+    int256 answer = feed.latestAnswer();
+    uint256 observedAt = feed.latestTimestamp();
+
+   ```
+  … (--full for the rest)
+
+Sources:
+  - Chainlink Push Engine Feeds: https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe
+  - Chainlink Data Feeds: https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-ds
+  - Oracle: https://docs.pharos.xyz/tooling-and-infrastructure/oracles
+  - Chainlink CCIP: https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain/chainlink-ccip
+
+(via Developer Docs MCP https://docs.pharos.xyz/~gitbook/mcp)
+[exit 0]

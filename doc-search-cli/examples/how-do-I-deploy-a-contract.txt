@@ -1,0 +1,26 @@
+$ pharos-docs "how do I deploy a contract?"
+For Pharos, a quick Foundry deployment looks like this:
+
+1. Install Foundry, set up your contract, and compile and test it:
+
+   ```sh
+   forge build
+   forge test
+   ```
+2. Create a deployment script that loads `PRIVATE_KEY`, starts broadcasting, and deploys your contract. The [Write Your First Token](/developer-guide/foundry/write-your-first-token) includes a sample script.
+3. Set your deployer key and broadcast to your network’s RPC:
+
+   ```sh
+   export PRIVATE_KEY=<your-private-key>
+   forge script script/DeployToken.s.sol --rpc-url <PHAROS_RPC_URL> --broadcast
+   ```
+  … (--full for the rest)
+
+Sources:
+  - Write Your First Token: https://docs.pharos.xyz/developer-guide/foundry/write-your-first-token
+  - Write Your First Token: https://docs.pharos.xyz/developer-guide/hardhat/write-your-first-token
+  - Write Your First Uniswap Contract: https://docs.pharos.xyz/developer-guide/foundry/write-your-first-uniswap-contract
+  - Write Your First Uniswap Contract: https://docs.pharos.xyz/developer-guide/hardhat/write-your-first-uniswap-contract
+
+(via Developer Docs MCP https://docs.pharos.xyz/~gitbook/mcp)
+[exit 0]

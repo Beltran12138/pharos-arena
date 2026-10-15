@@ -1,0 +1,14 @@
+$ pharos-docs "how do I stake ETH on Lido from Pharos?"
+✗ The Pharos docs don't answer this.
+
+  Pharos documentation doesn’t provide steps for staking ETH through Lido directly from Pharos. It says **stETH may circulate in Pharos’s DeFi ecosystem**, but doesn’t specify a Lido staking flow or a supported route for moving stETH to Pharos. See [About Pharos](/).
+  
+  I can’t find instructions for completing this from Pharos.
+
+Closest pages (they do not answer it):
+  - About Pharos: https://docs.pharos.xyz/introduction/readme
+  - Node Management: https://docs.pharos.xyz/node-and-validator-guide/node-management
+  - Call EVM From WASM: https://docs.pharos.xyz/developer-guide/interoperability/call-evm-from-wasm
+
+(via Developer Docs MCP https://docs.pharos.xyz/~gitbook/mcp)
+[exit 3]
