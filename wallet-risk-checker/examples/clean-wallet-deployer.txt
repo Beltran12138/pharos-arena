@@ -1,0 +1,17 @@
+$ node wallet-risk-checker/check.mjs 0x7565f60988b83e577cb1a670ce577667311b11ae
+Risk check: WPROS deployer (0x7565f60988b83e577cb1a670ce577667311b11ae)
+  https://www.pharosscan.xyz/address/0x7565f60988b83e577cb1a670ce577667311b11ae
+  wallet, balance 78.8977 PROS, block 20,322,756
+
+RISK: LOW
+
+  ✓ ok      Flagged address: not on your flagged list (0 entries)
+             No match in the list of addresses you marked as dangerous.
+  ✓ ok      Wallet age: first seen 281 days ago, nonce 227
+             It has a history on Pharos.
+  ✓ ok      Failed transactions: 0 of its last 49 transactions failed
+             Normal.
+  ✓ ok      Approvals: 2 recent approval(s), none unlimited
+             No standing unlimited permissions in recent history.
+  ✓ ok      Interacted with flagged addresses: none among 20 recent counterparties
+             No recent counterparty is on your flagged list.

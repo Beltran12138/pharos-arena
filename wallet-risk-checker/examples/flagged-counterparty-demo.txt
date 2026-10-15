@@ -1,0 +1,17 @@
+$ node wallet-risk-checker/check.mjs 0x4edf8ec4e8e0e230a4266c5b4cbc1fcb92dbb364 --flagged wallet-risk-checker/examples/flagged-demo.json
+Risk check: 0x4edf…b364 (0x4edf8ec4e8e0e230a4266c5b4cbc1fcb92dbb364)
+  https://www.pharosscan.xyz/address/0x4edf8ec4e8e0e230a4266c5b4cbc1fcb92dbb364
+  wallet, balance 119.4655 PROS, block 20,322,847
+
+RISK: HIGH  (Interacted with flagged addresses)
+
+  ✓ ok      Flagged address: not on your flagged list (1 entries)
+             No match in the list of addresses you marked as dangerous.
+  ✓ ok      Wallet age: first seen 32 days ago, nonce 661
+             It has a history on Pharos.
+  ✓ ok      Failed transactions: 0 of its last 50 transactions failed
+             Normal.
+  ✓ ok      Approvals: 0 recent approval(s), none unlimited
+             No standing unlimited permissions in recent history.
+  ✗ HIGH    Interacted with flagged addresses: 0x7d43…180f (DEMO ENTRY: flagged by me for this example only (unverified contract deployed hours before the check); not an accusation)
+             It has transacted with addresses you flagged. Funds may be linked to them.

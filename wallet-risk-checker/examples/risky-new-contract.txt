@@ -1,0 +1,19 @@
+$ node wallet-risk-checker/check.mjs 0x7d43e0e51550fe894ba71288eba90173ee9b180f
+Risk check: 0x7d43…180f (0x7d43e0e51550fe894ba71288eba90173ee9b180f)
+  https://www.pharosscan.xyz/address/0x7d43e0e51550fe894ba71288eba90173ee9b180f
+  contract, balance 0 PROS, block 20,322,773
+
+RISK: HIGH  (Contract age, Verified source code, Usage)
+
+  ✓ ok      Flagged address: not on your flagged list (0 entries)
+             No match in the list of addresses you marked as dangerous.
+  ✗ HIGH    Contract age: deployed 2.2 h ago by 0x4edf…b364
+             Brand-new contracts have no track record. Most scam and rug-pull contracts are used within days of deployment.
+  ! MEDIUM  Verified source code: source code NOT verified
+             Nobody can easily read what this contract does. You'd be trusting bytecode you can't inspect.
+  ✓ ok      Upgradeable: not an EIP-1967 proxy
+             Its code can't be swapped through the standard proxy slot.
+  ! MEDIUM  Usage: 2 transaction(s) ever
+             Almost nobody has used this contract yet.
+  ✓ ok      Interacted with flagged addresses: none among 3 recent counterparties
+             No recent counterparty is on your flagged list.
