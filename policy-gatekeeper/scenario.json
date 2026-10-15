@@ -1,0 +1,12 @@
+[
+  { "id": "a1", "note": "send 0.0001 PROS to the burn address (allowlisted)", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.0001", "at": "2026-10-15T03:00:00Z" },
+  { "id": "a2", "note": "wrap 0.0005 PROS into WPROS via deposit()", "to": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0", "value": "0.0005", "call": { "fn": "deposit()" }, "at": "2026-10-15T03:01:00Z" },
+  { "id": "d1", "note": "send PROS to an address that is not allowlisted", "to": "0x1111111111111111111111111111111111111111", "value": "0.0001", "at": "2026-10-15T03:02:00Z" },
+  { "id": "d2", "note": "USDC transfer to a recipient that is not allowlisted", "to": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "call": { "fn": "transfer(address,uint256)", "args": ["0x1111111111111111111111111111111111111111", "100000"] }, "at": "2026-10-15T03:03:00Z" },
+  { "id": "d3", "note": "approve on LINK, a contract that is not allowlisted", "to": "0x51e2A24742Db77604B881d6781Ee16B5b8fcBE29", "call": { "fn": "approve(address,uint256)", "args": ["0x1111111111111111111111111111111111111111", "1000000000000000000"] }, "at": "2026-10-15T03:04:00Z" },
+  { "id": "d4", "note": "unlimited WPROS approve: contract allowlisted, function not", "to": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0", "call": { "fn": "approve(address,uint256)", "args": ["0x1111111111111111111111111111111111111111", "115792089237316195423570985008687907853269984665640564039457584007913129639935"] }, "at": "2026-10-15T03:05:00Z" },
+  { "id": "d5", "note": "allowlisted transfer, but at 02:30 Hong Kong time", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.0001", "at": "2026-10-15T18:30:00Z" },
+  { "id": "d6", "note": "0.005 PROS in one transaction (per-tx limit is 0.001)", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.005", "at": "2026-10-15T03:06:00Z" },
+  { "id": "a3", "note": "0.0009 PROS: brings today's total to 0.0015", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.0009", "at": "2026-10-15T03:07:00Z" },
+  { "id": "d7", "note": "another 0.0009 PROS: today's total would be 0.0024 (daily limit 0.002)", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.0009", "at": "2026-10-15T03:08:00Z" }
+]

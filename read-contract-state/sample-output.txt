@@ -1,0 +1,11 @@
+Contract     Wrapped PROS (WPROS)  0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+             https://www.pharosscan.xyz/address/0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+Read at      block 20,318,487  (2026-10-15T15:37:30.000Z)  via Chain MCP https://mcp.pharos.xyz/mcp
+Code         3249 bytes deployed
+
+Token decimals  18
+Total supply    23,286,730.6958 WPROS
+PROS held       23,286,730.6958 PROS  (native balance of the contract)
+Holder          WPROS deployer (0x7565f60988b83e577cb1a670ce577667311b11ae) holds 4.3076 WPROS
+
+In plain words: every WPROS in circulation is backed 1:1 by PROS locked in the contract.

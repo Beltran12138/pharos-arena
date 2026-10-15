@@ -1,0 +1,23 @@
+#1 ALLOW a1  send 0.0001 PROS to the burn address (allowlisted)
+    rule: -  all rules passed  @ 2026-10-15T03:00:00.000Z (simulated clock)
+    execution: simulated (gas 21000)
+#2 ALLOW a2  wrap 0.0005 PROS into WPROS via deposit()
+    rule: -  all rules passed  @ 2026-10-15T03:01:00.000Z (simulated clock)
+    execution: simulated (gas 36735)
+#3 DENY  d1  send PROS to an address that is not allowlisted
+    rule: allowlist.recipient  recipient 0x1111111111111111111111111111111111111111 is not on the allowlist  @ 2026-10-15T03:02:00.000Z (simulated clock)
+#4 DENY  d2  USDC transfer to a recipient that is not allowlisted
+    rule: allowlist.recipient  recipient 0x1111111111111111111111111111111111111111 is not on the allowlist  @ 2026-10-15T03:03:00.000Z (simulated clock)
+#5 DENY  d3  approve on LINK, a contract that is not allowlisted
+    rule: allowlist.contract  contract 0x51e2a24742db77604b881d6781ee16b5b8fcbe29 is not on the allowlist  @ 2026-10-15T03:04:00.000Z (simulated clock)
+#6 DENY  d4  unlimited WPROS approve: contract allowlisted, function not
+    rule: allowlist.function  function 0x095ea7b3 is not allowed on 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0  @ 2026-10-15T03:05:00.000Z (simulated clock)
+#7 DENY  d5  allowlisted transfer, but at 02:30 Hong Kong time
+    rule: timeWindow  2026-10-15T18:30:00.000Z is outside every allowed window  @ 2026-10-15T18:30:00.000Z (simulated clock)
+#8 DENY  d6  0.005 PROS in one transaction (per-tx limit is 0.001)
+    rule: spendLimit.perTx  0.005 PROS vs per-tx limit 0.001 PROS  @ 2026-10-15T03:06:00.000Z (simulated clock)
+#9 ALLOW a3  0.0009 PROS: brings today's total to 0.0015
+    rule: -  all rules passed  @ 2026-10-15T03:07:00.000Z (simulated clock)
+    execution: simulated (gas 21000)
+#10 DENY  d7  another 0.0009 PROS: today's total would be 0.0024 (daily limit 0.002)
+    rule: spendLimit.perDay  0.0024 PROS today incl. this vs daily limit 0.002 PROS  @ 2026-10-15T03:08:00.000Z (simulated clock)

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "network": "pharos-mainnet",
+  "signer": null,
+  "simulateFrom": "0x7565f60988b83e577cb1a670ce577667311b11ae",
+  "allowlist": {
+    "recipients": ["0x000000000000000000000000000000000000dEaD"],
+    "contracts": {
+      "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0": ["deposit()", "withdraw(uint256)"],
+      "0xc879c018db60520f4355c26ed1a6d572cdac1815": ["transfer(address,uint256)"]
+    }
+  },
+  "spendLimit": {
+    "perTx": { "PROS": "0.001", "USDC": "0.5" },
+    "perDay": { "PROS": "0.002", "USDC": "1" }
+  },
+  "timeWindows": [
+    {
+      "name": "08:00-24:00 Hong Kong time, every day",
+      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "from": "00:00",
+      "to": "16:00"
+    }
+  ]
+}
