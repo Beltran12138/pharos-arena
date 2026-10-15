@@ -9,10 +9,11 @@
 // request.json: { "from": "0x…", "to": "0x…", "value": "0.01", "call": { "fn": "transfer(address,uint256)", "args": [...] } }
 // (or "data": "0x…" instead of "call"). --execute needs PRIVATE_KEY for `from` in the environment.
 import { readFileSync } from "node:fs";
-import { createWalletClient, decodeFunctionData, defineChain, encodeFunctionData, erc20Abi, http, parseAbi, parseEther } from "viem";
+import { decodeFunctionData, encodeFunctionData, erc20Abi, parseAbi, parseEther } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { connect } from "../lib/mcp.mjs";
-import { CHAIN_ID, NATIVE, RPC_URL, TOKENS, human, label, read, txLink } from "../lib/pharos.mjs";
+import { NATIVE, TOKENS, human, label, read } from "../lib/pharos.mjs";
+import { signAndSend } from "../lib/send.mjs";
 import { parseRevert } from "../dapp-support-agent/diagnose.mjs";
 
 const WPROS = "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0";
@@ -152,20 +153,9 @@ function render(req, tx, sim) {
 async function send(mcp, tx, sim) {
   const account = privateKeyToAccount(process.env.PRIVATE_KEY ?? "0x");
   if (account.address.toLowerCase() !== tx.from) throw new Error(`PRIVATE_KEY is for ${account.address}, the request is from ${tx.from}`);
-  const chain = defineChain({ id: CHAIN_ID, name: "Pharos", nativeCurrency: { name: NATIVE, symbol: NATIVE, decimals: 18 }, rpcUrls: { default: { http: [RPC_URL] } } });
-  const wallet = createWalletClient({ account, chain, transport: http(RPC_URL) });
-  const hash = await wallet.sendTransaction({ to: tx.to, value: tx.valueWei, data: tx.data, gas: (sim.gas * 12n) / 10n });
-  for (let i = 0; i < 30; i++) {
-    try {
-      const r = await mcp.call("get_transaction_receipt", { hash });
-      if (r?.status) {
-        const used = BigInt(r.gasUsed);
-        return `${r.status === "0x1" ? "✓ mined" : "✗ reverted"} in block ${Number(BigInt(r.blockNumber))}: gas used ${used} (predicted ${sim.gas}, ${((Number(used) / Number(sim.gas)) * 100).toFixed(1)}%)\n  ${txLink(hash)}`;
-      }
-    } catch {
-      // not mined yet
-    }
-    await new Promise((r) => setTimeout(r, 1000));
-  }
-  return `sent, not yet confirmed: ${txLink(hash)}`;
+  const r = await signAndSend(mcp, account, { to: tx.to, value: tx.valueWei, data: tx.data, gas: (sim.gas * 12n) / 10n });
+  if (!r.gasUsed) return `sent via ${r.via}, not yet confirmed: ${r.link}`;
+  const pct = ((Number(r.gasUsed) / Number(sim.gas)) * 100).toFixed(1);
+  return `${r.status === "success" ? "✓ mined" : "✗ reverted"} in block ${r.block} (sent via ${r.via}): gas used ${r.gasUsed} (predicted ${sim.gas}, ${pct}%)
+  ${r.link}`;
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Policy Gatekeeper (Pharos Agent Arena, Medium): every action an agent wants to take on Pharos goes through
 // here first. Denied actions are logged and never signed; allowed actions are simulated through Chain MCP
-// (estimate_gas) and, in `exec` mode, signed locally and broadcast.
+// (estimate_gas) and, in `exec` mode, signed locally and broadcast through Chain MCP send_raw_transaction.
 //
 //   node policy-gatekeeper/gatekeeper.mjs check  <requests.json> [--policy p.json] [--log audit.jsonl]
 //   node policy-gatekeeper/gatekeeper.mjs exec   <requests.json> [--policy p.json] [--log audit.jsonl]
@@ -12,10 +12,10 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { createWalletClient, encodeFunctionData, http, parseAbi, parseEther, defineChain } from "viem";
+import { encodeFunctionData, parseAbi, parseEther } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { connect } from "../lib/mcp.mjs";
-import { CHAIN_ID, RPC_URL, txLink } from "../lib/pharos.mjs";
+import { signAndSend } from "../lib/send.mjs";
 import { compile, evaluate } from "./policy.mjs";
 import { append, spentOn, verify } from "./auditlog.mjs";
 
@@ -28,13 +28,6 @@ const opt = (name, dflt) => {
 const cmd = args[0];
 const policyPath = opt("--policy", join(here, "policy.json"));
 const logPath = opt("--log", join(here, "audit.jsonl"));
-
-const pharos = defineChain({
-  id: CHAIN_ID,
-  name: "Pharos",
-  nativeCurrency: { name: "PROS", symbol: "PROS", decimals: 18 },
-  rpcUrls: { default: { http: [RPC_URL] } },
-});
 
 /** Accept a friendly request ({value: "0.001", call: {fn, args}}) and produce {to, valueWei, data}. */
 export function normalize(req) {
@@ -112,26 +105,8 @@ async function simulateAndMaybeSend(mcp, mode, account, from, action) {
   const cost = BigInt(action.valueWei) + gas * BigInt(gasPriceWei) * 2n;
   if (BigInt(balanceWei) < cost) return { status: "not-sent", error: `balance ${balanceWei} wei < value + gas ${cost} wei` };
 
-  const wallet = createWalletClient({ account, chain: pharos, transport: http(RPC_URL) });
-  const hash = await wallet.sendTransaction({
-    to: action.to,
-    value: BigInt(action.valueWei),
-    data: action.data,
-    gas: (gas * 12n) / 10n,
-  });
-  // Confirm through Chain MCP.
-  for (let i = 0; i < 30; i++) {
-    try {
-      const r = await mcp.call("get_transaction_receipt", { hash });
-      if (r && r.status) {
-        return { status: r.status === "0x1" ? "success" : "reverted", hash, block: Number(BigInt(r.blockNumber)), link: txLink(hash) };
-      }
-    } catch {
-      // not mined yet
-    }
-    await new Promise((res) => setTimeout(res, 1000));
-  }
-  return { status: "sent-unconfirmed", hash, link: txLink(hash) };
+  const sent = await signAndSend(mcp, account, { to: action.to, value: BigInt(action.valueWei), data: action.data, gas: (gas * 12n) / 10n });
+  return { ...sent, gasUsed: sent.gasUsed?.toString(), predictedGas: gas.toString() };
 }
 
 function print(e) {

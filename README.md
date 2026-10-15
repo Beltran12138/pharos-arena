@@ -1,27 +1,40 @@
 # pharos-arena
 
-Three builds for the [Pharos Agent Arena](https://pharos-agent-arena.vercel.app/) (Season of AI). Every chain
-read goes through the hosted **Pharos Chain MCP** server (`https://mcp.pharos.xyz/mcp`, read-only, no key);
-nothing here talks to a Pharos RPC directly except `exec` broadcasting a transaction the user signed locally
-(the hosted MCP disables `send_raw_transaction`).
+Builds for the [Pharos Agent Arena](https://pharos-agent-arena.vercel.app/) (Season of AI). Every chain
+read goes through the hosted **Pharos Chain MCP** (`https://mcp.pharos.xyz/mcp`, no key) and every docs
+lookup through the **Developer Docs MCP** (`https://docs.pharos.xyz/~gitbook/mcp`). Transactions are signed
+locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC is only a fallback.
 
 | Build | Arena task | What it does |
 |---|---|---|
-| [`read-contract-state/`](read-contract-state/) | Read Contract State (Easy) | Reads a Pharos mainnet contract at one pinned block and explains it in plain words |
-| [`policy-gatekeeper/`](policy-gatekeeper/) | Policy Gatekeeper (Medium) | A Skill that allows or denies each on-chain action against spend limits, allowlists and time windows, with a hash-chained audit log |
-| [`audit-log-agent/`](audit-log-agent/) | Audit-Log Agent (Medium) | A plain-language activity report for a wallet over a date range, exported as Markdown and CSV |
+| [`read-contract-state/`](read-contract-state/) | Read Contract State (Easy) | Reads a contract at one pinned block and explains it in plain words |
+| [`event-log-monitor/`](event-log-monitor/) | Event/Log Monitor (Easy) | Watches one event on one contract, block by block, no duplicates across restarts |
+| [`doc-search-cli/`](doc-search-cli/) | Doc-Search CLI (Easy) | `pharos-docs "question"`: short sourced answer, or "the docs don't cover this" |
+| [`docs-mcp-onboarding/`](docs-mcp-onboarding/) | Docs MCP Onboarding (Easy) | A docs-only onboarding log with the gaps found and the fix for each |
+| [`dapp-support-agent/`](dapp-support-agent/) | dApp Support Agent (Easy) | Explains why a transaction failed and what to do |
+| [`policy-gatekeeper/`](policy-gatekeeper/) | Policy Gatekeeper (Medium) | Allows or denies each action against spend limits, allowlists and time windows; hash-chained audit log |
+| [`dry-run-executor/`](dry-run-executor/) | Dry-Run Executor (Medium) | Simulates a transaction, predicts balances, blocks it if it would fail |
+| [`threshold-guardian/`](threshold-guardian/) | Threshold Guardian (Medium) | Fires an action only when several on-chain conditions all pass; decision trace |
+| [`docs-chain-mcp-agent/`](docs-chain-mcp-agent/) | Docs MCP + Chain MCP Agent (Medium) | Explains a function from the docs, calls it, interprets the result, flags docs/contract mismatches |
+| [`audit-log-agent/`](audit-log-agent/) | Audit-Log Agent (Medium) | A plain-language activity report for a wallet over a date range (Markdown + CSV) |
+
+Requirements of every task, copied from the arena: [`TASKS.md`](TASKS.md).
 
 ```bash
 npm install
 node read-contract-state/read.mjs                                   # WPROS by default
 node policy-gatekeeper/gatekeeper.mjs check policy-gatekeeper/scenario.json
+node doc-search-cli/pharos-docs.mjs "how do I deploy a contract?"
 node audit-log-agent/report.mjs --wallet 0x… --from 2026-10-01 --to 2026-10-15
 npm test
 ```
 
-Node 20+. Chain MCP tools used: `get_block_number`, `get_block`, `get_code`, `get_balance`, `eth_call`,
-`estimate_gas`, `get_gas_price`, `get_transaction`, `get_transaction_receipt`. The hosted endpoint allows
-120 requests per minute per IP; the client backs off on 429.
+Node 20+. Chain MCP tools used: `get_block_number`, `get_block`, `get_code`, `get_balance`,
+`get_transaction_count`, `eth_call`, `estimate_gas`, `get_gas_price`, `get_logs`, `get_transaction`,
+`get_transaction_receipt`, `send_raw_transaction`. Docs MCP tools used: `askQuestion`,
+`searchDocumentation`, `getPage` (never `sendFeedback`). The hosted Chain MCP allows 120 requests per
+minute per IP; the client backs off on 429. Shared code: [`lib/`](lib/) (MCP clients, Pharos constants and
+Chainlink feeds, V3 pool reads, local signing + MCP broadcast).
 
 ## Where this comes from
 
