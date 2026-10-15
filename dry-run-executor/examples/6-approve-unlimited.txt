@@ -1,0 +1,14 @@
+$ node dry-run-executor/dryrun.mjs dry-run-executor/examples/6-approve-unlimited.json
+Dry run at block 20,321,247 (Pharos mainnet, via Chain MCP)
+  unlimited USDC approval to a router
+  from 0x1f35…c85c  to USDC token  value 0 PROS  data 0x095ea7b3…
+
+Prediction: SUCCEEDS
+  gas 71,897 × 10 gwei = fee 0.00071897 PROS
+
+Balances before → after:
+  0x1f35…c85c                PROS                         61.80075118 → 61.80003221  (−0.00071897)
+  0x1f35…c85c                USDC allowance for 0x974d…9f35 0 → unlimited  (+unlimited)
+
+✓ would succeed. Not sent (dry run). Add --execute to sign and send.
+[exit 0]

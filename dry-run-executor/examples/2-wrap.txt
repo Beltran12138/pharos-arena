@@ -1,0 +1,14 @@
+$ node dry-run-executor/dryrun.mjs dry-run-executor/examples/2-wrap.json
+Dry run at block 20,321,196 (Pharos mainnet, via Chain MCP)
+  wrap 0.5 PROS into WPROS
+  from WPROS deployer  to WPROS token  value 0.5 PROS  data 0xd0e30db0
+
+Prediction: SUCCEEDS
+  gas 36,735 × 10 gwei = fee 0.00036735 PROS
+
+Balances before → after:
+  WPROS deployer             PROS                         78.89773637 → 78.39736902  (−0.50036735)
+  WPROS deployer             WPROS                        4.3076 → 4.8076  (+0.5)
+
+✓ would succeed. Not sent (dry run). Add --execute to sign and send.
+[exit 0]

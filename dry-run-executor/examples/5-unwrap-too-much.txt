@@ -1,0 +1,14 @@
+$ node dry-run-executor/dryrun.mjs dry-run-executor/examples/5-unwrap-too-much.json
+Dry run at block 20,321,237 (Pharos mainnet, via Chain MCP)
+  unwrap 1,000 WPROS while holding about 4.3
+  from WPROS deployer  to WPROS token  value 0 PROS  data 0x2e1a7d4d…
+
+Prediction: REVERTS
+  reason: The contract stopped it without giving a reason. Most likely cause: it needs 1,000 WPROS but WPROS deployer holds 4.3076.
+
+Balances now (unchanged, since it would revert):
+  WPROS deployer             PROS                         78.89773637
+  WPROS deployer             WPROS                        4.3076
+
+⛔ BLOCKED: the simulation failed, so nothing was signed or sent.
+[exit 1]

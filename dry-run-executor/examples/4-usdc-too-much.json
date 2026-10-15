@@ -1,0 +1,1 @@
+{ "note": "send 1,000,000 USDC from a wallet that does not have it", "from": "0x7565f60988b83e577cb1a670ce577667311b11ae", "to": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "call": { "fn": "transfer(address,uint256)", "args": ["0x000000000000000000000000000000000000dEaD", "1000000000000"] } }

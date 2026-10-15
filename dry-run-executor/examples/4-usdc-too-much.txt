@@ -1,0 +1,15 @@
+$ node dry-run-executor/dryrun.mjs dry-run-executor/examples/4-usdc-too-much.json
+Dry run at block 20,321,224 (Pharos mainnet, via Chain MCP)
+  send 1,000,000 USDC from a wallet that does not have it
+  from WPROS deployer  to USDC token  value 0 PROS  data 0xa9059cbb…
+
+Prediction: REVERTS
+  reason: The contract stopped it with the message "ERC20: transfer amount exceeds balance".  (raw: ERC20: transfer amount exceeds balance)
+
+Balances now (unchanged, since it would revert):
+  WPROS deployer             PROS                         78.89773637
+  WPROS deployer             USDC                         0
+  burn address (0x…dEaD)     USDC                         0.000904
+
+⛔ BLOCKED: the simulation failed, so nothing was signed or sent.
+[exit 1]

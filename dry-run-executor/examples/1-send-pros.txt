@@ -1,0 +1,14 @@
+$ node dry-run-executor/dryrun.mjs dry-run-executor/examples/1-send-pros.json
+Dry run at block 20,321,184 (Pharos mainnet, via Chain MCP)
+  send 0.0001 PROS to the burn address
+  from WPROS deployer  to burn address (0x…dEaD)  value 0.0001 PROS  data 0x
+
+Prediction: SUCCEEDS
+  gas 21,000 × 10 gwei = fee 0.00021 PROS
+
+Balances before → after:
+  WPROS deployer             PROS                         78.89773637 → 78.89742637  (−0.00031)
+  burn address (0x…dEaD)     PROS                         0 → 0.0001  (+0.0001)
+
+✓ would succeed. Not sent (dry run). Add --execute to sign and send.
+[exit 0]

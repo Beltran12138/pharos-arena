@@ -1,0 +1,15 @@
+$ node dry-run-executor/dryrun.mjs dry-run-executor/examples/3-usdc-transfer.json
+Dry run at block 20,321,209 (Pharos mainnet, via Chain MCP)
+  send 1 USDC
+  from 0x1f35…c85c  to USDC token  value 0 PROS  data 0xa9059cbb…
+
+Prediction: SUCCEEDS
+  gas 58,353 × 10 gwei = fee 0.00058353 PROS
+
+Balances before → after:
+  0x1f35…c85c                PROS                         61.80075118 → 61.80016765  (−0.00058353)
+  0x1f35…c85c                USDC                         2,075.29312 → 2,074.29312  (−1)
+  burn address (0x…dEaD)     USDC                         0.000904 → 1.000904  (+1)
+
+✓ would succeed. Not sent (dry run). Add --execute to sign and send.
+[exit 0]

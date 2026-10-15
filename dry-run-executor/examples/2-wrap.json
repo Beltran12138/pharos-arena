@@ -1,0 +1,1 @@
+{ "note": "wrap 0.5 PROS into WPROS", "from": "0x7565f60988b83e577cb1a670ce577667311b11ae", "to": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0", "value": "0.5", "call": { "fn": "deposit()" } }

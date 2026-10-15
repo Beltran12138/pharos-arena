@@ -1,0 +1,1 @@
+{ "note": "send 1 USDC", "from": "0x1f3546a29eec2102c8d52e21a45114124014c85c", "to": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "call": { "fn": "transfer(address,uint256)", "args": ["0x000000000000000000000000000000000000dEaD", "1000000"] } }
