@@ -1,0 +1,11 @@
+$ node dapp-support-agent/explain.mjs 0x135b2b4bc5ab4b67df312b2e39c5be94716ed615dfc0c5aea7ed5934126bd03e
+Transaction 0x135b2b4bc5ab4b67df312b2e39c5be94716ed615dfc0c5aea7ed5934126bd03e
+https://www.pharosscan.xyz/tx/0x135b2b4bc5ab4b67df312b2e39c5be94716ed615dfc0c5aea7ed5934126bd03e
+
+What happened: the transaction from 0xf7c8…3d62 to 0x974d…9f35 failed in block 20,051,313. Nothing it tried to do took effect, but the network fee of 0.002716 PROS was still paid.
+
+Why: The contract stopped it with the message "Min return not reached".
+
+What you can do: The price moved between when you got your quote and when the trade ran, beyond the slippage you allowed. Get a fresh quote and retry, or raise slippage tolerance slightly if the market is moving fast.
+
+(failure type: slippage; raw reason: Min return not reached; gas 271668/921600)

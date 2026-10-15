@@ -1,0 +1,6 @@
+$ node dapp-support-agent/explain.mjs 0x1111111111111111111111111111111111111111111111111111111111111111
+Transaction 0x1111111111111111111111111111111111111111111111111111111111111111
+
+I can't find this transaction on Pharos mainnet.
+If your wallet showed an error before sending (for example "insufficient funds for gas"), it was never broadcast, so nothing happened and no fee was paid.
+If you just sent it, wait a few seconds and ask again. Otherwise check the hash and the network.

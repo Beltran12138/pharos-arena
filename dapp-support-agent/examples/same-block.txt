@@ -1,0 +1,11 @@
+$ node dapp-support-agent/explain.mjs 0xca06b84455d9199ba9abaab13e8a3b2a76822276603af9cfcb4be98994ddae56
+Transaction 0xca06b84455d9199ba9abaab13e8a3b2a76822276603af9cfcb4be98994ddae56
+https://www.pharosscan.xyz/tx/0xca06b84455d9199ba9abaab13e8a3b2a76822276603af9cfcb4be98994ddae56
+
+What happened: the transaction from 0xf7c8…3d62 to 0x974d…9f35 failed in block 20,312,887. Nothing it tried to do took effect, but the network fee of 0.002669 PROS was still paid.
+
+Why: Replayed against the state just before block 20312887, it succeeds. Transactions earlier in the same block changed the state it depended on.
+
+What you can do: Nothing was wrong with the transaction itself: replayed against the state before its block, it succeeds. Other transactions in the same block changed the state first (typically a price or a balance). Retrying usually works; for trades, get a fresh quote.
+
+(failure type: same-block; gas 266921/921600)

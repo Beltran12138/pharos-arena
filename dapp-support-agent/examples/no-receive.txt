@@ -1,0 +1,11 @@
+$ node dapp-support-agent/explain.mjs 0xd5fe1baa6e7818dcba55048631558828bb99ddae3ad2908452945900e5e1fd55
+Transaction 0xd5fe1baa6e7818dcba55048631558828bb99ddae3ad2908452945900e5e1fd55
+https://www.pharosscan.xyz/tx/0xd5fe1baa6e7818dcba55048631558828bb99ddae3ad2908452945900e5e1fd55
+
+What happened: the transaction from 0x6e20…49d3 to LINK token failed in block 6,067,672. Nothing it tried to do took effect, but the network fee of 0.00021 PROS was still paid.
+
+Why: It sent 0.01 PROS to a contract with only 21000 gas, the amount for a wallet-to-wallet transfer. The contract has no simple way to receive PROS, so the transfer stopped.
+
+What you can do: You sent PROS to a contract that does not accept plain transfers. Send it to a wallet address, or use the contract's own deposit function.
+
+(failure type: no-receive; gas 21000/21000)

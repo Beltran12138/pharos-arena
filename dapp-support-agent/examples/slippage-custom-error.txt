@@ -1,0 +1,11 @@
+$ node dapp-support-agent/explain.mjs 0x9688a57bd1d7177103c84787ad066792e86a7904569b8fb0b74fb703d775c1ff
+Transaction 0x9688a57bd1d7177103c84787ad066792e86a7904569b8fb0b74fb703d775c1ff
+https://www.pharosscan.xyz/tx/0x9688a57bd1d7177103c84787ad066792e86a7904569b8fb0b74fb703d775c1ff
+
+What happened: the transaction from 0xc5f6…0f45 to 0x9365…b470 failed in block 20,318,454. Nothing it tried to do took effect, but the network fee of 0.002739 PROS was still paid.
+
+Why: The contract rejected it with the error InsufficientOutputAmount.
+
+What you can do: The price moved between when you got your quote and when the trade ran, beyond the slippage you allowed. Get a fresh quote and retry, or raise slippage tolerance slightly if the market is moving fast.
+
+(failure type: slippage; raw reason: InsufficientOutputAmount(uint256,uint256,uint256); gas 171965/540000)
