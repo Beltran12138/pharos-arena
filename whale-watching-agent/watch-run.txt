@@ -1,0 +1,4 @@
+$ node whale-watching-agent/whales.mjs watch --for 120 --interval 20
+watching 6 addresses from block 20323714; significant = ≥ $1000 or token thresholds {"WETH":0.5}
+
+stopped at block 20323812

@@ -1,0 +1,48 @@
+[2026-10-15 11:15] whale 2 (0xd094…8f44) received 96,603.73 USDC newly minted  (~$96,590)
+    why it matters: Fresh USDC minted to this wallet: typically bridged in from another chain (Circle CCTP) or issued by Circle. New money arriving on Pharos.
+    https://www.pharosscan.xyz/tx/0xcd2cb1b5bb76f0bca32cf53ee056c3e4db718c4a8786a2a119e96e03b2bacf50
+[2026-10-15 11:16] whale 4 (0x18e2…3dee) received 43,500 USDC newly minted  (~$43,494)
+    why it matters: Fresh USDC minted to this wallet: typically bridged in from another chain (Circle CCTP) or issued by Circle. New money arriving on Pharos.
+    https://www.pharosscan.xyz/tx/0x091400a2d111d69ff5ab8aad0796d46bd4815a23e16b2dec0b99c0d6b774c1ec
+[2026-10-15 11:18] whale 2 (0xd094…8f44) deposited 96,603.87 USDC into contract 0xd042…908a and received 93,793.07 APC3M (newly minted shares)  (~$96,590)
+    why it matters: Capital going into a protocol or vault: it stays on Pharos, now earning or locked, and the wallet holds a claim (the share token) instead.
+    https://www.pharosscan.xyz/tx/0xd85c239cd9d8c168ad5699b6568ecc597cb2957e7b4a37d8f48b9d8915cd56e8
+[2026-10-15 11:21] whale 4 (0x18e2…3dee) deposited 43,500 USDC into contract 0xd042…908a and received 42,234.32 APC3M (newly minted shares)  (~$43,494)
+    why it matters: Capital going into a protocol or vault: it stays on Pharos, now earning or locked, and the wallet holds a claim (the share token) instead.
+    https://www.pharosscan.xyz/tx/0x10153b3107ca720327ac69f16c9cbd93efadfb80640466bb4a289a43d1cf923c
+[2026-10-15 11:29] whale 3 (0x59c0…b8b2) received 87,999.8 USDC newly minted  (~$87,988)
+    why it matters: Fresh USDC minted to this wallet: typically bridged in from another chain (Circle CCTP) or issued by Circle. New money arriving on Pharos.
+    https://www.pharosscan.xyz/tx/0x03b59da399ca76b18671cb0e0e01a8efc5f8531ccfe01e6bbb1303a4dbbcd88d
+[2026-10-15 11:54] whale 1 (0xbeed…6dba) received 250,000 USDC newly minted  (~$249,965)
+    why it matters: Fresh USDC minted to this wallet: typically bridged in from another chain (Circle CCTP) or issued by Circle. New money arriving on Pharos.
+    https://www.pharosscan.xyz/tx/0x2621d7756cf6f8f2873d900861221e7c0cf84a18b2833d46c5f5d9872fac9710
+[2026-10-15 11:59] whale 1 (0xbeed…6dba) deposited 250,000 USDC into contract 0xd042…908a and received 242,725.97 APC3M (newly minted shares)  (~$249,965)
+    why it matters: Capital going into a protocol or vault: it stays on Pharos, now earning or locked, and the wallet holds a claim (the share token) instead.
+    https://www.pharosscan.xyz/tx/0x3e76e53158d04a189d166e9514f8854bf598e800f639594edfd2b17b0e4caa0c
+[2026-10-15 12:13] whale 3 (0x59c0…b8b2) deposited 88,099.6 USDC into contract 0xd042…908a and received 85,536.24 APC3M (newly minted shares)  (~$88,087)
+    why it matters: Capital going into a protocol or vault: it stays on Pharos, now earning or locked, and the wallet holds a claim (the share token) instead.
+    https://www.pharosscan.xyz/tx/0x5d166f2286e95b2ca4e38e8087bbf716d048e3031a278a2efd328bf9291a9ce6
+[2026-10-15 16:22] whale 5 (0x5c88…7ad4) received 39,999.7 USDC newly minted  (~$39,994)
+    why it matters: Fresh USDC minted to this wallet: typically bridged in from another chain (Circle CCTP) or issued by Circle. New money arriving on Pharos.
+    https://www.pharosscan.xyz/tx/0x2a6e7132135da72d5f8ee535f759fbcca0da64a1ce4371174ae950ee6359d456
+[2026-10-15 16:43] whale 5 (0x5c88…7ad4) deposited 39,999.7 USDC into contract 0xd042…908a and received 38,835.87 APC3M (newly minted shares)  (~$39,994)
+    why it matters: Capital going into a protocol or vault: it stays on Pharos, now earning or locked, and the wallet holds a claim (the share token) instead.
+    https://www.pharosscan.xyz/tx/0x29e67d5cbc71c162af228334b1016d352bc0d845241c8d0219a352ceba1bcf6d
+
+=== Summary: last 6 h, 10 significant move(s), threshold $1000, prices from Chainlink via Chain MCP ===
+  PROS $0.5971  USDC $0.9999  ETH $2427.34  LINK $12.39
+
+  Address                                      moves     in (USD)    out (USD)  last move
+  whale 1 (0xbeed…6dba)                            2      249,965      249,965  deposited 250,000 USDC into contract 0xd042…908a and receive
+  whale 2 (0xd094…8f44)                            2       96,590       96,590  deposited 96,603.87 USDC into contract 0xd042…908a and recei
+  whale 3 (0x59c0…b8b2)                            2       87,988       88,087  deposited 88,099.6 USDC into contract 0xd042…908a and receiv
+  whale 4 (0x18e2…3dee)                            2       43,494       43,494  deposited 43,500 USDC into contract 0xd042…908a and received
+  whale 5 (0x5c88…7ad4)                            2       39,994       39,994  deposited 39,999.7 USDC into contract 0xd042…908a and receiv
+  whale 6 (0x1f35…c85c)                            0            0            0  —
+
+  Pattern: 5 of 6 watched wallets called contract 0xd042…908a within 5.4 h, ~$518,131 in total; 5 of them had just received freshly minted USDC. Coordinated flow into one protocol: worth checking what that contract is.
+
+  Largest moves:
+  - $249,965: whale 1 (0xbeed…6dba) received 250,000 USDC newly minted
+  - $249,965: whale 1 (0xbeed…6dba) deposited 250,000 USDC into contract 0xd042…908a and received 242,725.97 APC3M (newly minted shares)
+  - $96,590: whale 2 (0xd094…8f44) deposited 96,603.87 USDC into contract 0xd042…908a and received 93,793.07 APC3M (newly minted shares)

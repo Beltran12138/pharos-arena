@@ -1,0 +1,11 @@
+{
+  "watch": [
+    { "label": "whale 1", "address": "0xbeedea7a42b4bc0d3dd6c74b5693bbfc8a196dba" },
+    { "label": "whale 2", "address": "0xd0946a13684d6dd060a2d492756dc223027a8f44" },
+    { "label": "whale 3", "address": "0x59c070079b441eb563bb06c8e42fc2f4adcbb8b2" },
+    { "label": "whale 4", "address": "0x18e20e29a4930138a10fa25f5440810bb06d3dee" },
+    { "label": "whale 5", "address": "0x5c88d61dbdf86573916ceba0fedb81b36aa97ad4" },
+    { "label": "whale 6", "address": "0x1f3546a29eec2102c8d52e21a45114124014c85c" }
+  ],
+  "thresholds": { "usd": 1000, "tokens": { "WETH": 0.5 } }
+}
