@@ -1,0 +1,13 @@
+$ node threshold-guardian/guardian.mjs threshold-guardian/configs/rebalance-after-move.json
+PROS/USDC rebalance guard (last rebalance at $0.58) — block 20,321,478 (2026-10-15T16:29:45.000Z), via Chain MCP
+  PASS  price moved since last rebalance   PROS/USD 0.600290 vs reference 0.58 (+3.50%)   [|move| ≥ 3%]
+  PASS  oracle is fresh                    PROS/USD updated 1354 s ago   [≤ 3600 s]
+  PASS  pool agrees with oracle            pool 0.598176 vs oracle 0.600290 (-0.35%)   [|deviation| ≤ 1.5%]
+  PASS  gas is cheap                       10 gwei   [≤ 20 gwei]
+  PASS  pool has USDC liquidity            527,866.63 USDC in 0x912c…f647   [≥ 100,000 USDC]
+
+Decision: FIRE → rebalance: swap back to the 50/50 PROS/USDC target through the WPROS/USDC pool
+  prepared request (hand to dry-run-executor / policy-gatekeeper):
+  {"note":"rebalance leg, size set by the portfolio","to":"0x974d1cf6ffa4fce5a4d62955afc02f45aac29f35"}
+trace appended to threshold-guardian/trace.jsonl
+[exit 0]

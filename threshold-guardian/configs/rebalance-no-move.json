@@ -1,0 +1,14 @@
+{
+  "name": "PROS/USDC rebalance guard (last rebalance at $0.60)",
+  "conditions": [
+    { "name": "price moved since last rebalance", "type": "feedMovePct", "pair": "PROS/USD", "reference": 0.60, "minPct": 3 },
+    { "name": "oracle is fresh", "type": "feedAge", "pair": "PROS/USD", "maxSeconds": 3600 },
+    { "name": "pool agrees with oracle", "type": "poolVsOracle", "pool": "0x912c9ade24d44d8922f0866d8dcb079f1363f647", "pair": "PROS/USD", "maxDeviationPct": 1.5 },
+    { "name": "gas is cheap", "type": "gasPrice", "maxGwei": 20 },
+    { "name": "pool has USDC liquidity", "type": "tokenBalance", "token": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "holder": "0x912c9ade24d44d8922f0866d8dcb079f1363f647", "min": 100000 }
+  ],
+  "action": {
+    "description": "rebalance: swap back to the 50/50 PROS/USDC target through the WPROS/USDC pool",
+    "request": { "note": "rebalance leg, size set by the portfolio", "to": "0x974d1cf6ffa4fce5a4d62955afc02f45aac29f35" }
+  }
+}
