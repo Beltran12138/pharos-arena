@@ -1,0 +1,66 @@
+
+════ 01-design-studio.txt  (format: text)
+  reference  INV-2026-0142
+  payee      Lighthouse Design Studio  0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+  amount     0.0003 WPROS  (2 line items)
+  due        2026-11-01    network 1672
+  Payment summary: pay 0.0003 WPROS to Lighthouse Design Studio (0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5) for invoice INV-2026-0142, from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071, on Pharos mainnet (chain 1672); max fee 0.000791 PROS.
+  The calldata carries "INV:INV-2026-0142" after the transfer arguments, so the payment can be matched to the invoice on chain.
+  → unsigned transaction (not signed, not sent): to 0x52C48d4213107b20bC583832b0d951FB9CA8F0B0, nonce 2, gas 79149; out\INV-2026-0142.json
+    wallet request: ethereum:0x52C48d4213107b20bC583832b0d951FB9CA8F0B0@1672/transfer?address=0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5&uint256=300000000000000
+
+════ 02-node-ops.json  (format: json)
+  reference  HNO-7731
+  payee      Harbor Node Ops  0x0000000000000000000000000000000000000b0b
+  amount     0.0002 PROS  (2 line items)
+  due        2026-10-26    network 1672
+  Payment summary: pay 0.0002 PROS to Harbor Node Ops (0x0000000000000000000000000000000000000B0b) for invoice HNO-7731, from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071, on Pharos mainnet (chain 1672); max fee 0.000343 PROS.
+  The calldata carries "INV:HNO-7731" after the transfer arguments, so the payment can be matched to the invoice on chain.
+  → unsigned transaction (not signed, not sent): to 0x0000000000000000000000000000000000000B0b, nonce 3, gas 34356; out\HNO-7731.json
+    wallet request: ethereum:0x0000000000000000000000000000000000000B0b@1672?value=200000000000000
+
+════ 03-payment-request.uri  (format: eip681)
+  reference  LDS-REQ-88
+  payee      Lighthouse Design Studio  0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+  amount     0.00015 WPROS
+  due        —    network 1672
+  Payment summary: pay 0.00015 WPROS to Lighthouse Design Studio (0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5) for invoice LDS-REQ-88, from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071, on Pharos mainnet (chain 1672); max fee 0.00079 PROS.
+  The calldata carries "INV:LDS-REQ-88" after the transfer arguments, so the payment can be matched to the invoice on chain.
+  → unsigned transaction (not signed, not sent): to 0x52C48d4213107b20bC583832b0d951FB9CA8F0B0, nonce 4, gas 79062; out\LDS-REQ-88.json
+    wallet request: ethereum:0x52C48d4213107b20bC583832b0d951FB9CA8F0B0@1672/transfer?address=0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5&uint256=150000000000000
+
+════ 04-bad-totals.txt  (format: text)
+  reference  INV-2026-0139
+  payee      Lighthouse Design Studio  0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+  amount     150 USDC  (2 line items)
+  due        2026-10-10    network 1672
+  FLAG amount: line items add up to 160, but the total says 150
+  FLAG amount: "Copy edits": 3 × 15 = 45, not 40
+  note due: due 2026-10-10, already past
+  → not prepared: fix or confirm the flagged fields with the payee first.
+
+════ 05-redirected-payee.json  (format: json)
+  reference  HNO-7732
+  payee      Harbor Node Ops  0x9b1F7e5a8C2d4E6f0A1b3C5d7E9f1A3b5C7d9E1f
+  amount     250 USDC  (1 line items)
+  due        2026-11-02    network 1672
+  FLAG payee: "Harbor Node Ops" is on file with 0x0000000000000000000000000000000000000b0b, but this invoice says pay 0x9b1F7e5a8C2d4E6f0A1b3C5d7E9f1A3b5C7d9E1f
+  → not prepared: fix or confirm the flagged fields with the payee first.
+
+════ 06-no-token.txt  (format: text)
+  reference  —
+  payee      Lighthouse Design Studio  0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+  amount     75 USD
+  due        —    network —
+  FLAG reference: no invoice number / reference found
+  FLAG currency: "USD" is not a token: say which token to pay in (e.g. USDC for USD)
+  note network: no network stated; preparing on Pharos mainnet (1672)
+  → not prepared: fix or confirm the flagged fields with the payee first.
+
+════ 01-design-studio.txt  (format: text)
+  reference  INV-2026-0142
+  payee      Lighthouse Design Studio  0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+  amount     0.0003 WPROS  (2 line items)
+  due        2026-11-01    network 1672
+  FLAG reference: invoice INV-2026-0142 was already prepared for payment on 2026-10-20T09:04:33.598Z
+  → not prepared: fix or confirm the flagged fields with the payee first.

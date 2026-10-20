@@ -24,6 +24,8 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`weekly-digest/`](weekly-digest/) | Weekly Digest Agent (Medium) | WPROS/USDC pool week vs previous week, top 3 notable events, to Telegram + a published page, on a schedule |
 | [`skill-chain-mcp-flow/`](skill-chain-mcp-flow/) | Skill + Chain MCP Flow (Medium) | A trade-timing Skill decides TRADE / SPLIT / WAIT from pool, oracle and tick-range state read through Chain MCP |
 | [`liquidation-watchdog/`](liquidation-watchdog/) | Liquidation Watchdog (Medium) | Morpho Blue positions: health factor with accrued interest, warn/critical alerts to Telegram with repay-or-add-collateral amounts |
+| [`natural-language-payment/`](natural-language-payment/) | Natural-Language Payment Agent (Medium) | "send 100 USDC to alice" → questions on ambiguity → on-chain checks → summary → unsigned tx + EIP-681 request |
+| [`invoice-to-payment/`](invoice-to-payment/) | Invoice-to-Payment Agent (Medium) | Text / JSON / EIP-681 invoices → flags (totals, payee redirection, duplicates) → unsigned payment with the reference in calldata |
 
 **Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state
 (4 of 80 reads through Chain MCP, 1 of 40 through `rpc.pharos.xyz`). Values that drive a decision are read

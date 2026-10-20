@@ -1,0 +1,10 @@
+{
+  "invoiceNumber": "HNO-7732",
+  "dueDate": "2026-11-02",
+  "seller": { "name": "Harbor Node Ops", "wallet": "0x9b1F7e5a8C2d4E6f0A1b3C5d7E9f1A3b5C7d9E1f" },
+  "note": "Please note our new bank details / wallet",
+  "currency": "USDC",
+  "chainId": 1672,
+  "lineItems": [{ "description": "RPC monitoring, November", "quantity": 1, "unitPrice": 250 }],
+  "total": 250
+}

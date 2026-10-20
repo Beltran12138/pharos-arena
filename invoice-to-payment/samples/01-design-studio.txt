@@ -1,0 +1,16 @@
+INVOICE
+
+Invoice No: INV-2026-0142
+Date: 2026-10-18
+Due date: 2026-11-01
+
+From: Lighthouse Design Studio
+Bill to: Pharos Arena builder
+
+  Icon set           2 x 0.0001 WPROS = 0.0002
+  Banner revision    1 x 0.0001 WPROS = 0.0001
+
+Total due: 0.0003 WPROS
+
+Pay to: 0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+Network: Pharos mainnet

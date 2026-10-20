@@ -1,0 +1,14 @@
+INVOICE
+
+Invoice No: INV-2026-0139
+Due date: 2026-10-10
+
+From: Lighthouse Design Studio
+
+  Landing page       1 x 120.00 USDC = 120.00
+  Copy edits         3 x 15.00 USDC = 40.00
+
+Total due: 150.00 USDC
+
+Pay to: 0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+Chain ID: 1672

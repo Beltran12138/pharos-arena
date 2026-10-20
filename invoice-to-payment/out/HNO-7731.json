@@ -1,0 +1,45 @@
+{
+ "invoice": "02-node-ops.json",
+ "extracted": {
+  "format": "json",
+  "reference": "HNO-7731",
+  "payee": {
+   "name": "Harbor Node Ops",
+   "address": "0x0000000000000000000000000000000000000b0b"
+  },
+  "total": 0.0002,
+  "currency": "PROS",
+  "items": [
+   {
+    "description": "RPC monitoring, October",
+    "quantity": 1,
+    "unitPrice": 0.00015,
+    "amount": 0.00015
+   },
+   {
+    "description": "Alert relay",
+    "quantity": 1,
+    "unitPrice": 0.00005,
+    "amount": 0.00005
+   }
+  ],
+  "dueDate": "2026-10-26",
+  "chainId": 1672,
+  "network": null
+ },
+ "issues": [],
+ "memo": "INV:HNO-7731",
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x0000000000000000000000000000000000000B0b",
+  "value": "200000000000000",
+  "data": "0x494e563a484e4f2d37373331",
+  "nonce": 3,
+  "gas": "34356",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xf838038502540be400828634940000000000000000000000000000000000000b0b86b5e620f480008c494e563a484e4f2d373733318206888080",
+ "uri": "ethereum:0x0000000000000000000000000000000000000B0b@1672?value=200000000000000"
+}

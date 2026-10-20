@@ -1,0 +1,47 @@
+{
+ "invoice": "01-design-studio.txt",
+ "extracted": {
+  "format": "text",
+  "reference": "INV-2026-0142",
+  "payee": {
+   "name": "Lighthouse Design Studio",
+   "address": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5"
+  },
+  "total": 0.0003,
+  "currency": "WPROS",
+  "items": [
+   {
+    "description": "Icon set",
+    "quantity": 2,
+    "unitPrice": 0.0001,
+    "amount": 0.0002,
+    "currency": "WPROS"
+   },
+   {
+    "description": "Banner revision",
+    "quantity": 1,
+    "unitPrice": 0.0001,
+    "amount": 0.0001,
+    "currency": "WPROS"
+   }
+  ],
+  "dueDate": "2026-11-01",
+  "chainId": 1672,
+  "network": "Pharos mainnet"
+ },
+ "issues": [],
+ "memo": "INV:INV-2026-0142",
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+  "value": "0",
+  "data": "0xa9059cbb0000000000000000000000006649228a90bef932a1aa98e5c4412dadba8a04c5000000000000000000000000000000000000000000000000000110d9316ec000494e563a494e562d323032362d30313432",
+  "nonce": 2,
+  "gas": "79149",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xf87d028502540be4008301352d9452c48d4213107b20bc583832b0d951fb9ca8f0b080b855a9059cbb0000000000000000000000006649228a90bef932a1aa98e5c4412dadba8a04c5000000000000000000000000000000000000000000000000000110d9316ec000494e563a494e562d323032362d303134328206888080",
+ "uri": "ethereum:0x52C48d4213107b20bC583832b0d951FB9CA8F0B0@1672/transfer?address=0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5&uint256=300000000000000"
+}

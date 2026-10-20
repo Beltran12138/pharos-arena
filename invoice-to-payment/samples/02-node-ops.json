@@ -1,0 +1,14 @@
+{
+  "invoiceNumber": "HNO-7731",
+  "issueDate": "2026-10-19",
+  "dueDate": "2026-10-26",
+  "seller": { "name": "Harbor Node Ops", "wallet": "0x0000000000000000000000000000000000000b0b" },
+  "buyer": { "name": "Pharos Arena builder" },
+  "currency": "PROS",
+  "chainId": 1672,
+  "lineItems": [
+    { "description": "RPC monitoring, October", "quantity": 1, "unitPrice": 0.00015 },
+    { "description": "Alert relay", "quantity": 1, "unitPrice": 0.00005 }
+  ],
+  "total": 0.0002
+}

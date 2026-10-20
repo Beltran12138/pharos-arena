@@ -1,0 +1,33 @@
+{
+ "invoice": "03-payment-request.uri",
+ "extracted": {
+  "format": "eip681",
+  "reference": "LDS-REQ-88",
+  "payee": {
+   "name": "Lighthouse Design Studio",
+   "address": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5"
+  },
+  "tokenAddress": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0",
+  "rawAmount": "150000000000000",
+  "total": 0.00015,
+  "currency": "WPROS",
+  "items": [],
+  "dueDate": null,
+  "chainId": 1672
+ },
+ "issues": [],
+ "memo": "INV:LDS-REQ-88",
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+  "value": "0",
+  "data": "0xa9059cbb0000000000000000000000006649228a90bef932a1aa98e5c4412dadba8a04c50000000000000000000000000000000000000000000000000000886c98b76000494e563a4c44532d5245512d3838",
+  "nonce": 4,
+  "gas": "79062",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xf87a048502540be400830134d69452c48d4213107b20bc583832b0d951fb9ca8f0b080b852a9059cbb0000000000000000000000006649228a90bef932a1aa98e5c4412dadba8a04c50000000000000000000000000000000000000000000000000000886c98b76000494e563a4c44532d5245512d38388206888080",
+ "uri": "ethereum:0x52C48d4213107b20bC583832b0d951FB9CA8F0B0@1672/transfer?address=0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5&uint256=150000000000000"
+}
