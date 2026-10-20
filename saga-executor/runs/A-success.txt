@@ -1,0 +1,24 @@
+$ node --env-file=.env saga-executor/saga.mjs run --amount 0.01
+Saga saga-20261020T132402: wrap 0.01 PROS → approve Morpho → supply to Morpho BTCVC/WPROS, from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+  state log: saga-executor/state/saga-20261020T132402.jsonl
+
+  13:24:05  saga     started      amount 0.01 PROS; WPROS already held 0.0004 (kept out of the saga)
+  13:24:05  wrap     pending
+  13:24:06  wrap     simulated    estimate_gas ok, gas limit 44082
+  13:24:07  wrap     signed       nonce 8, gas price 10 gwei https://www.pharosscan.xyz/tx/0xeded81652298e283f6dfd14a6df97a70866eafe742bff505974bb4babcd21266
+  13:24:07  wrap     sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0xeded81652298e283f6dfd14a6df97a70866eafe742bff505974bb4babcd21266
+  13:24:10  wrap     confirmed    block 20749630, gas used 27842 https://www.pharosscan.xyz/tx/0xeded81652298e283f6dfd14a6df97a70866eafe742bff505974bb4babcd21266
+  13:24:12  wrap     verified     WPROS balance +0.01 (expected +0.01)
+  13:24:12  approve  pending
+  13:24:12  approve  simulated    estimate_gas ok, gas limit 70800
+  13:24:13  approve  signed       nonce 9, gas price 10 gwei https://www.pharosscan.xyz/tx/0x8f580679858838be692da0ccb02f1a80c53305c208069ee1029786e830591910
+  13:24:14  approve  sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0x8f580679858838be692da0ccb02f1a80c53305c208069ee1029786e830591910
+  13:24:16  approve  confirmed    block 20749638, gas used 46111 https://www.pharosscan.xyz/tx/0x8f580679858838be692da0ccb02f1a80c53305c208069ee1029786e830591910
+  13:24:17  approve  verified     allowance to Morpho 0.01 WPROS
+  13:24:17  supply   pending
+  13:24:18  supply   simulated    estimate_gas ok, gas limit 163364
+  13:24:19  supply   signed       nonce 10, gas price 10 gwei https://www.pharosscan.xyz/tx/0x4c6d22f692b395efc522f6c05e7037e5abaac7b8d84f70912397065086a8105c
+  13:24:19  supply   sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0x4c6d22f692b395efc522f6c05e7037e5abaac7b8d84f70912397065086a8105c
+  13:24:22  supply   confirmed    block 20749645, gas used 102884 https://www.pharosscan.xyz/tx/0x4c6d22f692b395efc522f6c05e7037e5abaac7b8d84f70912397065086a8105c
+  13:24:27  supply   verified     WPROS balance -0.01, Morpho supply shares +4998783400317250923949
+  13:24:27  saga     completed    all 3 steps verified

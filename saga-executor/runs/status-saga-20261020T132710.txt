@@ -1,0 +1,8 @@
+Saga saga-20261020T132710: COMPENSATED (last change 2026-10-20T13:28:42.876Z)
+  wrap      verified   https://www.pharosscan.xyz/tx/0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74
+  approve   verified   https://www.pharosscan.xyz/tx/0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb
+  supply    failed    
+  revoke    verified   https://www.pharosscan.xyz/tx/0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0
+  unwrap    verified   https://www.pharosscan.xyz/tx/0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d
+  failure: supply: simulation reverts: execution reverted: market not created — not sent, no gas spent
+  now: compensated

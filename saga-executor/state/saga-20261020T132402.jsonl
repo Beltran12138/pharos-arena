@@ -1,0 +1,40 @@
+{"t":"2026-10-20T13:24:05.014Z","saga":"saga-20261020T132402","phase":"started","detail":"amount 0.01 PROS; WPROS already held 0.0004 (kept out of the saga)","start":{"amount":"10000000000000000","market":"0x6657f8b7ec9d900f8e975e3f7eb74b80e2783cbbacd1d3f90d144a3e34ad2faa","baselineWpros":"400000000000000","inject":{"failAt":null,"dropAt":null,"spikeAt":null},"from":"0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071"}}
+{"t":"2026-10-20T13:24:05.533Z","saga":"saga-20261020T132402","step":"wrap","state":"pending","detail":""}
+{"t":"2026-10-20T13:24:06.252Z","saga":"saga-20261020T132402","step":"wrap","state":"simulated","detail":"estimate_gas ok, gas limit 44082"}
+{"t":"2026-10-20T13:24:07.088Z","saga":"saga-20261020T132402","step":"wrap","state":"signed","detail":"nonce 8, gas price 10 gwei","tx":"0xeded81652298e283f6dfd14a6df97a70866eafe742bff505974bb4babcd21266","nonce":8}
+{"t":"2026-10-20T13:24:07.597Z","saga":"saga-20261020T132402","step":"wrap","state":"sent","detail":"broadcast through Chain MCP","tx":"0xeded81652298e283f6dfd14a6df97a70866eafe742bff505974bb4babcd21266","nonce":8}
+{"t":"2026-10-20T13:24:10.008Z","saga":"saga-20261020T132402","step":"wrap","state":"confirmed","detail":"block 20749630, gas used 27842","tx":"0xeded81652298e283f6dfd14a6df97a70866eafe742bff505974bb4babcd21266"}
+{"t":"2026-10-20T13:24:12.384Z","saga":"saga-20261020T132402","step":"wrap","state":"verified","detail":"WPROS balance +0.01 (expected +0.01)"}
+{"t":"2026-10-20T13:24:12.386Z","saga":"saga-20261020T132402","step":"approve","state":"pending","detail":""}
+{"t":"2026-10-20T13:24:12.974Z","saga":"saga-20261020T132402","step":"approve","state":"simulated","detail":"estimate_gas ok, gas limit 70800"}
+{"t":"2026-10-20T13:24:13.790Z","saga":"saga-20261020T132402","step":"approve","state":"signed","detail":"nonce 9, gas price 10 gwei","tx":"0x8f580679858838be692da0ccb02f1a80c53305c208069ee1029786e830591910","nonce":9}
+{"t":"2026-10-20T13:24:14.192Z","saga":"saga-20261020T132402","step":"approve","state":"sent","detail":"broadcast through Chain MCP","tx":"0x8f580679858838be692da0ccb02f1a80c53305c208069ee1029786e830591910","nonce":9}
+{"t":"2026-10-20T13:24:16.536Z","saga":"saga-20261020T132402","step":"approve","state":"confirmed","detail":"block 20749638, gas used 46111","tx":"0x8f580679858838be692da0ccb02f1a80c53305c208069ee1029786e830591910"}
+{"t":"2026-10-20T13:24:17.793Z","saga":"saga-20261020T132402","step":"approve","state":"verified","detail":"allowance to Morpho 0.01 WPROS"}
+{"t":"2026-10-20T13:24:17.795Z","saga":"saga-20261020T132402","step":"supply","state":"pending","detail":""}
+{"t":"2026-10-20T13:24:18.390Z","saga":"saga-20261020T132402","step":"supply","state":"simulated","detail":"estimate_gas ok, gas limit 163364"}
+{"t":"2026-10-20T13:24:19.522Z","saga":"saga-20261020T132402","step":"supply","state":"signed","detail":"nonce 10, gas price 10 gwei","tx":"0x4c6d22f692b395efc522f6c05e7037e5abaac7b8d84f70912397065086a8105c","nonce":10}
+{"t":"2026-10-20T13:24:19.935Z","saga":"saga-20261020T132402","step":"supply","state":"sent","detail":"broadcast through Chain MCP","tx":"0x4c6d22f692b395efc522f6c05e7037e5abaac7b8d84f70912397065086a8105c","nonce":10}
+{"t":"2026-10-20T13:24:22.461Z","saga":"saga-20261020T132402","step":"supply","state":"confirmed","detail":"block 20749645, gas used 102884","tx":"0x4c6d22f692b395efc522f6c05e7037e5abaac7b8d84f70912397065086a8105c"}
+{"t":"2026-10-20T13:24:27.405Z","saga":"saga-20261020T132402","step":"supply","state":"verified","detail":"WPROS balance -0.01, Morpho supply shares +4998783400317250923949"}
+{"t":"2026-10-20T13:24:27.406Z","saga":"saga-20261020T132402","phase":"completed","detail":"all 3 steps verified"}
+{"t":"2026-10-20T13:30:03.408Z","saga":"saga-20261020T132402","phase":"compensating","detail":"rollback requested: undo every verified step, newest first"}
+{"t":"2026-10-20T13:30:03.413Z","saga":"saga-20261020T132402","step":"withdraw","state":"pending","detail":""}
+{"t":"2026-10-20T13:30:05.915Z","saga":"saga-20261020T132402","step":"withdraw","state":"simulated","detail":"estimate_gas ok, gas limit 130615"}
+{"t":"2026-10-20T13:30:06.786Z","saga":"saga-20261020T132402","step":"withdraw","state":"signed","detail":"nonce 15, gas price 10 gwei","tx":"0x1e8ef150ab4e6c0b7d60d3f9b5b412ee779b3a920b17c6f8869ba704251d629f","nonce":15}
+{"t":"2026-10-20T13:30:07.185Z","saga":"saga-20261020T132402","step":"withdraw","state":"sent","detail":"broadcast through Chain MCP","tx":"0x1e8ef150ab4e6c0b7d60d3f9b5b412ee779b3a920b17c6f8869ba704251d629f","nonce":15}
+{"t":"2026-10-20T13:30:09.606Z","saga":"saga-20261020T132402","step":"withdraw","state":"confirmed","detail":"block 20749953, gas used 80836","tx":"0x1e8ef150ab4e6c0b7d60d3f9b5b412ee779b3a920b17c6f8869ba704251d629f"}
+{"t":"2026-10-20T13:30:13.866Z","saga":"saga-20261020T132402","step":"withdraw","state":"verified","detail":"WPROS balance +0.010000000193980304 back from Morpho, supply shares left 0"}
+{"t":"2026-10-20T13:30:13.868Z","saga":"saga-20261020T132402","step":"revoke","state":"pending","detail":""}
+{"t":"2026-10-20T13:30:14.525Z","saga":"saga-20261020T132402","step":"revoke","state":"simulated","detail":"estimate_gas ok, gas limit 41608"}
+{"t":"2026-10-20T13:30:15.353Z","saga":"saga-20261020T132402","step":"revoke","state":"signed","detail":"nonce 16, gas price 10 gwei","tx":"0x54821bbf1a3774736bddd805f2e756771fa228039dd4daef7bad51c4ccd3b907","nonce":16}
+{"t":"2026-10-20T13:30:15.757Z","saga":"saga-20261020T132402","step":"revoke","state":"sent","detail":"broadcast through Chain MCP","tx":"0x54821bbf1a3774736bddd805f2e756771fa228039dd4daef7bad51c4ccd3b907","nonce":16}
+{"t":"2026-10-20T13:30:18.082Z","saga":"saga-20261020T132402","step":"revoke","state":"confirmed","detail":"block 20749963, gas used 26151","tx":"0x54821bbf1a3774736bddd805f2e756771fa228039dd4daef7bad51c4ccd3b907"}
+{"t":"2026-10-20T13:30:19.221Z","saga":"saga-20261020T132402","step":"revoke","state":"verified","detail":"allowance to Morpho 0 WPROS"}
+{"t":"2026-10-20T13:30:19.223Z","saga":"saga-20261020T132402","step":"unwrap","state":"pending","detail":""}
+{"t":"2026-10-20T13:30:21.643Z","saga":"saga-20261020T132402","step":"unwrap","state":"simulated","detail":"estimate_gas ok, gas limit 55788"}
+{"t":"2026-10-20T13:30:22.446Z","saga":"saga-20261020T132402","step":"unwrap","state":"signed","detail":"nonce 17, gas price 10 gwei","tx":"0xd3eeb38f52e73fa70fae17fccca7461e5dfa1d56cefb88e312f18ad18f9f9ea4","nonce":17}
+{"t":"2026-10-20T13:30:22.893Z","saga":"saga-20261020T132402","step":"unwrap","state":"sent","detail":"broadcast through Chain MCP","tx":"0xd3eeb38f52e73fa70fae17fccca7461e5dfa1d56cefb88e312f18ad18f9f9ea4","nonce":17}
+{"t":"2026-10-20T13:30:25.217Z","saga":"saga-20261020T132402","step":"unwrap","state":"confirmed","detail":"block 20749971, gas used 35259","tx":"0xd3eeb38f52e73fa70fae17fccca7461e5dfa1d56cefb88e312f18ad18f9f9ea4"}
+{"t":"2026-10-20T13:30:27.680Z","saga":"saga-20261020T132402","step":"unwrap","state":"verified","detail":"WPROS balance -0.01 (unwrapped to PROS)"}
+{"t":"2026-10-20T13:30:27.681Z","saga":"saga-20261020T132402","phase":"compensated","detail":"undone: withdraw, revoke, unwrap"}

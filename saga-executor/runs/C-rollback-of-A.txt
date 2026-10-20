@@ -1,0 +1,23 @@
+$ node --env-file=.env saga-executor/saga.mjs rollback saga-20261020T132402
+Saga saga-20261020T132402 (rollback), from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+
+  13:30:03  saga     compensating rollback requested: undo every verified step, newest first
+  13:30:03  withdraw pending
+  13:30:05  withdraw simulated    estimate_gas ok, gas limit 130615
+  13:30:06  withdraw signed       nonce 15, gas price 10 gwei https://www.pharosscan.xyz/tx/0x1e8ef150ab4e6c0b7d60d3f9b5b412ee779b3a920b17c6f8869ba704251d629f
+  13:30:07  withdraw sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0x1e8ef150ab4e6c0b7d60d3f9b5b412ee779b3a920b17c6f8869ba704251d629f
+  13:30:09  withdraw confirmed    block 20749953, gas used 80836 https://www.pharosscan.xyz/tx/0x1e8ef150ab4e6c0b7d60d3f9b5b412ee779b3a920b17c6f8869ba704251d629f
+  13:30:13  withdraw verified     WPROS balance +0.010000000193980304 back from Morpho, supply shares left 0
+  13:30:13  revoke   pending
+  13:30:14  revoke   simulated    estimate_gas ok, gas limit 41608
+  13:30:15  revoke   signed       nonce 16, gas price 10 gwei https://www.pharosscan.xyz/tx/0x54821bbf1a3774736bddd805f2e756771fa228039dd4daef7bad51c4ccd3b907
+  13:30:15  revoke   sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0x54821bbf1a3774736bddd805f2e756771fa228039dd4daef7bad51c4ccd3b907
+  13:30:18  revoke   confirmed    block 20749963, gas used 26151 https://www.pharosscan.xyz/tx/0x54821bbf1a3774736bddd805f2e756771fa228039dd4daef7bad51c4ccd3b907
+  13:30:19  revoke   verified     allowance to Morpho 0 WPROS
+  13:30:19  unwrap   pending
+  13:30:21  unwrap   simulated    estimate_gas ok, gas limit 55788
+  13:30:22  unwrap   signed       nonce 17, gas price 10 gwei https://www.pharosscan.xyz/tx/0xd3eeb38f52e73fa70fae17fccca7461e5dfa1d56cefb88e312f18ad18f9f9ea4
+  13:30:22  unwrap   sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0xd3eeb38f52e73fa70fae17fccca7461e5dfa1d56cefb88e312f18ad18f9f9ea4
+  13:30:25  unwrap   confirmed    block 20749971, gas used 35259 https://www.pharosscan.xyz/tx/0xd3eeb38f52e73fa70fae17fccca7461e5dfa1d56cefb88e312f18ad18f9f9ea4
+  13:30:27  unwrap   verified     WPROS balance -0.01 (unwrapped to PROS)
+  13:30:27  saga     compensated  undone: withdraw, revoke, unwrap

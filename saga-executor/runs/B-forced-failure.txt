@@ -1,0 +1,40 @@
+$ node --env-file=.env saga-executor/saga.mjs run --amount 0.01 --spike-at wrap --drop-at approve --fail-at supply
+Saga saga-20261020T132710: wrap 0.01 PROS → approve Morpho → supply to Morpho BTCVC/WPROS, from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+  state log: saga-executor/state/saga-20261020T132710.jsonl
+
+  13:27:13  saga     started      amount 0.01 PROS; WPROS already held 0.0004 (kept out of the saga); injected: {"failAt":"supply","dropAt":"approve","spikeAt":"wrap"}
+  13:27:14  wrap     pending
+  13:27:14  wrap     simulated    estimate_gas ok, gas limit 44082
+  13:27:15  wrap     retrying     gas 80 gwei > cap 50 gwei (injected spike); waiting 15 s
+  13:27:18  wrap     retrying     gas 80 gwei > cap 50 gwei (injected spike); waiting 15 s
+  13:27:24  wrap     signed       nonce 11, gas price 10 gwei https://www.pharosscan.xyz/tx/0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74
+  13:27:24  wrap     sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74
+  13:27:28  wrap     confirmed    block 20749814, gas used 27842 https://www.pharosscan.xyz/tx/0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74
+  13:27:31  wrap     verified     WPROS balance +0.01 (expected +0.01)
+  13:27:31  approve  pending
+  13:27:31  approve  simulated    estimate_gas ok, gas limit 70800
+  13:27:32  approve  signed       nonce 12, gas price 10 gwei https://www.pharosscan.xyz/tx/0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb
+  13:27:32  approve  sent         injected: dropped — these bytes were NOT broadcast, as if the node had lost them https://www.pharosscan.xyz/tx/0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb
+  13:28:20  approve  retrying     no receipt after 45 s: dropped: the node does not know it; send the same signed bytes again https://www.pharosscan.xyz/tx/0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb
+  13:28:20  approve  sent         rebroadcast (same signed bytes) https://www.pharosscan.xyz/tx/0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb
+  13:28:22  approve  confirmed    block 20749867, gas used 46111 https://www.pharosscan.xyz/tx/0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb
+  13:28:24  approve  verified     allowance to Morpho 0.01 WPROS
+  13:28:24  supply   pending      injected: market params with lltv + 1 (no such market)
+  13:28:24  supply   failed       simulation reverts: execution reverted: market not created — not sent, no gas spent
+  13:28:24  saga     compensating supply failed permanently; undoing the verified steps
+  13:28:24  revoke   pending
+  13:28:25  revoke   simulated    estimate_gas ok, gas limit 45704
+  13:28:26  revoke   signed       nonce 13, gas price 10 gwei https://www.pharosscan.xyz/tx/0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0
+  13:28:26  revoke   sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0
+  13:28:29  revoke   confirmed    block 20749872, gas used 24151 https://www.pharosscan.xyz/tx/0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0
+  13:28:30  revoke   verified     allowance to Morpho 0 WPROS
+  13:28:30  unwrap   pending
+  13:28:32  unwrap   simulated    estimate_gas ok, gas limit 55788
+  13:28:33  unwrap   signed       nonce 14, gas price 10 gwei https://www.pharosscan.xyz/tx/0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d
+  13:28:34  unwrap   sent         broadcast through Chain MCP https://www.pharosscan.xyz/tx/0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d
+  13:28:39  unwrap   confirmed    block 20749879, gas used 35259 https://www.pharosscan.xyz/tx/0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d
+  13:28:42  unwrap   verified     WPROS balance -0.01 (unwrapped to PROS)
+  13:28:42  saga     compensated  undone: revoke, unwrap
+
+Note: "waiting 15 s" is what this version printed; for an injected spike it waits 3 s (see the timestamps).
+The message now prints the actual wait.

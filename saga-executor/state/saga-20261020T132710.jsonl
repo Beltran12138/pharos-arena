@@ -1,0 +1,33 @@
+{"t":"2026-10-20T13:27:13.661Z","saga":"saga-20261020T132710","phase":"started","detail":"amount 0.01 PROS; WPROS already held 0.0004 (kept out of the saga); injected: {\"failAt\":\"supply\",\"dropAt\":\"approve\",\"spikeAt\":\"wrap\"}","start":{"amount":"10000000000000000","market":"0x6657f8b7ec9d900f8e975e3f7eb74b80e2783cbbacd1d3f90d144a3e34ad2faa","baselineWpros":"400000000000000","inject":{"failAt":"supply","dropAt":"approve","spikeAt":"wrap"},"from":"0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071"}}
+{"t":"2026-10-20T13:27:14.271Z","saga":"saga-20261020T132710","step":"wrap","state":"pending","detail":""}
+{"t":"2026-10-20T13:27:14.975Z","saga":"saga-20261020T132710","step":"wrap","state":"simulated","detail":"estimate_gas ok, gas limit 44082"}
+{"t":"2026-10-20T13:27:15.374Z","saga":"saga-20261020T132710","step":"wrap","state":"retrying","detail":"gas 80 gwei > cap 50 gwei (injected spike); waiting 15 s"}
+{"t":"2026-10-20T13:27:18.954Z","saga":"saga-20261020T132710","step":"wrap","state":"retrying","detail":"gas 80 gwei > cap 50 gwei (injected spike); waiting 15 s"}
+{"t":"2026-10-20T13:27:24.228Z","saga":"saga-20261020T132710","step":"wrap","state":"signed","detail":"nonce 11, gas price 10 gwei","tx":"0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74","nonce":11}
+{"t":"2026-10-20T13:27:24.646Z","saga":"saga-20261020T132710","step":"wrap","state":"sent","detail":"broadcast through Chain MCP","tx":"0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74","nonce":11}
+{"t":"2026-10-20T13:27:28.874Z","saga":"saga-20261020T132710","step":"wrap","state":"confirmed","detail":"block 20749814, gas used 27842","tx":"0xb4783efa5b83be2a59340e96dff4fba816c9c660d21025d6357df51a0514ef74"}
+{"t":"2026-10-20T13:27:31.292Z","saga":"saga-20261020T132710","step":"wrap","state":"verified","detail":"WPROS balance +0.01 (expected +0.01)"}
+{"t":"2026-10-20T13:27:31.293Z","saga":"saga-20261020T132710","step":"approve","state":"pending","detail":""}
+{"t":"2026-10-20T13:27:31.978Z","saga":"saga-20261020T132710","step":"approve","state":"simulated","detail":"estimate_gas ok, gas limit 70800"}
+{"t":"2026-10-20T13:27:32.889Z","saga":"saga-20261020T132710","step":"approve","state":"signed","detail":"nonce 12, gas price 10 gwei","tx":"0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb","nonce":12}
+{"t":"2026-10-20T13:27:32.890Z","saga":"saga-20261020T132710","step":"approve","state":"sent","detail":"injected: dropped — these bytes were NOT broadcast, as if the node had lost them","tx":"0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb","nonce":12}
+{"t":"2026-10-20T13:28:20.069Z","saga":"saga-20261020T132710","step":"approve","state":"retrying","detail":"no receipt after 45 s: dropped: the node does not know it; send the same signed bytes again","tx":"0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb"}
+{"t":"2026-10-20T13:28:20.486Z","saga":"saga-20261020T132710","step":"approve","state":"sent","detail":"rebroadcast (same signed bytes)","tx":"0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb","nonce":12}
+{"t":"2026-10-20T13:28:22.811Z","saga":"saga-20261020T132710","step":"approve","state":"confirmed","detail":"block 20749867, gas used 46111","tx":"0xe23b37bf22a03d63fa1d9b8ff6d3972e304b7231d8235a0dc0c39001b1633deb"}
+{"t":"2026-10-20T13:28:24.243Z","saga":"saga-20261020T132710","step":"approve","state":"verified","detail":"allowance to Morpho 0.01 WPROS"}
+{"t":"2026-10-20T13:28:24.244Z","saga":"saga-20261020T132710","step":"supply","state":"pending","detail":"injected: market params with lltv + 1 (no such market)"}
+{"t":"2026-10-20T13:28:24.894Z","saga":"saga-20261020T132710","step":"supply","state":"failed","detail":"simulation reverts: execution reverted: market not created — not sent, no gas spent"}
+{"t":"2026-10-20T13:28:24.895Z","saga":"saga-20261020T132710","phase":"compensating","detail":"supply failed permanently; undoing the verified steps"}
+{"t":"2026-10-20T13:28:24.896Z","saga":"saga-20261020T132710","step":"revoke","state":"pending","detail":""}
+{"t":"2026-10-20T13:28:25.602Z","saga":"saga-20261020T132710","step":"revoke","state":"simulated","detail":"estimate_gas ok, gas limit 45704"}
+{"t":"2026-10-20T13:28:26.422Z","saga":"saga-20261020T132710","step":"revoke","state":"signed","detail":"nonce 13, gas price 10 gwei","tx":"0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0","nonce":13}
+{"t":"2026-10-20T13:28:26.841Z","saga":"saga-20261020T132710","step":"revoke","state":"sent","detail":"broadcast through Chain MCP","tx":"0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0","nonce":13}
+{"t":"2026-10-20T13:28:29.143Z","saga":"saga-20261020T132710","step":"revoke","state":"confirmed","detail":"block 20749872, gas used 24151","tx":"0x45902bea5cf0543c110db05feaa54408a0af2daeb9cc57f7a094a84ec799c9f0"}
+{"t":"2026-10-20T13:28:30.393Z","saga":"saga-20261020T132710","step":"revoke","state":"verified","detail":"allowance to Morpho 0 WPROS"}
+{"t":"2026-10-20T13:28:30.395Z","saga":"saga-20261020T132710","step":"unwrap","state":"pending","detail":""}
+{"t":"2026-10-20T13:28:32.865Z","saga":"saga-20261020T132710","step":"unwrap","state":"simulated","detail":"estimate_gas ok, gas limit 55788"}
+{"t":"2026-10-20T13:28:33.775Z","saga":"saga-20261020T132710","step":"unwrap","state":"signed","detail":"nonce 14, gas price 10 gwei","tx":"0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d","nonce":14}
+{"t":"2026-10-20T13:28:34.207Z","saga":"saga-20261020T132710","step":"unwrap","state":"sent","detail":"broadcast through Chain MCP","tx":"0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d","nonce":14}
+{"t":"2026-10-20T13:28:39.015Z","saga":"saga-20261020T132710","step":"unwrap","state":"confirmed","detail":"block 20749879, gas used 35259","tx":"0x4249c2606f83c649c731a9c679c34f248122b0a2c381dc35cbc769696f877f9d"}
+{"t":"2026-10-20T13:28:42.875Z","saga":"saga-20261020T132710","step":"unwrap","state":"verified","detail":"WPROS balance -0.01 (unwrapped to PROS)"}
+{"t":"2026-10-20T13:28:42.876Z","saga":"saga-20261020T132710","phase":"compensated","detail":"undone: revoke, unwrap"}

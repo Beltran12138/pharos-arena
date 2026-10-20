@@ -1,0 +1,14 @@
+# Independent check after A, B and C, straight from https://rpc.pharos.xyz (not through Chain MCP): every saga transaction's receipt (hash prefix, status, block, gas used, to), then the wallet's Morpho supply shares in BTCVC/WPROS, WPROS balance and allowance to Morpho, PROS balance.
+0x1e8ef150 success 20749953n 80836n 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb
+0x4249c260 success 20749879n 35259n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0x45902bea success 20749872n 24151n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0x4c6d22f6 success 20749645n 102884n 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb
+0x54821bbf success 20749963n 26151n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0x8f580679 success 20749638n 46111n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0xb4783efa success 20749814n 27842n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0xd3eeb38f success 20749971n 35259n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0xe23b37bf success 20749867n 46111n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+0xeded8165 success 20749630n 27842n 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+supplyShares 0n
+WPROS 0.000400000193980304 allowance 0
+PROS 4.981545845
