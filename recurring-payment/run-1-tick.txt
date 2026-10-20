@@ -1,0 +1,4 @@
+2026-10-20 08:59:08Z tick: 3 unpaid instance(s) due
+  subscription@2026-10-01: failed (balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance)
+  rent@2026-10-20: prepared → out/rent_2026-10-20.json nonce 2
+  payroll@2026-10-20: prepared → out/payroll_2026-10-20.json nonce 3

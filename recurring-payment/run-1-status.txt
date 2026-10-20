@@ -1,0 +1,14 @@
+Payer 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+
+rent: 0.0001 WPROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 weekly from 2026-10-20 (weekly rent to the landlord's wallet)
+  2026-10-20  PENDING signature: out/rent_2026-10-20.json (nonce 2)
+  next: 2026-10-27
+
+payroll: 0.0001 PROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 weekly from 2026-10-20 (weekly wage, native PROS)
+  2026-10-20  PENDING signature: out/payroll_2026-10-20.json (nonce 3)
+  next: 2026-10-27
+
+subscription: 1 USDC to 0x0000000000000000000000000000000000000b0b monthly from 2026-10-01 (monthly, but the payer holds no USDC)
+  2026-10-01  FAILED (attempt 1): balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance
+  next: 2026-11-01
+

@@ -1,0 +1,6 @@
+$ node --env-file=.env recurring-payment/sign.mjs out/rent_2026-10-20.json; … payroll; … rent again   (run by the payer)
+rent@2026-10-20: sent https://www.pharosscan.xyz/tx/0x497415a31e5380ff76934de68f1204c6d40e113c3679dc3a370c01cf8569e545
+  success in block 20733924, gas 51776
+payroll@2026-10-20: sent https://www.pharosscan.xyz/tx/0xf6e7c75f2b836e17490b515cd8044bc1321a029e8cb6343eae7031f62fe46ce6
+  success in block 20733935, gas 21288
+refused: nonce 2 is already used (account nonce is 4). rent@2026-10-20 was already sent or replaced; run the agent's tick to reconcile.

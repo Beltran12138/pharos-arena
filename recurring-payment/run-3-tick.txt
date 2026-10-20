@@ -1,0 +1,5 @@
+2026-10-20 09:10:37Z tick: 3 unpaid instance(s) due
+  subscription@2026-10-01: failed (balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance)
+  rent@2026-10-20: stale (nonce 2 was used by another transaction) nonce 2
+  rent@2026-10-20: prepared → out/rent_2026-10-20.json nonce 4
+  payroll@2026-10-20: paid https://www.pharosscan.xyz/tx/0xf6e7c75f2b836e17490b515cd8044bc1321a029e8cb6343eae7031f62fe46ce6

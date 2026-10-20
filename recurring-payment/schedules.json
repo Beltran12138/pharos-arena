@@ -1,0 +1,8 @@
+{
+  "payer": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "schedules": [
+    { "id": "rent", "note": "weekly rent to the landlord's wallet", "to": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5", "token": "WPROS", "amount": "0.0001", "every": "weekly", "start": "2026-10-20" },
+    { "id": "payroll", "note": "weekly wage, native PROS", "to": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5", "token": "PROS", "amount": "0.0001", "every": "weekly", "start": "2026-10-20" },
+    { "id": "subscription", "note": "monthly, but the payer holds no USDC", "to": "0x0000000000000000000000000000000000000b0b", "token": "USDC", "amount": "1", "every": "monthly", "start": "2026-10-01" }
+  ]
+}

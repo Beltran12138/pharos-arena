@@ -1,0 +1,3 @@
+2026-10-20 09:12:02Z tick: 2 unpaid instance(s) due
+  subscription@2026-10-01: failed (balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance)
+  rent@2026-10-20: paid https://www.pharosscan.xyz/tx/0x497415a31e5380ff76934de68f1204c6d40e113c3679dc3a370c01cf8569e545

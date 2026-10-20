@@ -1,0 +1,26 @@
+{
+ "instance": "payroll@2026-10-20",
+ "schedule": {
+  "id": "payroll",
+  "note": "weekly wage, native PROS",
+  "to": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5",
+  "token": "PROS",
+  "amount": "0.0001",
+  "every": "weekly",
+  "start": "2026-10-20"
+ },
+ "dueAt": "2026-10-20T00:00:00.000Z",
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5",
+  "value": "100000000000000",
+  "data": "0x706179726f6c6c40323032362d31302d3230",
+  "nonce": 3,
+  "gas": "34496",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xf83e038502540be4008286c0946649228a90bef932a1aa98e5c4412dadba8a04c5865af3107a400092706179726f6c6c40323032362d31302d32308206888080",
+ "uri": "ethereum:0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5@1672?value=100000000000000"
+}

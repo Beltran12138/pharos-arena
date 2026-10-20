@@ -1,0 +1,9 @@
+{"at":"2026-10-20T08:59:17.605Z","instance":"subscription@2026-10-01","event":"failed","reason":"balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance"}
+{"at":"2026-10-20T08:59:21.768Z","instance":"rent@2026-10-20","event":"prepared","nonce":2,"file":"out/rent_2026-10-20.json"}
+{"at":"2026-10-20T08:59:23.750Z","instance":"payroll@2026-10-20","event":"prepared","nonce":3,"file":"out/payroll_2026-10-20.json"}
+{"at":"2026-10-20T09:10:47.331Z","instance":"subscription@2026-10-01","event":"failed","reason":"balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance"}
+{"at":"2026-10-20T09:10:47.332Z","instance":"rent@2026-10-20","event":"stale","nonce":2,"reason":"nonce 2 was used by another transaction"}
+{"at":"2026-10-20T09:10:50.886Z","instance":"rent@2026-10-20","event":"prepared","nonce":4,"file":"out/rent_2026-10-20.json"}
+{"at":"2026-10-20T09:10:50.887Z","instance":"payroll@2026-10-20","event":"paid","tx":"0xf6e7c75f2b836e17490b515cd8044bc1321a029e8cb6343eae7031f62fe46ce6","logIndex":-1,"block":20733935,"amount":"0.0001","token":"PROS"}
+{"at":"2026-10-20T09:12:12.381Z","instance":"subscription@2026-10-01","event":"failed","reason":"balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance"}
+{"at":"2026-10-20T09:12:12.382Z","instance":"rent@2026-10-20","event":"paid","tx":"0x497415a31e5380ff76934de68f1204c6d40e113c3679dc3a370c01cf8569e545","logIndex":5,"block":20733924,"amount":"0.0001","token":"WPROS"}

@@ -1,0 +1,14 @@
+Payer 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+
+rent: 0.0001 WPROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 weekly from 2026-10-20 (weekly rent to the landlord's wallet)
+  2026-10-20  PAID https://www.pharosscan.xyz/tx/0x497415a31e5380ff76934de68f1204c6d40e113c3679dc3a370c01cf8569e545
+  next: 2026-10-27
+
+payroll: 0.0001 PROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 weekly from 2026-10-20 (weekly wage, native PROS)
+  2026-10-20  PAID https://www.pharosscan.xyz/tx/0xf6e7c75f2b836e17490b515cd8044bc1321a029e8cb6343eae7031f62fe46ce6
+  next: 2026-10-27
+
+subscription: 1 USDC to 0x0000000000000000000000000000000000000b0b monthly from 2026-10-01 (monthly, but the payer holds no USDC)
+  2026-10-01  FAILED (attempt 3): balance: sender holds 0 USDC, needs 1; simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance
+  next: 2026-11-01
+
