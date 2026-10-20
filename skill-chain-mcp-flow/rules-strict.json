@@ -1,0 +1,8 @@
+{
+  "maxOracleAgeSec": 3900,
+  "maxDeviationPct": 0.1,
+  "maxImpactPct": 0.3,
+  "slippagePct": 0.5,
+  "gasReservePros": 0.01,
+  "maxChunks": 20
+}

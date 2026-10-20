@@ -1,0 +1,128 @@
+=== run 1: "sell 3 PROS for USDC" --wallet 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+[    0 ms] request   "sell 3 PROS for USDC" → sell 3 PROS for USDC, wallet 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+[ 2789 ms] chain-mcp get_block_number → block 20729580 (1521 ms)
+[ 2896 ms] chain-mcp get_block → block 20729580 @ 2026-10-20T08:03:07.000Z (105 ms)
+[ 3195 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (296 ms)
+[ 3670 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (475 ms)
+[ 3976 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (304 ms)
+[ 4360 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (384 ms)
+[ 4775 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (414 ms)
+[ 5186 ms] chain-mcp eth_call to 0x52c48d42… → 0x0000000000000000… (32 bytes) (409 ms)
+[ 5368 ms] chain-mcp eth_call to 0xc879c018… → 0x0000000000000000… (32 bytes) (180 ms)
+[ 5647 ms] chain-mcp eth_call to 0x371Ed36a… → 0x0000000000000000… (160 bytes) (279 ms)
+[ 6122 ms] chain-mcp eth_call to 0x3f882C4F… → 0x0000000000000000… (160 bytes) (474 ms)
+[ 6300 ms] chain-mcp get_gas_price → 10000000000 wei (178 ms)
+[ 6615 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (314 ms)
+[ 7056 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (439 ms)
+[ 7359 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (302 ms)
+[ 8082 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (722 ms)
+[ 8338 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (255 ms)
+[ 8433 ms] chain-mcp get_balance 0x6Ea606Ec… → 4998397755000000000 wei (95 ms)
+[ 8476 ms] skill     rules.json → TRADE
+              ok   oracle fresh: Chainlink PROS/USD updated 2576s ago (limit 3900s)
+              ok   pool vs oracle: pool 0.62209 vs oracle 0.62493 USD (-0.455%; 0.455% against you, limit 0.5%)
+              ok   balance: wallet holds 4.9984 of the 3 to sell
+              ok   gas reserve: 1.9984 PROS left for gas after the sale (one swap ≈ 0.003 PROS at 10000000000 wei, reserve 0.01)
+              ok   pool depth: quote 1.8661 out of a reserve of 539,983.8626
+              ok   liquidity range: price moves to tick -281072; constant liquidity holds to tick -281856 (no initialized tick in the 1024 slots scanned)
+              ok   price impact: 0.0103% for the full size (limit 0.3%, incl. 0.01% fee)
+
+TRADE: 3 PROS → expect 1.8661 USDC, minimum 1.8567 USDC (slippage 0.5%).
+
+Prepared commands (pharos-skill-engine format, mainnet; sign with your own key):
+  cast send 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0 "deposit()" --value 3ether --private-key $PRIVATE_KEY --rpc-url https://rpc.pharos.xyz   # wrap PROS → WPROS
+  cast call 0x912c9ade24d44d8922f0866d8dcb079f1363f647 "slot0()(uint160,int24,uint16,uint16,uint16,uint8,bool)" --rpc-url https://rpc.pharos.xyz   # re-check the price just before signing
+  then swap 3 WPROS in the WPROS/USDC 0.01% pool with amountOutMinimum = 1856742 (raw USDC units)
+
+=== run 2: "sell 20000 WPROS for USDC" 
+[    0 ms] request   "sell 20000 WPROS for USDC" → sell 20000 WPROS for USDC
+[ 1318 ms] chain-mcp get_block_number → block 20729591 (375 ms)
+[ 1404 ms] chain-mcp get_block → block 20729591 @ 2026-10-20T08:03:18.000Z (85 ms)
+[ 1733 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (326 ms)
+[ 1938 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (205 ms)
+[ 2157 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (217 ms)
+[ 2476 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (318 ms)
+[ 2891 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (414 ms)
+[ 3465 ms] chain-mcp eth_call to 0x52c48d42… → 0x0000000000000000… (32 bytes) (573 ms)
+[ 3689 ms] chain-mcp eth_call to 0xc879c018… → 0x0000000000000000… (32 bytes) (223 ms)
+[ 4387 ms] chain-mcp eth_call to 0x371Ed36a… → 0x0000000000000000… (160 bytes) (697 ms)
+[ 4702 ms] chain-mcp eth_call to 0x3f882C4F… → 0x0000000000000000… (160 bytes) (315 ms)
+[ 4800 ms] chain-mcp get_gas_price → 10000000000 wei (98 ms)
+[ 5095 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (294 ms)
+[ 5480 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (383 ms)
+[ 5811 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (330 ms)
+[ 6173 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (362 ms)
+[ 6426 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (253 ms)
+[ 6469 ms] skill     rules.json → SPLIT
+              ok   oracle fresh: Chainlink PROS/USD updated 2587s ago (limit 3900s)
+              ok   pool vs oracle: pool 0.62209 vs oracle 0.62493 USD (-0.455%; 0.455% against you, limit 0.5%)
+              ok   pool depth: quote 12,200.396 out of a reserve of 539,983.8626
+              ok   liquidity range: price moves to tick -281461; constant liquidity holds to tick -281856 (no initialized tick in the 1024 slots scanned)
+              FAIL price impact: 1.9400% for the full size (limit 0.3%, incl. 0.01% fee)
+
+SPLIT: 7 chunks of 2,857.1429 WPROS → expect 1,772.2348 USDC per chunk, minimum 1,763.3736 USDC (slippage 0.5%).
+Note: space the chunks out and re-run the skill before each one; back-to-back chunks get the same price as one big trade.
+
+Prepared commands (pharos-skill-engine format, mainnet; sign with your own key):
+  cast call 0x912c9ade24d44d8922f0866d8dcb079f1363f647 "slot0()(uint160,int24,uint16,uint16,uint16,uint8,bool)" --rpc-url https://rpc.pharos.xyz   # re-check the price just before signing
+  then swap 2857.142857142857142857 WPROS in the WPROS/USDC 0.01% pool with amountOutMinimum = 1763373641 (raw USDC units)
+
+=== run 3: "sell 120000 WPROS for USDC" 
+[    1 ms] request   "sell 120000 WPROS for USDC" → sell 120000 WPROS for USDC
+[ 1390 ms] chain-mcp get_block_number → block 20729600 (461 ms)
+[ 1579 ms] chain-mcp get_block → block 20729600 @ 2026-10-20T08:03:26.000Z (186 ms)
+[ 1949 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (368 ms)
+[ 2248 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (298 ms)
+[ 2621 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (370 ms)
+[ 3020 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (399 ms)
+[ 3447 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (426 ms)
+[ 3692 ms] chain-mcp eth_call to 0x52c48d42… → 0x0000000000000000… (32 bytes) (244 ms)
+[ 4003 ms] chain-mcp eth_call to 0xc879c018… → 0x0000000000000000… (32 bytes) (310 ms)
+[ 4252 ms] chain-mcp eth_call to 0x371Ed36a… → 0x0000000000000000… (160 bytes) (248 ms)
+[ 4604 ms] chain-mcp eth_call to 0x3f882C4F… → 0x0000000000000000… (160 bytes) (351 ms)
+[ 4701 ms] chain-mcp get_gas_price → 10000000000 wei (97 ms)
+[ 5114 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (413 ms)
+[ 5379 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (264 ms)
+[ 5728 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (348 ms)
+[ 6029 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (300 ms)
+[ 6240 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (211 ms)
+[ 6278 ms] skill     rules.json → WAIT
+              ok   oracle fresh: Chainlink PROS/USD updated 2595s ago (limit 3900s)
+              ok   pool vs oracle: pool 0.62209 vs oracle 0.62493 USD (-0.455%; 0.455% against you, limit 0.5%)
+              ok   pool depth: quote 66,759.3774 out of a reserve of 539,983.8626
+              FAIL liquidity range: price moves to tick -283304; constant liquidity holds to tick -281856 (no initialized tick in the 1024 slots scanned)
+              FAIL price impact: 10.5709% for the full size (limit 0.3%, incl. 0.01% fee)
+
+WAIT: no chunk size up to 20 chunks stays within 0.3% impact and the liquidity range. Nothing to sign. Re-run when the failing check clears.
+
+=== run 4: "sell 3 PROS for USDC" --wallet 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 --rules skill-chain-mcp-flow/rules-strict.json
+[    0 ms] request   "sell 3 PROS for USDC" → sell 3 PROS for USDC, wallet 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+[ 1735 ms] chain-mcp get_block_number → block 20729608 (361 ms)
+[ 1832 ms] chain-mcp get_block → block 20729608 @ 2026-10-20T08:03:34.000Z (95 ms)
+[ 2215 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (381 ms)
+[ 2623 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (224 bytes) (408 ms)
+[ 2900 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (273 ms)
+[ 4355 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (1455 ms)
+[ 4717 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (361 ms)
+[ 5043 ms] chain-mcp eth_call to 0x52c48d42… → 0x0000000000000000… (32 bytes) (325 ms)
+[ 5372 ms] chain-mcp eth_call to 0xc879c018… → 0x0000000000000000… (32 bytes) (328 ms)
+[ 5779 ms] chain-mcp eth_call to 0x371Ed36a… → 0x0000000000000000… (160 bytes) (407 ms)
+[ 6065 ms] chain-mcp eth_call to 0x3f882C4F… → 0x0000000000000000… (160 bytes) (285 ms)
+[ 6169 ms] chain-mcp get_gas_price → 10000000000 wei (104 ms)
+[ 6577 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (407 ms)
+[ 7280 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (702 ms)
+[ 7606 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (325 ms)
+[ 7876 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (269 ms)
+[ 8150 ms] chain-mcp eth_call to 0x912c9ade… → 0x0000000000000000… (32 bytes) (274 ms)
+[ 8338 ms] chain-mcp get_balance 0x6Ea606Ec… → 4998397755000000000 wei (187 ms)
+[ 8393 ms] skill     rules-strict.json → WAIT
+              ok   oracle fresh: Chainlink PROS/USD updated 2603s ago (limit 3900s)
+              FAIL pool vs oracle: pool 0.62209 vs oracle 0.62493 USD (-0.455%; 0.455% against you, limit 0.1%)
+              ok   balance: wallet holds 4.9984 of the 3 to sell
+              ok   gas reserve: 1.9984 PROS left for gas after the sale (one swap ≈ 0.003 PROS at 10000000000 wei, reserve 0.01)
+              ok   pool depth: quote 1.8661 out of a reserve of 539,983.8626
+              ok   liquidity range: price moves to tick -281072; constant liquidity holds to tick -281856 (no initialized tick in the 1024 slots scanned)
+              ok   price impact: 0.0103% for the full size (limit 0.3%, incl. 0.01% fee)
+
+WAIT: pool vs oracle. Nothing to sign. Re-run when the failing check clears.
+
