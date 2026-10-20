@@ -1,9 +1,9 @@
-Block 20738255 (2026-10-20T10:17:01.000Z): 17 yield sources; gas ≈ $0.00093 per transaction
+Block 20738882 (2026-10-20T10:26:37.000Z): 17 yield sources; gas ≈ $0.00093 per transaction
 
-  USDC   13.50%  VRPC-Aku                     exit async (not verified)  (share price 1.006962 at block 20133455 → 1.009411 at block 20738255)
-  USDC   13.50%  RPC-AKU vault                exit sync, fee 0%  (share price 1.006962 at block 20133455 → 1.009411 at block 20738255)
-  USDC   12.92%  APC3M (AxilPrimeCredit-3M)   exit async (not verified)  (share price 1.029278 at block 20133455 → 1.031679 at block 20738255)
-  USDC    9.29%  APT vault                    exit async, fee 0.15% (not verified)  (share price 1.004855 at block 20133455 → 1.006569 at block 20738255)
+  USDC   13.50%  VRPC-Aku                     exit async, 0 USDC on hand (not verified)  (share price 1.006962 at block 20134082 → 1.009411 at block 20738882)
+  USDC   13.50%  RPC-AKU vault                exit sync, fee 0%, 0 USDC on hand (not verified)  (share price 1.006962 at block 20134082 → 1.009411 at block 20738882)
+  USDC   12.92%  APC3M (AxilPrimeCredit-3M)   exit async, 0 USDC on hand (not verified)  (share price 1.029278 at block 20134082 → 1.031679 at block 20738882)
+  USDC    9.29%  APT vault                    exit async, fee 0.15%, 0 USDC on hand (not verified)  (share price 1.004855 at block 20134082 → 1.006569 at block 20738882)
   USDC    7.78%  Morpho strUSD/USDC           liquidity 0.05 USDC  (borrow 8.48% × utilization 91.7%)
   USDC    5.46%  Morpho wsrUSD/USDC           liquidity 586,859.82 USDC  (borrow 6.00% × utilization 91.0%)
   USDC    5.35%  Morpho syzUSD/USDC           liquidity 333,954.07 USDC  (borrow 5.93% × utilization 90.2%)
@@ -20,51 +20,46 @@ Block 20738255 (2026-10-20T10:17:01.000Z): 17 yield sources; gas ≈ $0.00093 pe
 
 ════ A-idle-usdc: 10,000 USDC in the wallet, hold ≥ 30 days, move only if ≥ $5
   staying: 0.00% → $0.00 over the period
-       RPC-AKU vault                13.50% → gross $110.96, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $110.96
-       Morpho wsrUSD/USDC           5.45% (5.46% now, 5.45% after adding 10000) → gross $44.79, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $44.79
-       Morpho syzUSD/USDC           5.34% (5.35% now, 5.34% after adding 10000) → gross $43.85, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $43.85
+       Morpho wsrUSD/USDC           5.45% (5.46% now, 5.45% after adding 10000) → gross $44.80, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $44.79
+       Morpho syzUSD/USDC           5.34% (5.35% now, 5.34% after adding 10000) → gross $43.86, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $43.85
        Morpho WPROS/USDC            4.93% (4.98% now, 4.93% after adding 10000) → gross $40.52, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $40.52
        Morpho APC3M/USDC            3.81% (3.84% now, 3.81% after adding 10000) → gross $31.29, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $31.29
        Morpho APT/USDC              2.36% (2.38% now, 2.36% after adding 10000) → gross $19.35, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $19.35
-  → MOVE: RPC-AKU vault: +$110.96 over 30 days after costs ($0.00) compared with leaving it in the wallet
+       Morpho BTCVC/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $-0.00
+  → MOVE: Morpho wsrUSD/USDC: +$44.79 over 30 days after costs ($0.00) compared with leaving it in the wallet
   prepared for 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 to sign, in order (out\A-idle-usdc.json):
-    1. approve 10000 USDC to RPC-AKU vault: to 0xc879c018db60520f4355c26ed1a6d572cdac1815, data 0x095ea7b3… (68 bytes)
-    2. deposit 10000 USDC into RPC-AKU vault: to 0xbf5bbf9d11763c129a8c37752e196914159b177e, data 0x6e553f65… (68 bytes)
+    1. approve 10000 USDC to Morpho wsrUSD/USDC: to 0xc879c018db60520f4355c26ed1a6d572cdac1815, data 0x095ea7b3… (68 bytes)
+    2. supply 10000 USDC to Morpho wsrUSD/USDC: to 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb, data 0xa99aad89… (324 bytes)
     step 1 simulates OK from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 (71481 gas); the owner holds 0 USDC, so the deposit would fail until 10000 is there — this is the plan for whoever holds it
 
 ════ B-from-morpho: 10,000 USDC in Morpho syzUSD/USDC, hold ≥ 30 days, move only if ≥ $5
   staying: 5.35% → $43.98 over the period
-       RPC-AKU vault                13.50% → gross $110.96, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $66.98
-       Morpho wsrUSD/USDC           5.45% (5.46% now, 5.45% after adding 10000) → gross $44.79, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $0.81
+       Morpho wsrUSD/USDC           5.45% (5.46% now, 5.45% after adding 10000) → gross $44.80, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $0.81
        Morpho WPROS/USDC            4.93% (4.98% now, 4.93% after adding 10000) → gross $40.52, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-3.47
        Morpho APC3M/USDC            3.81% (3.84% now, 3.81% after adding 10000) → gross $31.29, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-12.69
        Morpho APT/USDC              2.36% (2.38% now, 2.36% after adding 10000) → gross $19.35, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-24.63
        Morpho BTCVC/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-43.99
-  → MOVE: RPC-AKU vault: +$66.98 over 30 days after costs ($0.00) compared with staying in Morpho syzUSD/USDC
-  prepared for 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 to sign, in order (out\B-from-morpho.json):
-    1. withdraw 10000 USDC from Morpho syzUSD/USDC: to 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb, data 0x5c2bea49… (292 bytes)
-    2. approve 10000 USDC to RPC-AKU vault: to 0xc879c018db60520f4355c26ed1a6d572cdac1815, data 0x095ea7b3… (68 bytes)
-    3. deposit 10000 USDC into RPC-AKU vault: to 0xbf5bbf9d11763c129a8c37752e196914159b177e, data 0x6e553f65… (68 bytes)
-    step 1 would fail if sent now from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071: execution reverted: arithmetic underflow or overflow
+       Morpho VRPCW/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-43.99
+  → STAY PUT: best move (Morpho wsrUSD/USDC) gains $0.81 over 30 days after costs, below the $5 minimum
 
 ════ C-short-hold: 1,000 USDC in Morpho wsrUSD/USDC, hold ≥ 7 days, move only if ≥ $5
   staying: 5.46% → $1.05 over the period
-       RPC-AKU vault                13.50% → gross $2.59, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $1.54
        Morpho syzUSD/USDC           5.35% → gross $1.03, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-0.02
        Morpho WPROS/USDC            4.97% → gross $0.95, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-0.10
        Morpho APC3M/USDC            3.84% → gross $0.74, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-0.31
        Morpho APT/USDC              2.38% → gross $0.46, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-0.59
        Morpho BTCVC/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-1.05
-  → STAY PUT: best move (RPC-AKU vault) gains $1.54 over 7 days after costs, below the $5 minimum
+       Morpho VRPCW/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-1.05
+  → STAY PUT: best move (Morpho syzUSD/USDC) gains $-0.02 over 7 days after costs, below the $5 minimum
 
 ════ D-stuck: 1,000,000 USDC in Morpho wsrUSD/USDC, hold ≥ 30 days, move only if ≥ $5
-  staying: 5.46% → $4486.07 over the period
-       RPC-AKU vault                13.50% → gross $11096.20, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $6610.13
-       Morpho syzUSD/USDC           4.14% (5.35% now, 4.14% after adding 1000000) → gross $3403.55, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-1082.52
-       Morpho WPROS/USDC            2.60% (4.98% now, 2.60% after adding 1000000) → gross $2139.94, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-2346.14
-       Morpho APC3M/USDC            2.10% (3.84% now, 2.10% after adding 1000000) → gross $1726.95, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-2759.13
-       Morpho APT/USDC              1.19% (2.38% now, 1.19% after adding 1000000) → gross $977.34, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-3508.73
-       Morpho BTCVC/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-4486.07
+  staying: 5.46% → $4486.36 over the period
+       Morpho syzUSD/USDC           4.14% (5.35% now, 4.14% after adding 1000000) → gross $3403.65, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-1082.71
+       Morpho WPROS/USDC            2.60% (4.98% now, 2.60% after adding 1000000) → gross $2140.08, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-2346.28
+       Morpho APC3M/USDC            2.10% (3.84% now, 2.10% after adding 1000000) → gross $1726.92, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-2759.45
+       Morpho APT/USDC              1.19% (2.38% now, 1.19% after adding 1000000) → gross $977.36, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-3509.00
+       Morpho BTCVC/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-4486.36
+       Morpho VRPCW/USDC            0.00% → gross $0.00, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0028), net vs staying $-4486.36
   → STAY PUT: only 586859.82 USDC can be withdrawn from Morpho wsrUSD/USDC right now (utilization), less than 1000000
 
 ════ E-dust-wpros: 0.0003 WPROS in the wallet, hold ≥ 30 days, move only if ≥ $0.01
@@ -77,14 +72,14 @@ Block 20738255 (2026-10-20T10:17:01.000Z): 17 yield sources; gas ≈ $0.00093 pe
 
 ════ F-accept-unverified: 10,000 USDC in the wallet, hold ≥ 30 days, move only if ≥ $5
   staying: 0.00% → $0.00 over the period
-       RPC-AKU vault                13.50% → gross $110.96, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $110.96
        VRPC-Aku                     13.50% → gross $110.96, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $110.96
-       APC3M (AxilPrimeCredit-3M)   12.92% → gross $106.15, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $106.15
+       RPC-AKU vault                13.50% → gross $110.96, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $110.96
+       APC3M (AxilPrimeCredit-3M)   12.92% → gross $106.16, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $106.15
        APT vault                    9.29% → gross $76.37, costs $15.00 (exit now $0.00, entry $0.00, exit later $15.00, gas $0.0019), net vs staying $61.37
-       Morpho wsrUSD/USDC           5.45% (5.46% now, 5.45% after adding 10000) → gross $44.79, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $44.79
-       Morpho syzUSD/USDC           5.34% (5.35% now, 5.34% after adding 10000) → gross $43.85, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $43.85
-  → MOVE: RPC-AKU vault: +$110.96 over 30 days after costs ($0.00) compared with leaving it in the wallet
+       Morpho wsrUSD/USDC           5.45% (5.46% now, 5.45% after adding 10000) → gross $44.80, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $44.79
+       Morpho syzUSD/USDC           5.34% (5.35% now, 5.34% after adding 10000) → gross $43.86, costs $0.00 (exit now $0.00, entry $0.00, exit later $0.00, gas $0.0019), net vs staying $43.85
+  → MOVE: VRPC-Aku: +$110.96 over 30 days after costs ($0.00) compared with leaving it in the wallet
   prepared for 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 to sign, in order (out\F-accept-unverified.json):
-    1. approve 10000 USDC to RPC-AKU vault: to 0xc879c018db60520f4355c26ed1a6d572cdac1815, data 0x095ea7b3… (68 bytes)
-    2. deposit 10000 USDC into RPC-AKU vault: to 0xbf5bbf9d11763c129a8c37752e196914159b177e, data 0x6e553f65… (68 bytes)
+    1. approve 10000 USDC to VRPC-Aku: to 0xc879c018db60520f4355c26ed1a6d572cdac1815, data 0x095ea7b3… (68 bytes)
+    2. deposit 10000 USDC into VRPC-Aku: to 0xf4419782c6c33c430ca2b566353d65e4951c93c6, data 0x6e553f65… (68 bytes)
     step 1 simulates OK from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 (71481 gas); the owner holds 0 USDC, so the deposit would fail until 10000 is there — this is the plan for whoever holds it

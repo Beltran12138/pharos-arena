@@ -10,7 +10,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { encodeFunctionData, erc20Abi, getAddress, parseAbi, parseUnits } from "viem";
 import { connect } from "../lib/mcp.mjs";
-import { read, readFeed } from "../lib/pharos.mjs";
+import { read, readFeed, revertReason } from "../lib/pharos.mjs";
 import { MORPHO, morphoMarket, vault } from "../lib/protocols.mjs";
 import { gasUsd, rank } from "./rank.mjs";
 
@@ -40,7 +40,7 @@ try {
   for (const v of reg.vaults) {
     const x = await vault(mcp, v, block, { days: 7 });
     venues.push({ id: v.address, label: v.label, kind: "vault", asset: x.asset, apy: x.apy ?? null, apyBasis: x.apySource ?? x.apyUnknown,
-      entryFeePct: x.entryFeePct ?? 0, exitFeePct: x.exitFeePct, exitVerified: x.redemptionMode === "sync" && x.exitFeePct != null, exitNote: x.redemptionNote, raw: x });
+      entryFeePct: x.entryFeePct ?? 0, exitFeePct: x.exitFeePct, exitVerified: x.exitVerified, exitNote: x.redemptionNote, raw: x });
   }
   for (const id of reg.morphoMarkets) {
     const m = await morphoMarket(mcp, id, block, { now });
@@ -50,7 +50,7 @@ try {
   }
   console.log(`Block ${block} (${new Date(now * 1000).toISOString()}): ${venues.length} yield sources; gas ≈ $${gas.usdPerTx.toFixed(5)} per transaction\n`);
   for (const v of venues.sort((a, b) => (b.apy ?? -1) - (a.apy ?? -1)))
-    console.log(`  ${v.asset.padEnd(5)} ${(v.apy == null ? "  ?  " : v.apy.toFixed(2) + "%").padStart(7)}  ${v.label.padEnd(28)} ${v.kind === "morpho" ? `liquidity ${fmt(v.liquidity)} ${v.asset}` : `exit ${v.raw.redemptionMode}${v.exitFeePct != null ? `, fee ${fmt(v.exitFeePct, 3)}%` : ""}${v.exitVerified ? "" : " (not verified)"}`}  (${v.apyBasis})`);
+    console.log(`  ${v.asset.padEnd(5)} ${(v.apy == null ? "  ?  " : v.apy.toFixed(2) + "%").padStart(7)}  ${v.label.padEnd(28)} ${v.kind === "morpho" ? `liquidity ${fmt(v.liquidity)} ${v.asset}` : `exit ${v.raw.redemptionMode}${v.exitFeePct != null ? `, fee ${fmt(v.exitFeePct, 3)}%` : ""}, ${fmt(v.raw.onHandAssets ?? 0)} ${v.asset} on hand${v.exitVerified ? "" : " (not verified)"}`}  (${v.apyBasis})`);
 
   mkdirSync(join(here, "out"), { recursive: true });
   for (const req of reqs) {
@@ -90,7 +90,7 @@ async function prepareMove(req, r) {
     : { step: `deposit ${req.amount} ${req.asset} into ${target.label}`, to: target.id, data: encodeFunctionData({ abi: VAULT_W, functionName: "deposit", args: [raw, addr] }) });
   const sim = await mcp.call("estimate_gas", { transaction: { from: addr, to: txs[0].to, data: txs[0].data, value: "0x0" } }).then(
     (g) => `simulates OK from ${addr} (${g.gas ?? g} gas)`,
-    (e) => `would fail if sent now from ${addr}: ${/"message":\s*"([^"]*)"/.exec(e.message)?.[1] || "reverted"}`,
+    (e) => `would fail if sent now from ${addr}: ${revertReason(e.message)}`,
   );
   // The later steps need the owner to actually hold the funds; say whether they do.
   const held = r.current ? null : await read(mcp, token, erc20Abi, "balanceOf", [addr]);

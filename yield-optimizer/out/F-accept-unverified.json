@@ -10,20 +10,20 @@
   "allowUnverifiedExit": true,
   "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071"
  },
- "decision": "RPC-AKU vault: +$110.96 over 30 days after costs ($0.00) compared with leaving it in the wallet",
+ "decision": "VRPC-Aku: +$110.96 over 30 days after costs ($0.00) compared with leaving it in the wallet",
  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
  "chainId": 1672,
  "firstStepSimulation": "simulates OK from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 (71481 gas); the owner holds 0 USDC, so the deposit would fail until 10000 is there — this is the plan for whoever holds it",
  "transactions": [
   {
-   "step": "approve 10000 USDC to RPC-AKU vault",
+   "step": "approve 10000 USDC to VRPC-Aku",
    "to": "0xc879c018db60520f4355c26ed1a6d572cdac1815",
-   "data": "0x095ea7b3000000000000000000000000bf5bbf9d11763c129a8c37752e196914159b177e00000000000000000000000000000000000000000000000000000002540be400",
+   "data": "0x095ea7b3000000000000000000000000f4419782c6c33c430ca2b566353d65e4951c93c600000000000000000000000000000000000000000000000000000002540be400",
    "value": "0"
   },
   {
-   "step": "deposit 10000 USDC into RPC-AKU vault",
-   "to": "0xbf5bbf9d11763c129a8c37752e196914159b177e",
+   "step": "deposit 10000 USDC into VRPC-Aku",
+   "to": "0xf4419782c6c33c430ca2b566353d65e4951c93c6",
    "data": "0x6e553f6500000000000000000000000000000000000000000000000000000002540be4000000000000000000000000006ea606ec600f47411bf56df699cf695a0b0e9071",
    "value": "0"
   }
