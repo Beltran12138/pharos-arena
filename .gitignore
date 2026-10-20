@@ -3,3 +3,4 @@ audit-log-agent/out/
 .env
 *.json.tmp
 /a.json
+alert-bot/state.json

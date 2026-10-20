@@ -1,0 +1,31 @@
+2026-10-20 07:18:42Z alert bot: 1 rule(s), from block 20723363, delivering to Telegram chat 6956039058
+  - usdc-10k: any USDC transfer ≥ 10000 USDC
+2026-10-20 07:18:47Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 428,396.73 USDC
+  zero address → 0x8b17…a639, block 20723412
+  https://www.pharosscan.xyz/tx/0xf845745f5edd7909456b8e4dc4558493c4989106cc14f929a43335229c657f3b
+2026-10-20 07:18:49Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 185,000 USDC
+  0x8eCD…Ab9f → 0x798d…83b2, block 20723887
+  https://www.pharosscan.xyz/tx/0xe845c4493893b226cfd521477acf47c406dfd4db96568dec608ee22ccc7115a8
+2026-10-20 07:18:49Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 185,000 USDC
+  0x798d…83b2 → 0x4083…9819, block 20723887
+  https://www.pharosscan.xyz/tx/0xe845c4493893b226cfd521477acf47c406dfd4db96568dec608ee22ccc7115a8
+2026-10-20 07:18:50Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 50,097.97 USDC
+  zero address → 0x49f6…C73b, block 20725156
+  https://www.pharosscan.xyz/tx/0x961b3b22b07967b7368cb6b372e09aec1a7f506877ed41790e152565efa3927c
+2026-10-20 07:18:50Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 50,097.97 USDC
+  0x49f6…C73b → 0xF350…411f, block 20725192
+  https://www.pharosscan.xyz/tx/0x35ecc0a338e3700867676bf477dfb9ee30952f9f48a6429d8400dff9171806b9
+2026-10-20 07:18:51Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 11,725.84 USDC
+  0xFd50…9493 → 0xF350…411f, block 20726057
+  https://www.pharosscan.xyz/tx/0x2aefbf64066198db0dd78aa5cdbe258ab1c73fe70f440062f2f0133723d04d27
+2026-10-20 07:18:52Z ALERT Large USDC transfer (≥ 10,000 USDC)
+  value: 10,000 USDC
+  zero address → 0x482A…b34f, block 20726243
+  https://www.pharosscan.xyz/tx/0x624b6861ce8ed80d9cb9102f17553ed415bfd02ff31abb01cac63110914f6bdd
+2026-10-20 07:18:52Z stopped at block 20726978: 7 alert(s) sent

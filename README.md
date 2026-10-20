@@ -20,6 +20,7 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`wallet-risk-checker/`](wallet-risk-checker/) | Wallet Risk Checker (Medium) | Nine red-flag signals before you interact with an address; LOW / MEDIUM / HIGH with reasons |
 | [`whale-watching-agent/`](whale-watching-agent/) | Whale-Watching Agent (Medium) | Significant moves of a watch list, explained from receipts; cross-wallet patterns |
 | [`trend-watcher/`](trend-watcher/) | Trend Watcher (Hard) | Persistent observations; fires only on a trend confirmed over several runs, never on one spike |
+| [`alert-bot/`](alert-bot/) | On-Chain Alert Bot (Easy) | Large transfers and Chainlink price crossings to Telegram, each alert once |
 
 **Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state
 (4 of 80 reads through Chain MCP, 1 of 40 through `rpc.pharos.xyz`). Values that drive a decision are read

@@ -1,0 +1,8 @@
+{
+  "rules": [
+    { "id": "usdc-large", "type": "transfer", "token": "USDC", "min": "1000" },
+    { "id": "wpros-large", "type": "transfer", "token": "WPROS", "min": "5000" },
+    { "id": "pros-above", "type": "price", "pair": "PROS/USD", "above": 0.62 },
+    { "id": "pros-below", "type": "price", "pair": "PROS/USD", "below": 0.55 }
+  ]
+}

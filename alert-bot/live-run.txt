@@ -1,0 +1,10 @@
+2026-10-20 07:15:24Z alert bot: 4 rule(s), from block 20726786, delivering to Telegram chat 6956039058
+  - usdc-large: any USDC transfer ≥ 1000 USDC
+  - wpros-large: any WPROS transfer ≥ 5000 WPROS
+  - pros-above: PROS/USD ≥ 0.62 (re-arms after 0.5% back)
+  - pros-below: PROS/USD ≤ 0.55 (re-arms after 0.5% back)
+2026-10-20 07:15:28Z ALERT PROS/USD above 0.62
+  value: PROS/USD = 0.6256 (Chainlink, updated 2026-10-20T06:39:36Z)
+  feed 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+  https://www.pharosscan.xyz/address/0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466
+2026-10-20 07:18:22Z stopped at block 20726963: 1 alert(s) sent
