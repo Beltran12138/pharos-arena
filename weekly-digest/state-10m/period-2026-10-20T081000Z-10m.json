@@ -1,0 +1,55 @@
+{
+ "start": "2026-10-20T08:10:00Z",
+ "end": "2026-10-20T08:20:00Z",
+ "firstBlock": 20730039,
+ "lastBlock": 20730681,
+ "events": 12,
+ "swaps": 12,
+ "volumeUsd": 1480.9410990000001,
+ "traders": 1,
+ "medianSwapUsd": 116.9012855,
+ "netBought0": 125.49713861901932,
+ "price": {
+  "open": 0.6225489961538381,
+  "close": 0.6225494280793427,
+  "high": 0.6228563177967593,
+  "low": 0.6219354188568541
+ },
+ "liquidityAddedUsd": 0,
+ "liquidityRemovedUsd": 0,
+ "mints": 0,
+ "burns": 0,
+ "endState": {
+  "block": 20730681,
+  "price": 0.6225494280793427,
+  "reserve0": 434695.33742185315,
+  "reserve1": 540218.133652,
+  "tvlUsd": 810837.4673527316
+ },
+ "notable": [
+  {
+   "score": 2.6665209853487886,
+   "kind": "swap",
+   "time": 1792484305,
+   "tx": "0xa481be4d0b5d3891fd8da170b5666c1b33d589d07f82a06cc775d1bd21bf30c3",
+   "text": "Largest swap: $312 (sold WPROS), 2.7× the median swap of $117",
+   "link": "https://www.pharosscan.xyz/tx/0xa481be4d0b5d3891fd8da170b5666c1b33d589d07f82a06cc775d1bd21bf30c3"
+  },
+  {
+   "score": 1.334064098037656,
+   "kind": "swap",
+   "time": 1792484274,
+   "tx": "0xc726b4cc028fc8f554a9cb3c0b08cd01bd72909791be05a161a0356f01c03cf8",
+   "text": "Large swap: $156 (bought WPROS), 1.3× the median swap of $117",
+   "link": "https://www.pharosscan.xyz/tx/0xc726b4cc028fc8f554a9cb3c0b08cd01bd72909791be05a161a0356f01c03cf8"
+  },
+  {
+   "score": 1.3338002087239664,
+   "kind": "swap",
+   "time": 1792484267,
+   "tx": "0x7de1a4bd4b63f63afd19b467895c47117c2b5fb79acef68cb9844083db4cc939",
+   "text": "Large swap: $156 (bought WPROS), 1.3× the median swap of $117",
+   "link": "https://www.pharosscan.xyz/tx/0x7de1a4bd4b63f63afd19b467895c47117c2b5fb79acef68cb9844083db4cc939"
+  }
+ ]
+}

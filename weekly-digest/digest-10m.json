@@ -1,0 +1,8 @@
+{
+  "pool": "0x912c9ade24d44d8922f0866d8dcb079f1363f647",
+  "period": "10m",
+  "anchor": "2026-10-05T00:00:00Z",
+  "stateDir": "state-10m",
+  "pagesDir": "state-10m/pages",
+  "pageUrlBase": "https://github.com/Beltran12138/pharos-arena/blob/main/weekly-digest/state-10m/pages"
+}

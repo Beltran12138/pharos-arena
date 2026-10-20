@@ -1,0 +1,26 @@
+2026-10-20 08:11:19Z scheduler: every 10m from 2026-10-05T00:00:00Z; delivers each completed period once
+2026-10-20 08:11:19Z period 2026-10-20T08:00:00Z → 2026-10-20T08:10:00Z: finding blocks
+2026-10-20 08:11:24Z   blocks 20729401 … 20730038: reading Swap/Mint/Burn logs (1 get_logs calls)
+  100%
+2026-10-20 08:11:26Z period 2026-10-20T07:50:00Z → 2026-10-20T08:00:00Z: finding blocks
+2026-10-20 08:11:36Z   blocks 20728791 … 20729400: reading Swap/Mint/Burn logs (1 get_logs calls)
+  100%
+2026-10-20 08:11:39Z page written: C:\Users\lenovo\dev\pharos-arena\weekly-digest\state-10m\pages\2026-10-20T0800_10m.md
+2026-10-20 08:11:40Z delivered 2026-10-20T08:00:00Z/10m to Telegram
+2026-10-20 08:11:40Z next digest due at 2026-10-20T08:20:30.000Z
+2026-10-20 08:20:30Z period 2026-10-20T08:10:00Z → 2026-10-20T08:20:00Z: finding blocks
+2026-10-20 08:20:35Z   blocks 20730039 … 20730681: reading Swap/Mint/Burn logs (1 get_logs calls)
+  100%
+2026-10-20 08:20:38Z page written: C:\Users\lenovo\dev\pharos-arena\weekly-digest\state-10m\pages\2026-10-20T0810_10m.md
+2026-10-20 08:20:39Z delivered 2026-10-20T08:10:00Z/10m to Telegram
+2026-10-20 08:20:39Z next digest due at 2026-10-20T08:30:30.000Z
+2026-10-20 08:30:30Z period 2026-10-20T08:20:00Z → 2026-10-20T08:30:00Z: finding blocks
+2026-10-20 08:30:44Z   blocks 20730682 … 20731325: reading Swap/Mint/Burn logs (1 get_logs calls)
+  100%
+2026-10-20 08:30:49Z page written: C:\Users\lenovo\dev\pharos-arena\weekly-digest\state-10m\pages\2026-10-20T0820_10m.md
+2026-10-20 08:30:51Z delivered 2026-10-20T08:20:00Z/10m to Telegram
+2026-10-20 08:30:51Z next digest due at 2026-10-20T08:40:30.000Z
+
+--- restart right after the 08:30 delivery: the last complete period was already sent, so nothing is re-sent ---
+2026-10-20 08:31:19Z scheduler: every 10m from 2026-10-05T00:00:00Z; delivers each completed period once
+2026-10-20 08:31:19Z next digest due at 2026-10-20T08:40:30.000Z
