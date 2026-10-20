@@ -1,0 +1,14 @@
+{
+  "note": "WPROS/USDC pools of factory 0x2c90CcB0b989afA2433F499698451a25744A552b (getPool for each fee tier). gasPerSwap: median gasUsed of 12 real swap transactions on Pharos, 2026-10-20.",
+  "pools": [
+    { "label": "0.01% pool", "address": "0x912c9ade24d44d8922f0866d8dcb079f1363f647" },
+    { "label": "0.05% pool", "address": "0x9e1ec11d25f65ae5e7f9aaaa6f73b41eb4df651d" },
+    { "label": "0.3% pool", "address": "0x4146d192da6428c9e1c243d2a953c625b5765623" },
+    { "label": "1% pool", "address": "0xfc5f8974a7e94504f8d3ac20fbdc67dadff75049" }
+  ],
+  "dec0": 18,
+  "dec1": 6,
+  "gasPerSwap": 146378,
+  "slippageBps": 10,
+  "minNetUsd": 0.5
+}

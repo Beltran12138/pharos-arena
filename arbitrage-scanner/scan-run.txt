@@ -1,0 +1,84 @@
+
+2026-10-20 09:52:54Z scan at block 20736690: 4 pools, Chainlink WPROS ≈ 0.61853 USDC; gas for 2 swaps ≈ $0.00181
+  0.01% pool   0.61921  (0.111% vs oracle)  USDC reserve 538524
+  0.05% pool   0.62416  (0.910% vs oracle)  USDC reserve 11484
+  0.3% pool    0.61845  (-0.013% vs oracle)  USDC reserve 132252
+  1% pool      0.61676  (-0.285% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 79.8 bps, fees 6.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00181 − slippage $0.0000 → net $-0.0018 — net $-0.0018 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 12.4 bps, fees 31.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00181 − slippage $0.0000 → net $-0.0018 — spread 12.4 bps does not cover the two pools' fees (31.0 bps)
+  skip buy in 1% pool, sell in 0.01% pool: spread 39.8 bps, fees 101.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0001 − impact $0.0000; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — spread 39.8 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 92.3 bps, fees 35.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 27.3 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0001 − impact $0.0000; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — spread 27.3 bps does not cover the two pools' fees (130.0 bps)
+
+2026-10-20 09:54:34Z scan at block 20736781: 4 pools, Chainlink WPROS ≈ 0.61853 USDC; gas for 2 swaps ≈ $0.00181
+  0.01% pool   0.62023  (0.276% vs oracle)  USDC reserve 539041
+  0.05% pool   0.62416  (0.910% vs oracle)  USDC reserve 11484
+  0.3% pool    0.61845  (-0.013% vs oracle)  USDC reserve 132252
+  1% pool      0.61676  (-0.285% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 63.3 bps, fees 6.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 28.9 bps, fees 31.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00181 − slippage $0.0000 → net $-0.0018 — spread 28.9 bps does not cover the two pools' fees (31.0 bps)
+  skip buy in 1% pool, sell in 0.01% pool: spread 56.2 bps, fees 101.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — spread 56.2 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 92.3 bps, fees 35.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 27.3 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0001 − impact $0.0000; − gas $0.00181 − slippage $0.0000 → net $-0.0019 — spread 27.3 bps does not cover the two pools' fees (130.0 bps)
+
+2026-10-20 09:56:32Z scan at block 20736895: 4 pools, Chainlink WPROS ≈ 0.62179 USDC; gas for 2 swaps ≈ $0.00182
+  0.01% pool   0.62164  (-0.023% vs oracle)  USDC reserve 539760
+  0.05% pool   0.62416  (0.381% vs oracle)  USDC reserve 11484
+  0.3% pool    0.62041  (-0.221% vs oracle)  USDC reserve 132617
+  1% pool      0.61676  (-0.809% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 40.4 bps, fees 6.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 19.8 bps, fees 31.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0018 — spread 19.8 bps does not cover the two pools' fees (31.0 bps)
+  skip buy in 1% pool, sell in 0.01% pool: spread 79.2 bps, fees 101.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 79.2 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 60.3 bps, fees 35.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 59.2 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 59.2 bps does not cover the two pools' fees (130.0 bps)
+
+2026-10-20 09:58:11Z scan at block 20737029: 4 pools, Chainlink WPROS ≈ 0.62179 USDC; gas for 2 swaps ≈ $0.00182
+  0.01% pool   0.62241  (0.100% vs oracle)  USDC reserve 540150
+  0.05% pool   0.62416  (0.381% vs oracle)  USDC reserve 11484
+  0.3% pool    0.62041  (-0.221% vs oracle)  USDC reserve 132617
+  1% pool      0.61676  (-0.809% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 28.0 bps, fees 6.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 32.2 bps, fees 31.0 bps; best size $0.01: gross $0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0018 — net $-0.0018 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.01% pool: spread 91.6 bps, fees 101.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0018 — spread 91.6 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 60.3 bps, fees 35.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 59.2 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 59.2 bps does not cover the two pools' fees (130.0 bps)
+
+2026-10-20 10:00:11Z scan at block 20737142: 4 pools, Chainlink WPROS ≈ 0.62179 USDC; gas for 2 swaps ≈ $0.00182
+  0.01% pool   0.62210  (0.051% vs oracle)  USDC reserve 539994
+  0.05% pool   0.62416  (0.381% vs oracle)  USDC reserve 11484
+  0.3% pool    0.62063  (-0.187% vs oracle)  USDC reserve 132656
+  1% pool      0.61676  (-0.809% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 33.0 bps, fees 6.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 23.8 bps, fees 31.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0018 — spread 23.8 bps does not cover the two pools' fees (31.0 bps)
+  skip buy in 1% pool, sell in 0.01% pool: spread 86.6 bps, fees 101.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0018 — spread 86.6 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 56.9 bps, fees 35.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 62.6 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 62.6 bps does not cover the two pools' fees (130.0 bps)
+
+2026-10-20 10:01:49Z scan at block 20737274: 4 pools, Chainlink WPROS ≈ 0.62179 USDC; gas for 2 swaps ≈ $0.00182
+  0.01% pool   0.62180  (0.001% vs oracle)  USDC reserve 539838
+  0.05% pool   0.62416  (0.381% vs oracle)  USDC reserve 11484
+  0.3% pool    0.62063  (-0.187% vs oracle)  USDC reserve 132656
+  1% pool      0.61676  (-0.809% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 37.9 bps, fees 6.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0000 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 18.9 bps, fees 31.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0018 — spread 18.9 bps does not cover the two pools' fees (31.0 bps)
+  skip buy in 1% pool, sell in 0.01% pool: spread 81.6 bps, fees 101.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 81.6 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 56.9 bps, fees 35.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 62.6 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 62.6 bps does not cover the two pools' fees (130.0 bps)
+
+2026-10-20 10:03:27Z scan at block 20737392: 4 pools, Chainlink WPROS ≈ 0.62179 USDC; gas for 2 swaps ≈ $0.00182
+  0.01% pool   0.62069  (-0.177% vs oracle)  USDC reserve 539273
+  0.05% pool   0.62416  (0.381% vs oracle)  USDC reserve 11484
+  0.3% pool    0.62063  (-0.187% vs oracle)  USDC reserve 132656
+  1% pool      0.61676  (-0.809% vs oracle)  USDC reserve 50
+  skip buy in 0.01% pool, sell in 0.05% pool: spread 55.9 bps, fees 6.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 0.3% pool, sell in 0.01% pool: spread 1.0 bps, fees 31.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0000 − fees $0.0000 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 1.0 bps does not cover the two pools' fees (31.0 bps)
+  skip buy in 1% pool, sell in 0.01% pool: spread 63.6 bps, fees 101.0 bps; best size $0.01: gross $-0.0000 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 63.6 bps does not cover the two pools' fees (101.0 bps)
+  skip buy in 0.3% pool, sell in 0.05% pool: spread 56.9 bps, fees 35.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0000 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.05% pool: spread 119.9 bps, fees 105.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0001; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — net $-0.0019 < threshold $0.5; the largest cost is gas ($0.0018)
+  skip buy in 1% pool, sell in 0.3% pool: spread 62.6 bps, fees 130.0 bps; best size $0.01: gross $-0.0001 = ideal $0.0001 − fees $0.0001 − impact $0.0000; − gas $0.00182 − slippage $0.0000 → net $-0.0019 — spread 62.6 bps does not cover the two pools' fees (130.0 bps)
