@@ -1,0 +1,81 @@
+Reading 0x67765ea217d0021e35ca973dbae3b54823081a2b across the wallet, 4 vaults and 15 Morpho markets (Chain MCP)…
+Snapshot at block 20737396 (2026-10-20T10:02:52.000Z): 6 positions, 0 unreadable.
+
+Q: what am I earning?
+A: What you are earning (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z):
+  earns 9.27% on Morpho APT/USDC: 1,894,576.62 APT as collateral ($1,906,611.77) → $176,648.26/year — collateral is APT vault shares: it keeps earning the vault's yield
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: APT vault share price 1.006564 USDC (0x921974d7b1a2dbaccaf5ba893a3a1500638cea6b.convertToAssets at block 20737396) × Chainlink USDC/USD 0x3f882C4F2836b1e5C5278ff2B9FccE2502A35C5d at block 20737396
+  pays  2.64% on Morpho APT/USDC: borrowed USDC ($899,935.92) → −$23,781.12/year
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xd834016e…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  earns 12.92% on Morpho APC3M/USDC: 1,500,000.65 APC3M as collateral ($1,547,193.88) → $199,867.3/year — collateral is APC3M (AxilPrimeCredit-3M) shares: it keeps earning the vault's yield
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xba0d2638…, user) at block 20737396
+      source: APC3M (AxilPrimeCredit-3M) share price 1.031679 USDC (0xd0428799fbc35557834d33121ba4472692c8908a.convertToAssets at block 20737396) × Chainlink USDC/USD 0x3f882C4F2836b1e5C5278ff2B9FccE2502A35C5d at block 20737396
+  pays  4.61% on Morpho APC3M/USDC: borrowed USDC ($1,004,203.19) → −$46,337.32/year
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xba0d2638…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xba0d2638…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  Net, at today's rates: $306,397.12/year
+  Earning nothing that I can see: PROS in the wallet, WPROS in the wallet.
+  Rates: vault APY = share-price growth over the last 7 days, annualized; Morpho = current IRM rate × utilization. Both change.
+
+Q: where is my USDC?
+A: Your USDC (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z):
+  owed: 900,125.1282 USDC — Morpho APT/USDC: borrowed USDC
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xd834016e…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  owed: 1,004,414.3167 USDC — Morpho APC3M/USDC: borrowed USDC
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xba0d2638…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xba0d2638…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  Net USDC: -1,904,539.4449.
+
+Q: what's my biggest position?
+A: Your biggest position is Morpho APT/USDC: 1,894,576.62 APT as collateral: 1,894,576.6198 APT ≈ $1,906,611.77 (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z)
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: APT vault share price 1.006564 USDC (0x921974d7b1a2dbaccaf5ba893a3a1500638cea6b.convertToAssets at block 20737396) × Chainlink USDC/USD 0x3f882C4F2836b1e5C5278ff2B9FccE2502A35C5d at block 20737396
+  Next: Morpho APC3M/USDC: 1,500,000.65 APC3M as collateral ≈ $1,547,193.88.
+
+Q: what's my net worth?
+A: Net worth ≈ $1,549,821.42 (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z): assets $3,453,960.53, debts −$1,904,139.11.
+  PROS in the wallet: $16.24
+      source: 0x67765ea217d0021e35ca973dbae3b54823081a2b.get_balance at block 20737396
+      source: Chainlink PROS/USD 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466 at block 20737396
+  WPROS in the wallet: $138.63
+      source: 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0.balanceOf at block 20737396
+      source: Chainlink PROS/USD 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466 at block 20737396
+  Morpho APT/USDC: 1,894,576.62 APT as collateral: $1,906,611.77
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: APT vault share price 1.006564 USDC (0x921974d7b1a2dbaccaf5ba893a3a1500638cea6b.convertToAssets at block 20737396) × Chainlink USDC/USD 0x3f882C4F2836b1e5C5278ff2B9FccE2502A35C5d at block 20737396
+  Morpho APT/USDC: borrowed USDC: −$899,935.92
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xd834016e…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  Morpho APC3M/USDC: 1,500,000.65 APC3M as collateral: $1,547,193.88
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xba0d2638…, user) at block 20737396
+      source: APC3M (AxilPrimeCredit-3M) share price 1.031679 USDC (0xd0428799fbc35557834d33121ba4472692c8908a.convertToAssets at block 20737396) × Chainlink USDC/USD 0x3f882C4F2836b1e5C5278ff2B9FccE2502A35C5d at block 20737396
+  Morpho APC3M/USDC: borrowed USDC: −$1,004,203.19
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xba0d2638…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xba0d2638…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  Not covered at all: Uniswap V3 LP positions (position NFTs); staking or delegation; any protocol not listed in lib/protocols.json.
+
+Q: am I at risk of liquidation?
+A: Liquidation risk (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z):
+  Morpho APT/USDC: borrowed USDC: 900,125.1282 USDC (−$899,935.92) at 2.64% — health factor 1.8220 (liquidation below 1, LLTV 86%); comfortable; the collateral can fall 45.1% before liquidation
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xd834016e…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xd834016e…), 0xD5E02889….borrowRateView (interest accrued to block time)
+  Morpho APC3M/USDC: borrowed USDC: 1,004,414.3167 USDC (−$1,004,203.19) at 4.61% — health factor 1.3250 (liquidation below 1, LLTV 86%); comfortable; the collateral can fall 24.5% before liquidation
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb.position(0xba0d2638…, user) at block 20737396
+      source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xba0d2638…), 0xD5E02889….borrowRateView (interest accrued to block time)
+
+Q: how much WPROS do I have?
+A: Your WPROS (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z):
+  held: 223.0067 WPROS — WPROS in the wallet
+      source: 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0.balanceOf at block 20737396
+      source: Chainlink PROS/USD 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466 at block 20737396
+  Net WPROS: 223.0067.
+
+Q: what about my Uniswap LP?
+A: I can't read Uniswap: this assistant covers wallet balances, the vaults and the Morpho Blue markets in lib/protocols.json. I won't guess what you hold there. (wallet 0x67765ea217d0021e35ca973dbae3b54823081a2b, block 20737396, 2026-10-20T10:02:52.000Z)
+
+Q: should I buy more?
+A: I don't understand that question, so I won't guess. I can answer: what am I earning? · where is my <token>? · how much <token> do I have? · what's my biggest position? · what's my net worth? · what do I owe? · am I at risk of liquidation?
+
