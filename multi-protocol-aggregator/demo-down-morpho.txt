@@ -1,0 +1,27 @@
+Aggregator over Morpho Blue + Vaults (ERC-4626 / ERC-7575), block 20742011, user 0x0be241F6eECAcB46D4A48C5528A08756bc1e94e7 (simulating: morpho down)
+
+» rates for USDC
+  ⚠ Morpho Blue unavailable: simulated outage (--down) — answering with the other protocols only
+   13.50%  VRPC-Aku                     Vaults       exit: exits are ERC-7540 requests (requestRedeem in 0x8f14b757983f50137d33954fbf9687f64fee30ad): timing set by the vault, not guaranteed
+           source: 0xf4419782c6c33c430ca2b566353d65e4951c93c6.convertToAssets at blocks 20137211 and 20742011
+   13.50%  RPC-AKU vault                Vaults       exit: synchronous redeem/withdraw (0xf2adf0ac0f066e2cb3d7ea9614890479fbeffa15); instant only while the vault has liquidity; but the vault holds 0 USDC on chain, so nothing can be paid out from it directly
+           source: 0xbf5bbf9d11763c129a8c37752e196914159b177e.convertToAssets at blocks 20137211 and 20742011
+   12.92%  APC3M (AxilPrimeCredit-3M)   Vaults       exit: exits are ERC-7540 requests (requestRedeem in 0x880ac096be22069751445bd17b3cd6e40b8575fc): timing set by the vault, not guaranteed
+           source: 0xd0428799fbc35557834d33121ba4472692c8908a.convertToAssets at blocks 20137211 and 20742011
+    9.29%  APT vault                    Vaults       exit: exits are ERC-7540 requests (requestRedeem in 0x0d727d318313c3082d49cc9abb67d087c42e6228): timing set by the vault, not guaranteed
+           source: 0x921974d7b1a2dbaccaf5ba893a3a1500638cea6b.convertToAssets at blocks 20137211 and 20742011
+
+» deposit 5000 USDC
+  ⚠ Morpho Blue unavailable: simulated outage (--down) — answering with the other protocols only
+  not routing: no eligible venue
+    not APC3M (AxilPrimeCredit-3M): exit not verified: exits are ERC-7540 requests (requestRedeem in 0x880ac096be22069751445bd17b3cd6e40b8575fc): timing set by the vault, not guaranteed
+    not VRPC-Aku: exit not verified: exits are ERC-7540 requests (requestRedeem in 0x8f14b757983f50137d33954fbf9687f64fee30ad): timing set by the vault, not guaranteed
+    not APT vault: exit not verified: exits are ERC-7540 requests (requestRedeem in 0x0d727d318313c3082d49cc9abb67d087c42e6228): timing set by the vault, not guaranteed
+    not RPC-AKU vault: exit not verified: synchronous redeem/withdraw (0xf2adf0ac0f066e2cb3d7ea9614890479fbeffa15); instant only while the vault has liquidity; but the vault holds 0 USDC on chain, so nothing can be paid out from it directly
+
+» withdraw 1000 USDC
+  ⚠ Morpho Blue unavailable: simulated outage (--down) — answering with the other protocols only
+  route → RPC-AKU vault (Vaults): holds 5,035,547.4 USDC, gives up 13.50%
+    ⚠ not an instant exit: synchronous redeem/withdraw (0xf2adf0ac0f066e2cb3d7ea9614890479fbeffa15); instant only while the vault has liquidity; but the vault holds 0 USDC on chain, so nothing can be paid out from it directly
+    1. withdraw from RPC-AKU vault: to 0xBF5bbF9d11763C129A8C37752E196914159B177e, data 0xb460af94… (100 bytes) — unsigned
+    step 1 fails if sent now from 0x0be241F6eECAcB46D4A48C5528A08756bc1e94e7: execution reverted:  — AccessControlUnauthorizedAccount(account, role): the caller lacks a required role

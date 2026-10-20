@@ -1,0 +1,50 @@
+Aggregator over Morpho Blue + Vaults (ERC-4626 / ERC-7575), block 20742098, user 0x0be241F6eECAcB46D4A48C5528A08756bc1e94e7
+
+» rates for USDC
+   13.50%  VRPC-Aku                     Vaults       exit: exits are ERC-7540 requests (requestRedeem in 0x8f14b757983f50137d33954fbf9687f64fee30ad): timing set by the vault, not guaranteed
+           source: 0xf4419782c6c33c430ca2b566353d65e4951c93c6.convertToAssets at blocks 20137298 and 20742098
+   13.50%  RPC-AKU vault                Vaults       exit: synchronous redeem/withdraw (0xf2adf0ac0f066e2cb3d7ea9614890479fbeffa15); instant only while the vault has liquidity; but the vault holds 0 USDC on chain, so nothing can be paid out from it directly
+           source: 0xbf5bbf9d11763c129a8c37752e196914159b177e.convertToAssets at blocks 20137298 and 20742098
+   12.92%  APC3M (AxilPrimeCredit-3M)   Vaults       exit: exits are ERC-7540 requests (requestRedeem in 0x880ac096be22069751445bd17b3cd6e40b8575fc): timing set by the vault, not guaranteed
+           source: 0xd0428799fbc35557834d33121ba4472692c8908a.convertToAssets at blocks 20137298 and 20742098
+    9.29%  APT vault                    Vaults       exit: exits are ERC-7540 requests (requestRedeem in 0x0d727d318313c3082d49cc9abb67d087c42e6228): timing set by the vault, not guaranteed
+           source: 0x921974d7b1a2dbaccaf5ba893a3a1500638cea6b.convertToAssets at blocks 20137298 and 20742098
+    7.78%  Morpho strUSD/USDC           Morpho Blue  exit: instant up to the market's liquidity (0.05 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0x4cbedaf6…) + IRM at block 20742098
+    5.46%  Morpho wsrUSD/USDC           Morpho Blue  exit: instant up to the market's liquidity (586,859.82 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xbea21c37…) + IRM at block 20742098
+    5.35%  Morpho syzUSD/USDC           Morpho Blue  exit: instant up to the market's liquidity (333,954.07 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xc79579a0…) + IRM at block 20742098
+    4.98%  Morpho WPROS/USDC            Morpho Blue  exit: instant up to the market's liquidity (97,810.72 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xb3b8a31c…) + IRM at block 20742098
+    3.84%  Morpho APC3M/USDC            Morpho Blue  exit: instant up to the market's liquidity (202,896.76 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xba0d2638…) + IRM at block 20742098
+    2.38%  Morpho APT/USDC              Morpho Blue  exit: instant up to the market's liquidity (99,801 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xd834016e…) + IRM at block 20742098
+    0.00%  Morpho BTCVC/USDC            Morpho Blue  exit: instant up to the market's liquidity (190 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0xf203d06f…) + IRM at block 20742098
+    0.00%  Morpho VRPCW/USDC            Morpho Blue  exit: instant up to the market's liquidity (2 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0x082e865d…) + IRM at block 20742098
+    0.00%  Morpho APC3M/USDC            Morpho Blue  exit: instant up to the market's liquidity (1 USDC available)
+           source: 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb market(0x1aa31baf…) + IRM at block 20742098
+
+» positions
+  5,035,547.4 USDC in RPC-AKU vault (Vaults), earning 13.50%
+
+» deposit 5000 USDC
+  route → Morpho wsrUSD/USDC (Morpho Blue): 5.46%, ≈ $22.42 over 30 days after costs; exit: instant up to the market's liquidity
+    not Morpho syzUSD/USDC: $21.96 over 30 days
+    not Morpho WPROS/USDC: $20.36 over 30 days
+    not Morpho APC3M/USDC: $15.71 over 30 days
+    1. approve USDC to Morpho: to 0xC879C018dB60520F4355C26eD1a6D572cdAC1815, data 0x095ea7b3… (68 bytes) — unsigned
+    2. supply to Morpho wsrUSD/USDC: to 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb, data 0xa99aad89… (324 bytes) — unsigned
+    step 1 simulates OK from 0x0be241F6eECAcB46D4A48C5528A08756bc1e94e7 (71481 gas)
+
+» withdraw 1000 USDC
+  route → RPC-AKU vault (Vaults): holds 5,035,547.4 USDC, gives up 13.50%
+    ⚠ not an instant exit: synchronous redeem/withdraw (0xf2adf0ac0f066e2cb3d7ea9614890479fbeffa15); instant only while the vault has liquidity; but the vault holds 0 USDC on chain, so nothing can be paid out from it directly
+    1. withdraw from RPC-AKU vault: to 0xBF5bbF9d11763C129A8C37752E196914159B177e, data 0xb460af94… (100 bytes) — unsigned
+    step 1 fails if sent now from 0x0be241F6eECAcB46D4A48C5528A08756bc1e94e7: execution reverted:  — AccessControlUnauthorizedAccount(account, role): the caller lacks a required role
+
+» borrow 10 USDC
+  I don't understand that request. I can do: rates for <token> · positions · deposit <amount> <token> · withdraw <amount> <token> [from <venue>]
