@@ -37,7 +37,7 @@ there could not come back out). On a tie, the verified exit wins.
 
 ## Demo on mainnet, 2026-10-20 ([`demo-run.txt`](demo-run.txt), [`requests.json`](requests.json))
 
-17 sources at block 20,738,115; gas ≈ $0.0009 per transaction.
+17 sources at block 20,738,255; gas ≈ $0.0009 per transaction.
 
 | Request | Result |
 |---|---|
