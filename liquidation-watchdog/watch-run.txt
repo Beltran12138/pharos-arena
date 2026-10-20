@@ -1,0 +1,64 @@
+2026-10-20 08:33:48Z block 20731576: 11 position(s)
+  critical     HF 1.0058  syzUSD/USDC 0xe6a4…fe7c  → alert (new)
+2026-10-20 08:33:57Z ALERT → Telegram
+CRITICAL syzUSD/USDC syzUSD loop A — borrower 0xe6a4…fe7c: health factor 1.0058
+  thresholds: warn < 1.02, critical < 1.01, liquidation < 1.0 (LLTV 91.5%)
+  collateral 1,131,538 syzUSD (= 1,232,947.38 USDC at the market oracle); debt 1,121,635.41 USDC incl. interest (5.76% APR)
+  liquidation if syzUSD falls 0.58% against USDC
+  action: repay 26,347.2 USDC, or add 27,219.19 syzUSD of collateral, to get back to HF 1.03
+  https://www.pharosscan.xyz/address/0xe6a4771284342462f4d2bfbfb86db12c8f19fe7c
+  (block 20731576)
+  warn         HF 1.0125  syzUSD/USDC 0xa4a5…3dcc  → alert (new)
+2026-10-20 08:34:04Z ALERT → Telegram
+WARN syzUSD/USDC syzUSD loop B — borrower 0xa4a5…3dcc: health factor 1.0125
+  thresholds: warn < 1.02, critical < 1.01, liquidation < 1.0 (LLTV 91.5%)
+  collateral 1,356,062.1 syzUSD (= 1,477,593.53 USDC at the market oracle); debt 1,335,316 USDC incl. interest (5.76% APR)
+  liquidation if syzUSD falls 1.23% against USDC
+  action: repay 22,696.51 USDC, or add 23,447.67 syzUSD of collateral, to get back to HF 1.03
+  https://www.pharosscan.xyz/address/0xa4a57dcf7b15456b7053f10a377bdb437c073dcc
+  (block 20731576)
+  warn         HF 1.0178  syzUSD/USDC 0xea23…0be5  → alert (new)
+2026-10-20 08:34:10Z ALERT → Telegram
+WARN syzUSD/USDC syzUSD loop C — borrower 0xea23…0be5: health factor 1.0178
+  thresholds: warn < 1.02, critical < 1.01, liquidation < 1.0 (LLTV 91.5%)
+  collateral 271,202.32 syzUSD (= 295,507.7 USDC at the market oracle); debt 265,669.63 USDC incl. interest (5.76% APR)
+  liquidation if syzUSD falls 1.75% against USDC
+  action: repay 3,155.5 USDC, or add 3,259.94 syzUSD of collateral, to get back to HF 1.03
+  https://www.pharosscan.xyz/address/0xea2368f8afbbaac5b6e635dbe8687df1c9a80be5
+  (block 20731576)
+  ok           HF 1.0280  syzUSD/USDC 0x71ed…bb4e
+  ok           HF 1.0325  syzUSD/USDC 0x0a2c…ec06
+  warn         HF 1.0157  wsrUSD/USDC 0xc6dd…7aa7  → alert (new)
+2026-10-20 08:34:26Z ALERT → Telegram
+WARN wsrUSD/USDC wsrUSD loop A — borrower 0xc6dd…7aa7: health factor 1.0157
+  thresholds: warn < 1.02, critical < 1.01, liquidation < 1.0 (LLTV 91.5%)
+  collateral 448,838.57 wsrUSD (= 495,501.45 USDC at the market oracle); debt 446,383.73 USDC incl. interest (5.82% APR)
+  liquidation if wsrUSD falls 1.54% against USDC
+  action: repay 6,205.26 USDC, or add 6,327.34 wsrUSD of collateral, to get back to HF 1.03
+  https://www.pharosscan.xyz/address/0xc6dd9976066f3364b4d6a72cd4f1fa0468327aa7
+  (block 20731576)
+  ok           HF 1.0215  wsrUSD/USDC 0x086e…e327
+  critical     HF 1.0685  APC3M/USDC 0xf06a…aa89  → alert (new)
+2026-10-20 08:34:39Z ALERT → Telegram
+CRITICAL APC3M/USDC APC3M small — borrower 0xf06a…aa89: health factor 1.0685
+  thresholds: warn < 1.3, critical < 1.1, liquidation < 1.0 (LLTV 86%)
+  collateral 2,000 APC3M (= 2,063.36 USDC at the market oracle); debt 1,660.79 USDC incl. interest (4.51% APR)
+  liquidation if APC3M falls 6.41% against USDC
+  action: repay 477.8 USDC, or add 807.78 APC3M of collateral, to get back to HF 1.5
+  https://www.pharosscan.xyz/address/0xf06af1c5c2e34875bc190e2cc14efe9af810aa89
+  (block 20731576)
+  ok           HF 1.3250  APC3M/USDC 0x6776…1a2b
+  ok           HF 1.8220  APT/USDC 0x6776…1a2b
+  ok           HF 2.7510  WPROS/USDC 0xd27c…65c9
+2026-10-20 08:35:59Z block 20731720: 11 position(s)
+  critical     HF 1.0058  syzUSD/USDC 0xe6a4…fe7c
+  warn         HF 1.0125  syzUSD/USDC 0xa4a5…3dcc
+  warn         HF 1.0178  syzUSD/USDC 0xea23…0be5
+  ok           HF 1.0280  syzUSD/USDC 0x71ed…bb4e
+  ok           HF 1.0325  syzUSD/USDC 0x0a2c…ec06
+  warn         HF 1.0157  wsrUSD/USDC 0xc6dd…7aa7
+  ok           HF 1.0215  wsrUSD/USDC 0x086e…e327
+  critical     HF 1.0685  APC3M/USDC 0xf06a…aa89
+  ok           HF 1.3250  APC3M/USDC 0x6776…1a2b
+  ok           HF 1.8220  APT/USDC 0x6776…1a2b
+  ok           HF 2.7510  WPROS/USDC 0xd27c…65c9

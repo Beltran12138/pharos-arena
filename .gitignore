@@ -4,3 +4,4 @@ audit-log-agent/out/
 *.json.tmp
 /a.json
 alert-bot/state.json
+liquidation-watchdog/state.json

@@ -1,0 +1,173 @@
+{
+ "block": 20731213,
+ "found": [
+  {
+   "market": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86",
+   "borrower": "0xe6a4771284342462f4d2bfbfb86db12c8f19fe7c",
+   "pair": "syzUSD/USDC",
+   "hf": 1.0058059260832735,
+   "debt": "1,121,635"
+  },
+  {
+   "market": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86",
+   "borrower": "0xa4a57dcf7b15456b7053f10a377bdb437c073dcc",
+   "pair": "syzUSD/USDC",
+   "hf": 1.0124936010218426,
+   "debt": "1,335,315"
+  },
+  {
+   "market": "0xbea21c372be9729760844cb2d60879f5ced6a8a5bba9a538dea8801e8ac49e73",
+   "borrower": "0xc6dd9976066f3364b4d6a72cd4f1fa0468327aa7",
+   "pair": "wsrUSD/USDC",
+   "hf": 1.015682425250393,
+   "debt": "446,383"
+  },
+  {
+   "market": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86",
+   "borrower": "0xea2368f8afbbaac5b6e635dbe8687df1c9a80be5",
+   "pair": "syzUSD/USDC",
+   "hf": 1.0177667504204433,
+   "debt": "265,669"
+  },
+  {
+   "market": "0xbea21c372be9729760844cb2d60879f5ced6a8a5bba9a538dea8801e8ac49e73",
+   "borrower": "0x086eb9c2b14dd657ae77d07df9115a2f946ce327",
+   "pair": "wsrUSD/USDC",
+   "hf": 1.0214619543086338,
+   "debt": "5,497,152"
+  },
+  {
+   "market": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86",
+   "borrower": "0x71ed9944a10aba1489bf2fb9c3ad2beb00bebb4e",
+   "pair": "syzUSD/USDC",
+   "hf": 1.0280022106731452,
+   "debt": "82,675"
+  },
+  {
+   "market": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86",
+   "borrower": "0x0a2c601b9e2c95a0b0e02ceca607ee2350d0ec06",
+   "pair": "syzUSD/USDC",
+   "hf": 1.032478754822794,
+   "debt": "282,389"
+  },
+  {
+   "market": "0xba0d2638a277fd7696cdefdb96b5bd7405d0f174ba7526ce2c789f41149d91bc",
+   "borrower": "0xf06af1c5c2e34875bc190e2cc14efe9af810aa89",
+   "pair": "APC3M/USDC",
+   "hf": 1.0684621346228782,
+   "debt": "1,661"
+  },
+  {
+   "market": "0xb3b8a31c8a1652cf31eb872c7778716edc39471ed82bcad99b3f5c83a449e1ba",
+   "borrower": "0xe8ba2cca3126385d7309c69fdd21e20694edc701",
+   "pair": "WPROS/USDC",
+   "hf": 1.096561773965164,
+   "debt": "0"
+  },
+  {
+   "market": "0xbea21c372be9729760844cb2d60879f5ced6a8a5bba9a538dea8801e8ac49e73",
+   "borrower": "0xe8ba2cca3126385d7309c69fdd21e20694edc701",
+   "pair": "wsrUSD/USDC",
+   "hf": 1.1095043001658558,
+   "debt": "1"
+  },
+  {
+   "market": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86",
+   "borrower": "0xe8ba2cca3126385d7309c69fdd21e20694edc701",
+   "pair": "syzUSD/USDC",
+   "hf": 1.2184683748817586,
+   "debt": "1"
+  },
+  {
+   "market": "0xba0d2638a277fd7696cdefdb96b5bd7405d0f174ba7526ce2c789f41149d91bc",
+   "borrower": "0x67765ea217d0021e35ca973dbae3b54823081a2b",
+   "pair": "APC3M/USDC",
+   "hf": 1.3250281443699476,
+   "debt": "1,004,406"
+  },
+  {
+   "market": "0xba0d2638a277fd7696cdefdb96b5bd7405d0f174ba7526ce2c789f41149d91bc",
+   "borrower": "0xd7e318fb639ac35749ea5370dd696c323f89c230",
+   "pair": "APC3M/USDC",
+   "hf": 1.3427913147072024,
+   "debt": "64"
+  },
+  {
+   "market": "0xab78d4ff6d4f39a7d05a822d787e33d61c68e398fd7aec5a8bca4ab296985c69",
+   "borrower": "0x1f735797c030e7780f803706c5ed8e2b269a528c",
+   "pair": "ETHVP/WPROS",
+   "hf": 1.4790983217547342,
+   "debt": "0"
+  },
+  {
+   "market": "0x4cbedaf680d648926bafbce7d874ce717a1b3232ea7084c7c3593aa42bb429cd",
+   "borrower": "0xe8ba2cca3126385d7309c69fdd21e20694edc701",
+   "pair": "strUSD/USDC",
+   "hf": 1.605232563395561,
+   "debt": "1"
+  },
+  {
+   "market": "0xd834016ed49b76ffcbeb8402733e2d69b1f77d30b28d6f21c826931214ae5aea",
+   "borrower": "0x67765ea217d0021e35ca973dbae3b54823081a2b",
+   "pair": "APT/USDC",
+   "hf": 1.822011751269576,
+   "debt": "900,121"
+  },
+  {
+   "market": "0xbea21c372be9729760844cb2d60879f5ced6a8a5bba9a538dea8801e8ac49e73",
+   "borrower": "0x7552bcd1d045eabcb304d34f0574a9e3c7c8f9f1",
+   "pair": "wsrUSD/USDC",
+   "hf": 2.1216216216216215,
+   "debt": "0"
+  },
+  {
+   "market": "0xb3b8a31c8a1652cf31eb872c7778716edc39471ed82bcad99b3f5c83a449e1ba",
+   "borrower": "0xd27cb53f5920d484261cc14d32094d3f043265c9",
+   "pair": "WPROS/USDC",
+   "hf": 2.7509821659107305,
+   "debt": "1,000,335"
+  },
+  {
+   "market": "0x95bc6fe971db18703f2747ea9c8000e1525ea1c49b8c12f75c889e916a6b442c",
+   "borrower": "0xe8ba2cca3126385d7309c69fdd21e20694edc701",
+   "pair": "USDC/WPROS",
+   "hf": 3.061548766710602,
+   "debt": "0"
+  },
+  {
+   "market": "0x6657f8b7ec9d900f8e975e3f7eb74b80e2783cbbacd1d3f90d144a3e34ad2faa",
+   "borrower": "0x44e96401ba547b25719d233daee87cb90ca649dc",
+   "pair": "BTCVC/WPROS",
+   "hf": 15.762374558822147,
+   "debt": "1,799,382"
+  },
+  {
+   "market": "0xf203d06ff4b5339e76d576b369c6799168d76112d489651b8347a501cc7795c5",
+   "borrower": "0x1f735797c030e7780f803706c5ed8e2b269a528c",
+   "pair": "BTCVC/USDC",
+   "hf": 31.32,
+   "debt": "0"
+  },
+  {
+   "market": "0xf203d06ff4b5339e76d576b369c6799168d76112d489651b8347a501cc7795c5",
+   "borrower": "0x44e96401ba547b25719d233daee87cb90ca649dc",
+   "pair": "BTCVC/USDC",
+   "hf": 3129.608211640478,
+   "debt": "10"
+  },
+  {
+   "market": "0xab78d4ff6d4f39a7d05a822d787e33d61c68e398fd7aec5a8bca4ab296985c69",
+   "borrower": "0x10751f022a6e6765a39ac615ad25a4f78f563b4d",
+   "pair": "ETHVP/WPROS",
+   "hf": 733648.0909839965,
+   "debt": "5"
+  },
+  {
+   "market": "0xab78d4ff6d4f39a7d05a822d787e33d61c68e398fd7aec5a8bca4ab296985c69",
+   "borrower": "0x44e96401ba547b25719d233daee87cb90ca649dc",
+   "pair": "ETHVP/WPROS",
+   "hf": 1212885.8486115783,
+   "debt": "10"
+  }
+ ]
+}
