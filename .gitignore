@@ -1,3 +1,5 @@
 node_modules/
 audit-log-agent/out/
 .env
+*.json.tmp
+/a.json
