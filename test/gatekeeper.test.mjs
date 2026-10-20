@@ -77,6 +77,10 @@ test("audit log: hash chain detects an edited decision; spend counts only allowe
   assert.deepEqual(spentOn(path, DAY, "live"), { PROS: 7n });
   assert.equal(verify(path).ok, true);
 
+  // reserved chain fields can't be set by an entry (a confirmation once stored its tx hash as "hash")
+  assert.throws(() => append(path, { ...base, at: DAY.toISOString(), decision: "allow", hash: "0xabc" }), /reserved/);
+  assert.equal(verify(path).ok, true);
+
   const lines = readFileSync(path, "utf8").split("\n");
   lines[1] = lines[1].replace('"deny"', '"allow"');
   writeFileSync(path, lines.join("\n"));

@@ -5,6 +5,7 @@
 //
 //   node policy-gatekeeper/gatekeeper.mjs check  <requests.json> [--policy p.json] [--log audit.jsonl]
 //   node policy-gatekeeper/gatekeeper.mjs exec   <requests.json> [--policy p.json] [--log audit.jsonl]
+//   node policy-gatekeeper/gatekeeper.mjs confirm [--log audit.jsonl]   append receipts for unconfirmed broadcasts
 //   node policy-gatekeeper/gatekeeper.mjs verify [--log audit.jsonl]
 //
 // check: dry-run. A request may carry "at" (ISO time) to test the time-window rule; it is recorded as a
@@ -16,8 +17,9 @@ import { encodeFunctionData, parseAbi, parseEther } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { connect } from "../lib/mcp.mjs";
 import { signAndSend } from "../lib/send.mjs";
+import { txLink } from "../lib/pharos.mjs";
 import { compile, evaluate } from "./policy.mjs";
-import { append, spentOn, verify } from "./auditlog.mjs";
+import { append, readLog, spentOn, verify } from "./auditlog.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -120,7 +122,39 @@ function print(e) {
   }
 }
 
+/**
+ * Append a confirmation for every broadcast that the log records as unconfirmed. The log is hash-chained, so
+ * past lines are never edited: confirmations are new lines that point back to the decision (ofSeq).
+ */
+async function confirm() {
+  const log = readLog(logPath);
+  const done = new Set(log.filter((l) => l.type === "confirmation").map((l) => l.ofSeq));
+  const open = log.filter((l) => l.execution && /^sent/.test(l.execution.status) && !done.has(l.seq));
+  if (!open.length) return console.log("nothing to confirm");
+  const mcp = await connect();
+  try {
+    for (const l of open) {
+      const hash = typeof l.execution.hash === "string" ? l.execution.hash : l.execution.hash?.txHash;
+      const r = await mcp.call("get_transaction_receipt", { hash });
+      const e = append(logPath, {
+        type: "confirmation",
+        at: new Date().toISOString(),
+        ofSeq: l.seq,
+        txHash: hash, // not "hash": that field is the log's own chain hash
+        status: r.status === "0x1" ? "success" : "reverted",
+        block: Number(BigInt(r.blockNumber)),
+        gasUsed: BigInt(r.gasUsed).toString(),
+        link: txLink(hash),
+      });
+      console.log(`#${e.seq} confirms #${l.seq} (${l.request.id}): ${e.status} in block ${e.block}, gas ${e.gasUsed}  ${e.link}`);
+    }
+  } finally {
+    await mcp.close();
+  }
+}
+
 if (cmd === "check") await run("dry-run");
+else if (cmd === "confirm") await confirm();
 else if (cmd === "exec") await run("live");
 else if (cmd === "verify") {
   const r = verify(logPath);

@@ -57,6 +57,34 @@ log [`sample-dryrun.jsonl`](sample-dryrun.jsonl)):
 The time-window deny uses a simulated clock (`"at"` in the request), which only `check` accepts and which is
 marked `simulatedClock: true` in the log. `exec` always uses the real time.
 
+## Live on Pharos mainnet ([`audit.jsonl`](audit.jsonl))
+
+`exec` with [`live-requests.json`](live-requests.json), signer `0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071`
+(the only key `policy.json` accepts), real clock (2026-10-20 06:54 UTC, inside the window):
+
+| # | Request | Decision | What happened on chain |
+|---|---|---|---|
+| 9 | L1: 0.0001 PROS to 0x…dEaD | allow | [`0x272a2528…207e`](https://www.pharosscan.xyz/tx/0x272a2528a5e7fb780678a8e3c0a558cd3c5e3494052e5d72b66a9b7e73e0207e), block 20,725,572, success, gas 21,000 |
+| 10 | L2: wrap 0.0005 PROS via WPROS `deposit()` | allow | [`0xa933bdd6…7c44`](https://www.pharosscan.xyz/tx/0xa933bdd6591608d7dd7915c3ab92c81d00af5102d69e7f2f71de7ea6f4ed7c44), block 20,725,621, success, gas 44,942 |
+| 11 | L3: PROS to a non-allowlisted address | **deny** `allowlist.recipient` | nothing signed |
+| 12 | L4: 0.005 PROS (limit 0.001) | **deny** `spendLimit.perTx` | nothing signed |
+
+The signer's history on the explorer has exactly these two outgoing transactions: the denied requests never
+reached the key. Both were signed locally and broadcast through Chain MCP `send_raw_transaction`.
+
+The log also shows what happened before the wallet was funded: decisions #1–#8 are the same four requests
+run twice against an empty wallet. L1 and L2 were allowed by the policy but stopped by the `estimate_gas`
+simulation ("not enough funds"), so nothing was sent.
+
+Two bugs found by this run, both fixed: (1) the MCP returns `{ txHash }`, which the first version did not
+unwrap, so #9 and #10 were logged as `sent-unconfirmed` with a broken link. Lines #13 and #14 are
+confirmations appended afterwards by `gatekeeper.mjs confirm`, which reads the receipts through Chain MCP
+and points back to the decision (`ofSeq`); the hash chain means past lines are never rewritten. (2) The first
+`confirm` stored the transaction hash in a field named `hash`, which collided with the chain's own field, and
+`verify` failed. Those two lines were removed before the log was ever published and written again;
+`append` now refuses the reserved fields `seq`, `prevHash`, `hash`. Broadcast transactions also count
+toward the daily limit even before they are confirmed.
+
 ## Audit log
 
 One JSON line per decision: time, mode, the request, decision, deciding rule, all checks, spend, and the

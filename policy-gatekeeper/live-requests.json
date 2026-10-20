@@ -1,0 +1,6 @@
+[
+  { "id": "L1", "note": "send 0.0001 PROS to the burn address (allowlisted)", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.0001" },
+  { "id": "L2", "note": "wrap 0.0005 PROS into WPROS via deposit()", "to": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0", "value": "0.0005", "call": { "fn": "deposit()" } },
+  { "id": "L3", "note": "send PROS to an address that is not allowlisted (must be denied and never signed)", "to": "0x1111111111111111111111111111111111111111", "value": "0.0001" },
+  { "id": "L4", "note": "0.005 PROS in one transaction, over the 0.001 per-tx limit (must be denied and never signed)", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.005" }
+]

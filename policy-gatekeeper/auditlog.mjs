@@ -12,6 +12,9 @@ export function readLog(path) {
 }
 
 export function append(path, entry) {
+  for (const k of ["seq", "prevHash", "hash"]) {
+    if (k in entry) throw new Error(`audit entry may not set "${k}": it is reserved for the hash chain`);
+  }
   const log = readLog(path);
   const prev = log.at(-1);
   const body = { seq: (prev?.seq ?? 0) + 1, ...entry, prevHash: prev?.hash ?? GENESIS };
@@ -37,7 +40,8 @@ export function spentOn(path, at, mode) {
   const out = {};
   for (const l of readLog(path)) {
     if (l.decision !== "allow" || l.mode !== mode || l.at.slice(0, 10) !== day) continue;
-    if (l.execution && l.execution.status !== "success" && l.execution.status !== "simulated") continue;
+    // Spent = anything that may have reached the chain. Only simulation failures and not-sent are excluded.
+    if (l.execution && ["simulation-failed", "not-sent", "reverted"].includes(l.execution.status)) continue;
     for (const s of l.spends) out[s.symbol] = (out[s.symbol] ?? 0n) + BigInt(s.amount);
   }
   return out;
