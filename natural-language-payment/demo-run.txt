@@ -1,0 +1,125 @@
+=================== 1. complete request
+you>   send 0.0002 WPROS to alice
+
+agent> Checks on Pharos mainnet (Chain MCP):
+         ok   token known: WPROS at 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+         ok   recipient format: 0x00000000000000000000000000000000000A11cE
+         ok   amount: 0.0002 WPROS
+         ok   recipient not zero/burn: 0x00000000000000000000000000000000000A11cE
+         ok   recipient is not the token contract: sending tokens to the token contract itself loses them
+         ok   recipient type: a regular account (no contract code)
+         ok   token contract: on chain: symbol WPROS, decimals 18
+         ok   balance: sender holds 0.0005 WPROS, needs 0.0002
+         ok   simulation: estimate_gas from the sender succeeds: 65364 gas
+         ok   gas: fee ≈ 0.000784 PROS; sender has 4.998397 PROS for it
+
+agent> Summary:
+         Send     0.0002 WPROS
+         To       alice (0x00000000000000000000000000000000000A11cE)
+         From     0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+         Network  Pharos mainnet (chain 1672)
+         Max fee  0.000784 PROS (gas limit 78436)
+
+agent> Prepare this as an unsigned transaction for you to sign? (yes/no)
+you>   yes
+agent> Unsigned transaction (not signed, not sent):
+         to 0x52C48d4213107b20bC583832b0d951FB9CA8F0B0  value 0  nonce 2  gas 78436  gasPrice 10000000000
+         data 0xa9059cbb00000000000000000000000000000000000000000000000000000000000a11ce000000…
+         wallet request: ethereum:0x52C48d4213107b20bC583832b0d951FB9CA8F0B0@1672/transfer?address=0x00000000000000000000000000000000000A11cE&uint256=200000000000000
+         saved: C:\Users\lenovo\dev\pharos-arena\natural-language-payment\out\unsigned-2026-10-20T0855-WPROS-0x000011cE.json
+(exit 0)
+
+=================== 2. ENS name, then a balance the sender does not have
+you>   send 100 USDC to alice.eth
+agent> alice.eth is an ENS name, and there is no ENS on Pharos. Your contacts have "alice" = 0x00000000000000000000000000000000000a11ce: is that the one? What is the 0x address?
+you>   yes
+
+agent> Checks on Pharos mainnet (Chain MCP):
+         ok   token known: USDC at 0xc879c018db60520f4355c26ed1a6d572cdac1815
+         ok   recipient format: 0x00000000000000000000000000000000000A11cE
+         ok   amount: 100 USDC
+         ok   recipient not zero/burn: 0x00000000000000000000000000000000000A11cE
+         ok   recipient is not the token contract: sending tokens to the token contract itself loses them
+         ok   recipient type: a regular account (no contract code)
+         ok   token contract: on chain: symbol USDC, decimals 6
+         FAIL balance: sender holds 0 USDC, needs 100
+         FAIL simulation: estimate_gas from the sender fails: execution reverted: ERC20: transfer amount exceeds balance
+
+agent> I can't prepare this: balance, simulation failed. Nothing was prepared.
+(exit 1)
+
+=================== 3. ambiguous contact and a dollar sign
+you>   pay ali $0.5
+agent> "ali" matches several contacts: alice, alicia. Which one?
+you>   alicia
+agent> By "$", do you mean USDC (the only USD stablecoin this agent knows on Pharos)?
+you>   PROS
+
+agent> Checks on Pharos mainnet (Chain MCP):
+         ok   token known: PROS (native)
+         ok   recipient format: 0x000000000000000000000000000000000a11c1a0
+         ok   amount: 0.5 PROS
+         ok   recipient not zero/burn: 0x000000000000000000000000000000000a11c1a0
+         ok   recipient type: a regular account (no contract code)
+         ok   balance: sender holds 4.998397 PROS, needs 0.5
+         ok   simulation: estimate_gas from the sender succeeds: 21000 gas
+         ok   gas: fee ≈ 0.000252 PROS; sender has 4.498397 PROS for it
+
+agent> Summary:
+         Send     0.5 PROS
+         To       alicia (0x000000000000000000000000000000000a11c1a0)
+         From     0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+         Network  Pharos mainnet (chain 1672)
+         Max fee  0.000252 PROS (gas limit 25200)
+
+agent> Prepare this as an unsigned transaction for you to sign? (yes/no)
+you>   yes
+agent> Unsigned transaction (not signed, not sent):
+         to 0x000000000000000000000000000000000a11c1a0  value 500000000000000000  nonce 2  gas 25200  gasPrice 10000000000
+         data 0x
+         wallet request: ethereum:0x000000000000000000000000000000000a11c1a0@1672?value=500000000000000000
+         saved: C:\Users\lenovo\dev\pharos-arena\natural-language-payment\out\unsigned-2026-10-20T0855-PROS-0x0000c1a0.json
+(exit 0)
+
+=================== 4. 1.5k and an address with a broken checksum
+you>   send 1.5k PROS to 0x6649228a90BEF932a1aa98e5c4412dadba8a04c5
+agent> Is "1.5k" 1500? Please give the exact number.
+you>   1500
+
+agent> Checks on Pharos mainnet (Chain MCP):
+         ok   token known: PROS (native)
+         FAIL recipient format: 0x6649228a90BEF932a1aa98e5c4412dadba8a04c5 has a wrong checksum (mixed case does not match): likely a typo
+         ok   amount: 1,500 PROS
+
+agent> I can't prepare this: recipient format failed. Nothing was prepared.
+(exit 1)
+
+=================== 5. two amounts; user declines at the summary
+you>   send 0.1 WPROS and 0.2 WPROS to bob
+agent> I see more than one amount (0.1, 0.2). Which is the amount to send?
+you>   0.0001
+
+agent> Checks on Pharos mainnet (Chain MCP):
+         ok   token known: WPROS at 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0
+         ok   recipient format: 0x0000000000000000000000000000000000000B0b
+         ok   amount: 0.0001 WPROS
+         ok   recipient not zero/burn: 0x0000000000000000000000000000000000000B0b
+         ok   recipient is not the token contract: sending tokens to the token contract itself loses them
+         ok   recipient type: a regular account (no contract code)
+         ok   token contract: on chain: symbol WPROS, decimals 18
+         ok   balance: sender holds 0.0005 WPROS, needs 0.0001
+         ok   simulation: estimate_gas from the sender succeeds: 65349 gas
+         ok   gas: fee ≈ 0.000784 PROS; sender has 4.998397 PROS for it
+
+agent> Summary:
+         Send     0.0001 WPROS
+         To       bob (0x0000000000000000000000000000000000000B0b)
+         From     0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071
+         Network  Pharos mainnet (chain 1672)
+         Max fee  0.000784 PROS (gas limit 78418)
+
+agent> Prepare this as an unsigned transaction for you to sign? (yes/no)
+you>   no
+agent> OK, nothing was prepared.
+(exit 0)
+

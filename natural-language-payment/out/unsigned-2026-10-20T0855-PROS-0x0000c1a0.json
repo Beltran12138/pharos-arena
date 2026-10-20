@@ -1,0 +1,74 @@
+{
+ "request": "pay ali $0.5",
+ "summary": {
+  "amount": "0.5",
+  "token": "PROS",
+  "to": "0x000000000000000000000000000000000a11c1a0",
+  "name": "alicia",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "memo": null
+ },
+ "checks": [
+  {
+   "name": "token known",
+   "ok": true,
+   "level": "error",
+   "detail": "PROS (native)"
+  },
+  {
+   "name": "recipient format",
+   "ok": true,
+   "level": "error",
+   "detail": "0x000000000000000000000000000000000a11c1a0"
+  },
+  {
+   "name": "amount",
+   "ok": true,
+   "level": "error",
+   "detail": "0.5 PROS"
+  },
+  {
+   "name": "recipient not zero/burn",
+   "ok": true,
+   "level": "error",
+   "detail": "0x000000000000000000000000000000000a11c1a0"
+  },
+  {
+   "name": "recipient type",
+   "ok": true,
+   "level": "info",
+   "detail": "a regular account (no contract code)"
+  },
+  {
+   "name": "balance",
+   "ok": true,
+   "level": "error",
+   "detail": "sender holds 4.998397 PROS, needs 0.5"
+  },
+  {
+   "name": "simulation",
+   "ok": true,
+   "level": "error",
+   "detail": "estimate_gas from the sender succeeds: 21000 gas"
+  },
+  {
+   "name": "gas",
+   "ok": true,
+   "level": "error",
+   "detail": "fee ≈ 0.000252 PROS; sender has 4.498397 PROS for it"
+  }
+ ],
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x000000000000000000000000000000000a11c1a0",
+  "value": "500000000000000000",
+  "data": "0x",
+  "nonce": 2,
+  "gas": "25200",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xee028502540be40082627094000000000000000000000000000000000a11c1a08806f05b59d3b20000808206888080",
+ "uri": "ethereum:0x000000000000000000000000000000000a11c1a0@1672?value=500000000000000000"
+}

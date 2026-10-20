@@ -1,0 +1,86 @@
+{
+ "request": "send 0.0002 WPROS to alice",
+ "summary": {
+  "amount": "0.0002",
+  "token": "WPROS",
+  "to": "0x00000000000000000000000000000000000A11cE",
+  "name": "alice",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "memo": null
+ },
+ "checks": [
+  {
+   "name": "token known",
+   "ok": true,
+   "level": "error",
+   "detail": "WPROS at 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0"
+  },
+  {
+   "name": "recipient format",
+   "ok": true,
+   "level": "error",
+   "detail": "0x00000000000000000000000000000000000A11cE"
+  },
+  {
+   "name": "amount",
+   "ok": true,
+   "level": "error",
+   "detail": "0.0002 WPROS"
+  },
+  {
+   "name": "recipient not zero/burn",
+   "ok": true,
+   "level": "error",
+   "detail": "0x00000000000000000000000000000000000A11cE"
+  },
+  {
+   "name": "recipient is not the token contract",
+   "ok": true,
+   "level": "error",
+   "detail": "sending tokens to the token contract itself loses them"
+  },
+  {
+   "name": "recipient type",
+   "ok": true,
+   "level": "info",
+   "detail": "a regular account (no contract code)"
+  },
+  {
+   "name": "token contract",
+   "ok": true,
+   "level": "error",
+   "detail": "on chain: symbol WPROS, decimals 18"
+  },
+  {
+   "name": "balance",
+   "ok": true,
+   "level": "error",
+   "detail": "sender holds 0.0005 WPROS, needs 0.0002"
+  },
+  {
+   "name": "simulation",
+   "ok": true,
+   "level": "error",
+   "detail": "estimate_gas from the sender succeeds: 65364 gas"
+  },
+  {
+   "name": "gas",
+   "ok": true,
+   "level": "error",
+   "detail": "fee ≈ 0.000784 PROS; sender has 4.998397 PROS for it"
+  }
+ ],
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+  "value": "0",
+  "data": "0xa9059cbb00000000000000000000000000000000000000000000000000000000000a11ce0000000000000000000000000000000000000000000000000000b5e620f48000",
+  "nonce": 2,
+  "gas": "78436",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xf86c028502540be400830132649452c48d4213107b20bc583832b0d951fb9ca8f0b080b844a9059cbb00000000000000000000000000000000000000000000000000000000000a11ce0000000000000000000000000000000000000000000000000000b5e620f480008206888080",
+ "uri": "ethereum:0x52C48d4213107b20bC583832b0d951FB9CA8F0B0@1672/transfer?address=0x00000000000000000000000000000000000A11cE&uint256=200000000000000"
+}
