@@ -1,0 +1,12 @@
+Batch of 4 actions from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 (Pharos mainnet)
+
+  ok    pay-okx          0.00001 PROS → 0x6649228a90bef932a1aa98e5c4412dadba8a04c5  alone: 21000 gas
+  ok    burn-tip         0.00001 PROS → 0x000000000000000000000000000000000000dEaD  alone: 21000 gas
+  ok    pay-self         0.00001 PROS → 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071  alone: 21000 gas
+  FAIL  to-usdc          0.00001 PROS → 0xc879c018db60520f4355c26ed1a6d572cdac1815  alone: execution reverted:  — left out of the batch
+
+  3 transactions, 63000 gas → 1 transaction, 70252 gas: saves -7252 gas (-11.5%) and 2 signatures/nonces
+  left out: to-usdc (execution reverted: )
+  decision: SEPARATE: the batch would cost 7252 more gas than 3 plain transfers; set "optimize": "steps" to batch anyway
+
+  Why allowFailure is false (simulated with eth_call, not sent): with to-usdc included and allowFailure = true the batch succeeds even though to-usdc fails, and Multicall3's aggregate3Value does not refund a failed call's value, so to-usdc's 0.00001 PROS would be left in Multicall3 (which holds 0 PROS now, free for anyone to take). With allowFailure = false the same batch reverts (execution reverted: Multicall3: call failed), so nothing moves.

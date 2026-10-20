@@ -1,0 +1,9 @@
+{
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "actions": [
+    { "id": "pay-okx", "note": "to the payer's second wallet", "to": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5", "value": "0.00001" },
+    { "id": "burn-tip", "note": "to the burn address", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.00001" },
+    { "id": "pay-self", "note": "back to the sender", "to": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071", "value": "0.00001" },
+    { "id": "to-usdc", "note": "the USDC token contract does not accept PROS: must fail and be left out", "to": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "value": "0.00001" }
+  ]
+}

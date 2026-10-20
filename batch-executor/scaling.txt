@@ -1,0 +1,14 @@
+estimate_gas through Chain MCP, 2026-10-20, from 0x6Ea6…9071: N native transfers of 0.00001 PROS (to existing
+accounts) in one Multicall3 aggregate3Value call, against N separate transfers at 21,000 gas each.
+
+N=2: batch 58930 vs separate 42000 → -40.3%
+N=3: batch 70252 vs separate 63000 → -11.5%
+N=4: batch 81589 vs separate 84000 → 2.9%
+N=5: batch 92643 vs separate 105000 → 11.8%
+N=6: batch 103951 vs separate 126000 → 17.5%
+N=8: batch 126344 vs separate 168000 → 24.8%
+N=10: batch 148990 vs separate 210000 → 29.1%
+N=12: batch 171371 vs separate 252000 → 32.0%
+
+About 36k gas of fixed overhead plus about 11.3k per transfer, against 21k per separate transfer:
+batching saves gas from 4 transfers up. Below that it saves only signatures and nonces.

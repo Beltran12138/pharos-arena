@@ -1,0 +1,13 @@
+{
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "note": "six independent payouts plus one that cannot work",
+  "actions": [
+    { "id": "salary", "to": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5", "value": "0.00001" },
+    { "id": "bonus", "to": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5", "value": "0.00002" },
+    { "id": "burn-1", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.00001" },
+    { "id": "burn-2", "to": "0x000000000000000000000000000000000000dEaD", "value": "0.00001" },
+    { "id": "refund-1", "to": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071", "value": "0.00001" },
+    { "id": "refund-2", "to": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071", "value": "0.00001" },
+    { "id": "to-usdc", "note": "the USDC token contract does not accept PROS", "to": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "value": "0.00001" }
+  ]
+}

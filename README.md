@@ -26,6 +26,8 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`liquidation-watchdog/`](liquidation-watchdog/) | Liquidation Watchdog (Medium) | Morpho Blue positions: health factor with accrued interest, warn/critical alerts to Telegram with repay-or-add-collateral amounts |
 | [`natural-language-payment/`](natural-language-payment/) | Natural-Language Payment Agent (Medium) | "send 100 USDC to alice" → questions on ambiguity → on-chain checks → summary → unsigned tx + EIP-681 request |
 | [`recurring-payment/`](recurring-payment/) | Recurring Payment Agent (Medium) | Weekly/monthly payments prepared on time, reconciled on chain, pending/paid/failed ledger, no double pay |
+| [`gas-fee-optimizer/`](gas-fee-optimizer/) | Gas Fee Optimizer (Medium) | Gas history from blocks; holds a tx until gas is low or the deadline; reports paid vs request-time and vs others |
+| [`batch-executor/`](batch-executor/) | Batch Executor (Medium) | Simulate each transfer, leave failures out, one all-or-nothing Multicall3 batch; 6 transfers for 35% less gas |
 | [`invoice-to-payment/`](invoice-to-payment/) | Invoice-to-Payment Agent (Medium) | Text / JSON / EIP-681 invoices → flags (totals, payee redirection, duplicates) → unsigned payment with the reference in calldata |
 
 **Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state

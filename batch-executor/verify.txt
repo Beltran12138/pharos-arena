@@ -1,0 +1,14 @@
+Batch 0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720
+  success in block 20735903, gas used 81681, fee 0.00081681 PROS  https://www.pharosscan.xyz/tx/0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720
+  0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5: balance change 0.00003 PROS, expected 0.00003 PROS ✓
+  0x000000000000000000000000000000000000dEaD: balance change 0.00002 PROS, expected 0.00002 PROS ✓
+  0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071: balance change -0.00086681 PROS, expected -0.00086681 PROS ✓
+  salary         0.00001 PROS → 0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5  done
+  bonus          0.00002 PROS → 0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5  done
+  burn-1         0.00001 PROS → 0x000000000000000000000000000000000000dEaD  done
+  burn-2         0.00001 PROS → 0x000000000000000000000000000000000000dEaD  done
+  refund-1       0.00001 PROS → 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071  done
+  refund-2       0.00001 PROS → 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071  done
+  to-usdc        0.00001 PROS → 0xc879c018db60520f4355c26ed1a6d572cdac1815  left out before sending: execution reverted: 
+
+  Actual: 1 transaction, 81681 gas vs 126000 gas for 6 separate transfers: saved 44319 gas (35.2%) and 5 transactions. (The plan's estimate was 103951; estimate_gas over-states this call.)
