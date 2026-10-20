@@ -1,0 +1,21 @@
+job-20261020T143956: Morpho liquidation-risk report for 1 borrower(s); budget $0.02, per-call cap $0.004; buyer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA
+  ledger: x402-agent-buyer/ledger/job-20261020T143956.jsonl
+
+Plan (catalog prices; the price paid is the one in each 402):
+  required  $0.005  /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C — positions and health factor of 0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C
+  optional  $0.001  /v1/pros-price — PROS/USD (Chainlink), to state the market context
+  optional  $0.002  /v1/pool/wpros-usdc — pool price, to cross-check the oracle against the market
+  required items: $0.005 of the $0.02 budget
+
+  REFUSED /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C (required): price $0.005 is over the per-call cap $0.004
+  SKIPPED /v1/pros-price (optional): not bought: required data is missing, so this context is not worth paying for
+  SKIPPED /v1/pool/wpros-usdc (optional): not bought: required data is missing, so this context is not worth paying for
+
+Report
+  0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C: NOT BOUGHT — no data
+  skipped /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C: price $0.005 is over the per-call cap $0.004
+  skipped /v1/pros-price: not bought: required data is missing, so this context is not worth paying for
+  skipped /v1/pool/wpros-usdc: not bought: required data is missing, so this context is not worth paying for
+
+Paid 0 time(s), total $0 of $0.02; every payment: none
+→ JOB DONE (incomplete)

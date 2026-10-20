@@ -1,0 +1,50 @@
+facilitator on http://localhost:4020 — eip155:688689, settles from 0x530db77F96131E0a475c24AE2060Fc3f6ABF03Bf
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x1b67fcf8be64ed181865680e6ff93d6c016ca3c0402de9afcfb2bcf793684db9
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x8f8dd658e621b1ee66b0e06a6c73f3b150f5dcb9490aacc4989bd32081cf27d8
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 2000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x62c219aafb981cb82678785b28e4219cd17afdd1db9c3148404fce2d9ca09f9c
+verify  INVALID (invalid_exact_evm_signature) 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+verify  INVALID (invalid_exact_evm_nonce_already_used) 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0xe204deb06aeeacd6afc985e727d981a8aeb80dc47fcfdba6bef3a5b6fc87f494
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x98a99242e521a7455498c3741f893958032e9d14a444c00ce26d0c8fcfb81ab8
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 2000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0xcb3728250db88b233cc796f26c6956b3df35eed7eec384f0a12b6e2a5e1dac11
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0xa05c6e69c2c6900d6cfea41b1eaa80a49ef94d9a9f236564243cf765e41035d1
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x218bcbe158550d61553d6cb176f3367440331fda3029b4fe7b60233467616524
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x3def4aba1fa56ab86dac6b87598c79e9ec8e603fa84fbd0890f24b8fbe6344ac
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x980b6ee617cfbba1b5f26c28334dc702864c4993fba9a5eab30b46681da9dfd7
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 2000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x77f1444a65d3ca1df92f9f815e798510a38a5c4507cbc5557dae0f6dcb274e8f
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0xa66e2c5b68553003cfbc5e1e524db1559bd52ba0d1ae848b6a1250da4f0921d8
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x59d8bc6286f1a0cdc34b92d4ff68c846ed5936c00ab7201d9492c279961814a6
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x445cd7acc5851bc0e5dff59ea232728dfe29d09c8920650283e0398beed5241e
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 2000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x6d2003c718e75f93ff687d0153217471d495614a5e76b7223f3549b1651d090e
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x0da66631c4fcccc4213bb936b6574457f6f470237964a78df61400648e4fc900
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x98f8a628cb883658db6c518832c517b3db15a039e763e65b4a0cb1ecbc6c383c
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0xd794b4c747d4435d1ff4327e15d86f80ef373f8b258ea941049b31b2c281ad8e
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x1bf7ebf1f183931437bd31aa7f286089818215bc1c67a0311a68cd7d85b2dac6
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 5000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x2bc8733a1b417dcd5172d556b9160afd631fb2559a0437d17810cf2cdb7dc18b
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 1000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x3a162972fae3a2f201730f3131b0104288b98ee85b64a5e266e0cc99a6fbce51
+verify  valid   0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21, 2000 units
+settle  ok https://atlantic.pharosscan.xyz/tx/0x3d6a1c1bb7487032bcaf150610ec004e1a87c5c18dcc375a5817dc0482e7dd28

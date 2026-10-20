@@ -1,0 +1,31 @@
+job-20261020T144008: Morpho liquidation-risk report for 2 borrower(s); budget $0.02, per-call cap $0.006; buyer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA
+  ledger: x402-agent-buyer/ledger/job-20261020T144008.jsonl
+
+Plan (catalog prices; the price paid is the one in each 402):
+  required  $0.005  /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C — positions and health factor of 0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C
+  required  $0.005  /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc — positions and health factor of 0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc
+  optional  $0.001  /v1/pros-price — PROS/USD (Chainlink), to state the market context
+  optional  $0.002  /v1/pool/wpros-usdc — pool price, to cross-check the oracle against the market
+  required items: $0.01 of the $0.02 budget
+
+  pay $0.005 for /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C (positions and health factor of 0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C); nonce 0x99efbbde77…, running total incl. this $0.005
+    settled https://atlantic.pharosscan.xyz/tx/0xd794b4c747d4435d1ff4327e15d86f80ef373f8b258ea941049b31b2c281ad8e — bought /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C; running total $0.005
+  pay $0.005 for /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc (positions and health factor of 0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc); nonce 0x70e7feebb9…, running total incl. this $0.01
+    attempt 1: answer LOST (injected: dropped after the server answered 200)
+    authorizationState(buyer, nonce) = true → the nonce is used on chain: the payment went through; count it once
+    the payment is https://atlantic.pharosscan.xyz/tx/0x1bf7ebf1f183931437bd31aa7f286089818215bc1c67a0311a68cd7d85b2dac6: counted once (running total $0.01); the data did not arrive, so the item is still missing
+  pay $0.005 for /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc (positions and health factor of 0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc); nonce 0x5268c057db…, running total incl. this $0.015
+    settled https://atlantic.pharosscan.xyz/tx/0x2bc8733a1b417dcd5172d556b9160afd631fb2559a0437d17810cf2cdb7dc18b — bought /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc; running total $0.015
+  pay $0.001 for /v1/pros-price (PROS/USD (Chainlink), to state the market context); nonce 0x1acb25c2ce…, running total incl. this $0.016
+    settled https://atlantic.pharosscan.xyz/tx/0x3a162972fae3a2f201730f3131b0104288b98ee85b64a5e266e0cc99a6fbce51 — bought /v1/pros-price; running total $0.016
+  pay $0.002 for /v1/pool/wpros-usdc (pool price, to cross-check the oracle against the market); nonce 0x6ddfcc8bdd…, running total incl. this $0.018
+    settled https://atlantic.pharosscan.xyz/tx/0x3d6a1c1bb7487032bcaf150610ec004e1a87c5c18dcc375a5817dc0482e7dd28 — bought /v1/pool/wpros-usdc; running total $0.018
+
+Report
+  0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C: Morpho syzUSD/USDC — borrowed 1,121,680.49, HF 1.0058 → CRITICAL; liquidation if collateral falls 0.58% (block 20754368)
+  0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc: Morpho syzUSD/USDC — borrowed 1,335,369.8, HF 1.0125 → at risk; liquidation if collateral falls 1.23% (block 20754429)
+  PROS/USD (Chainlink): $0.6210, 53 s old
+  pool vs oracle: pool $0.6219, 0.15% from the oracle
+
+Paid 5 time(s), total $0.018 of $0.02; every payment: /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C $0.005 0xd794b4c7…, /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc $0.005 0x1bf7ebf1…, /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc $0.005 0x2bc8733a…, /v1/pros-price $0.001 0x3a162972…, /v1/pool/wpros-usdc $0.002 0x3d6a1c1b…
+→ JOB DONE

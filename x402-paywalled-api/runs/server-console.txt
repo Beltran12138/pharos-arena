@@ -1,0 +1,1 @@
+seller API on http://localhost:4021 — paid in eip155:688689 USDC to 0xcDb78951790492F9F440CF800C4F496b388adc21; routes: GET /v1/pros-price $0.001, GET /v1/pool/wpros-usdc $0.002, GET /v1/morpho/[address] $0.005

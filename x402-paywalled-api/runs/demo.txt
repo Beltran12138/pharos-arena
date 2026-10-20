@@ -1,0 +1,39 @@
+buyer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA, seller 0xcDb78951790492F9F440CF800C4F496b388adc21, eip155:688689, USDC 0xcfC8330f4BCAB529c625D12781b1C19466A9Fc8B
+balances before: buyer 19.999 USDC, seller 0.001 USDC
+
+1. GET /health (free) → 200
+  ✓ free route answers 200 without payment: {"ok":true,"network":"eip155:688689","payTo":"0xcDb78951790492F9F440CF800C4F496b388adc21","asset":"0xcfC8330f4BCAB529c625D12781b1C19466A9Fc8B","facilitator":"http://localhost:4020"}
+
+2. GET /v1/pros-price
+   → 402; PAYMENT-REQUIRED decoded: scheme exact, network eip155:688689, amount 1000 (0.001 USDC), asset 0xcfC8330f4BCAB529c625D12781b1C19466A9Fc8B, payTo 0xcDb78951790492F9F440CF800C4F496b388adc21, extra {"token":"USDC","name":"USDC","version":"2"}
+  ✓ unpaid request gets 402 with PAYMENT-REQUIRED
+   signed EIP-3009 authorization (no gas for the buyer): from 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA to 0xcDb78951790492F9F440CF800C4F496b388adc21, value 1000, valid 0–1792506825, nonce 0xb6a9b0c6ecc5d617…
+   → 200 with PAYMENT-SIGNATURE; data: {"pair":"PROS/USD","price":0.6248533780522165,"updatedAt":"2026-10-20T14:15:11.000Z","ageSeconds":818,"source":{"chain":"Pharos mainnet (1672)","contract":"0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466","call":"latestRoundD…
+  ✓ paid request gets 200 with PAYMENT-RESPONSE
+   PAYMENT-RESPONSE decoded: success true, transaction 0x8f8dd658e621b1ee66b0e06a6c73f3b150f5dcb9490aacc4989bd32081cf27d8, network eip155:688689, payer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA
+   https://atlantic.pharosscan.xyz/tx/0x8f8dd658e621b1ee66b0e06a6c73f3b150f5dcb9490aacc4989bd32081cf27d8
+  ✓ on chain: receipt success and USDC Transfer buyer → seller of exactly the price: block 31664474, Transfer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21 0.001 USDC
+
+3. GET /v1/pool/wpros-usdc
+   → 402; PAYMENT-REQUIRED decoded: scheme exact, network eip155:688689, amount 2000 (0.002 USDC), asset 0xcfC8330f4BCAB529c625D12781b1C19466A9Fc8B, payTo 0xcDb78951790492F9F440CF800C4F496b388adc21, extra {"token":"USDC","name":"USDC","version":"2"}
+  ✓ unpaid request gets 402 with PAYMENT-REQUIRED
+   signed EIP-3009 authorization (no gas for the buyer): from 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA to 0xcDb78951790492F9F440CF800C4F496b388adc21, value 2000, valid 0–1792506840, nonce 0x2d5a4e204991c81d…
+   → 200 with PAYMENT-SIGNATURE; data: {"pool":"0x912c9ade24d44d8922f0866d8dcb079f1363f647","feePct":0.01,"priceUsdcPerWpros":0.6226711215931852,"tick":-281062,"inRangeLiquidity":"801386629611202861","range":{"low":{"tick":-281344,"price":0.6053356037288509,"…
+  ✓ paid request gets 200 with PAYMENT-RESPONSE
+   PAYMENT-RESPONSE decoded: success true, transaction 0x62c219aafb981cb82678785b28e4219cd17afdd1db9c3148404fce2d9ca09f9c, network eip155:688689, payer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA
+   https://atlantic.pharosscan.xyz/tx/0x62c219aafb981cb82678785b28e4219cd17afdd1db9c3148404fce2d9ca09f9c
+  ✓ on chain: receipt success and USDC Transfer buyer → seller of exactly the price: block 31664488, Transfer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA → 0xcDb78951790492F9F440CF800C4F496b388adc21 0.002 USDC
+
+4. Underpaid: sign for half the price of /v1/pros-price
+  ✓ underpaid payment gets 402 again: 402 (No matching payment requirements)
+
+5. Bad signature: a correct payment with one byte of the signature changed
+  ✓ forged signature gets 402: 402 (invalid_exact_evm_signature)
+
+6. Replay: send the payment already settled in step 2 again
+  ✓ replayed payment gets 402 (its EIP-3009 nonce is used): 402 (invalid_exact_evm_nonce_already_used)
+
+balances after: buyer 19.996 USDC (-0.003 USDC), seller 0.004 USDC (+0.003 USDC)
+  ✓ only the two good payments moved money: expected 0.003 USDC
+
+→ ALL CHECKS PASSED (11 checks)

@@ -1,0 +1,27 @@
+job-20261020T143902: Morpho liquidation-risk report for 3 borrower(s); budget $0.012, per-call cap $0.006; buyer 0x6248CC0d193a45B9Ea0Dbb60423B2a6D27ac21DA
+  ledger: x402-agent-buyer/ledger/job-20261020T143902.jsonl
+
+Plan (catalog prices; the price paid is the one in each 402):
+  required  $0.005  /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C — positions and health factor of 0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C
+  required  $0.005  /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc — positions and health factor of 0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc
+  required  $0.005  /v1/morpho/0xEA2368F8AfBBaaC5b6e635DBe8687df1c9A80bE5 — positions and health factor of 0xEA2368F8AfBBaaC5b6e635DBe8687df1c9A80bE5
+  optional  $0.001  /v1/pros-price — PROS/USD (Chainlink), to state the market context
+  optional  $0.002  /v1/pool/wpros-usdc — pool price, to cross-check the oracle against the market
+  required items: $0.015 of the $0.012 budget — the budget cannot cover every borrower
+
+  pay $0.005 for /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C (positions and health factor of 0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C); nonce 0x11f070fedc…, running total incl. this $0.005
+    settled https://atlantic.pharosscan.xyz/tx/0x0da66631c4fcccc4213bb936b6574457f6f470237964a78df61400648e4fc900 — bought /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C; running total $0.005
+  pay $0.005 for /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc (positions and health factor of 0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc); nonce 0xe6e7359fef…, running total incl. this $0.01
+    settled https://atlantic.pharosscan.xyz/tx/0x98f8a628cb883658db6c518832c517b3db15a039e763e65b4a0cb1ecbc6c383c — bought /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc; running total $0.01
+  SKIPPED /v1/pros-price (optional): not bought: the job stopped at the budget
+  SKIPPED /v1/pool/wpros-usdc (optional): not bought: the job stopped at the budget
+
+Report
+  0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C: Morpho syzUSD/USDC — borrowed 1,121,680.36, HF 1.0058 → CRITICAL; liquidation if collateral falls 0.58% (block 20754293)
+  0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc: Morpho syzUSD/USDC — borrowed 1,335,369.57, HF 1.0125 → at risk; liquidation if collateral falls 1.23% (block 20754319)
+  0xEA2368F8AfBBaaC5b6e635DBe8687df1c9A80bE5: NOT BOUGHT — no data
+  skipped /v1/pros-price: not bought: the job stopped at the budget
+  skipped /v1/pool/wpros-usdc: not bought: the job stopped at the budget
+
+Paid 2 time(s), total $0.01 of $0.012; every payment: /v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C $0.005 0x0da66631…, /v1/morpho/0xA4A57DcF7B15456b7053f10A377Bdb437C073DCc $0.005 0x98f8a628…
+→ STOPPED at the budget: /v1/morpho/0xEA2368F8AfBBaaC5b6e635DBe8687df1c9A80bE5 ($0.005) would bring the total to $0.015, over the budget $0.012 (spent or in flight: $0.01)

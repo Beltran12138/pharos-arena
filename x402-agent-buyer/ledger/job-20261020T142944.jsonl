@@ -1,0 +1,8 @@
+{"t":"2026-10-20T14:29:46.783Z","job":"job-20261020T142944","nonce":"0x4e13815d3ca3de623dd2b977beef2d794f2e4312f7f6dad500cef5a604b182af","amount":"5000","resource":"/v1/morpho/0xE6a4771284342462f4d2BfbFB86DB12c8f19fe7C","status":"in-flight"}
+{"t":"2026-10-20T14:30:12.281Z","job":"job-20261020T142944","nonce":"0x4e13815d3ca3de623dd2b977beef2d794f2e4312f7f6dad500cef5a604b182af","status":"settled","tx":"0xe204deb06aeeacd6afc985e727d981a8aeb80dc47fcfdba6bef3a5b6fc87f494"}
+{"t":"2026-10-20T14:30:12.800Z","job":"job-20261020T142944","nonce":"0xd53a4633559d9c2deaf932cd008f2dadfe6cb35dfc1252565fad8afc2f98fa09","amount":"5000","resource":"/v1/morpho/0xa4A57dCF7B15456b7053f10a377BdB437c073Dcc","status":"in-flight"}
+{"t":"2026-10-20T14:30:43.059Z","job":"job-20261020T142944","nonce":"0xd53a4633559d9c2deaf932cd008f2dadfe6cb35dfc1252565fad8afc2f98fa09","status":"not-settled"}
+{"t":"2026-10-20T14:30:43.444Z","job":"job-20261020T142944","nonce":"0x128412db5d9c1e996820369693f88919461d24b535f73e11e717ac15ae22d1ef","amount":"1000","resource":"/v1/pros-price","status":"in-flight"}
+{"t":"2026-10-20T14:30:58.584Z","job":"job-20261020T142944","nonce":"0x128412db5d9c1e996820369693f88919461d24b535f73e11e717ac15ae22d1ef","status":"settled","tx":"0x98a99242e521a7455498c3741f893958032e9d14a444c00ce26d0c8fcfb81ab8"}
+{"t":"2026-10-20T14:30:59.019Z","job":"job-20261020T142944","nonce":"0xc2baa64ee53832c8eb9272e6dc4cd7be28b0a2b732e13eae9e11d12c38d4895d","amount":"2000","resource":"/v1/pool/wpros-usdc","status":"in-flight"}
+{"t":"2026-10-20T14:31:21.827Z","job":"job-20261020T142944","nonce":"0xc2baa64ee53832c8eb9272e6dc4cd7be28b0a2b732e13eae9e11d12c38d4895d","status":"settled","tx":"0xcb3728250db88b233cc796f26c6956b3df35eed7eec384f0a12b6e2a5e1dac11"}

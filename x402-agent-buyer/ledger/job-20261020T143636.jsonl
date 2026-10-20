@@ -1,0 +1,4 @@
+{"t":"2026-10-20T14:36:38.850Z","job":"job-20261020T143636","nonce":"0x8e3e906e27d3f291aa9686837cc6ca8a8e3b06f0d27effd5a0cdc2b9a601e49a","amount":"1000","resource":"/v1/pros-price","status":"in-flight"}
+{"t":"2026-10-20T14:36:56.422Z","job":"job-20261020T143636","nonce":"0x8e3e906e27d3f291aa9686837cc6ca8a8e3b06f0d27effd5a0cdc2b9a601e49a","status":"settled","tx":"0x445cd7acc5851bc0e5dff59ea232728dfe29d09c8920650283e0398beed5241e"}
+{"t":"2026-10-20T14:36:56.819Z","job":"job-20261020T143636","nonce":"0xdd4b0a002ba9462c767b149c4e12e82c8db30f582574dd943a1c280851ed9a42","amount":"2000","resource":"/v1/pool/wpros-usdc","status":"in-flight"}
+{"t":"2026-10-20T14:37:19.889Z","job":"job-20261020T143636","nonce":"0xdd4b0a002ba9462c767b149c4e12e82c8db30f582574dd943a1c280851ed9a42","status":"settled","tx":"0x6d2003c718e75f93ff687d0153217471d495614a5e76b7223f3549b1651d090e"}

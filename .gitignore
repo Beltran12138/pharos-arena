@@ -5,3 +5,5 @@ audit-log-agent/out/
 /a.json
 alert-bot/state.json
 liquidation-watchdog/state.json
+.env.*
+!.env.example

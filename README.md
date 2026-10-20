@@ -34,6 +34,8 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`multi-protocol-aggregator/`](multi-protocol-aggregator/) | Multi-Protocol Aggregator (Hard) | Morpho + vaults behind one interface; rates, positions, routed deposit/withdraw prepared for signature; survives a protocol outage |
 | [`doc-grounded-builder/`](doc-grounded-builder/) | Doc-Grounded Builder (Hard) | "How do I …?" → Docs MCP answer → steps parsed from its own commands, each fact checked on a getPage page → Chain MCP, verified over a second channel; refuses what the docs don't back |
 | [`saga-executor/`](saga-executor/) | Saga Executor (Hard) | Skill: wrap → approve → supply to Morpho, each verified on chain before the next; retries gas spikes and dropped txs; undoes verified steps on failure; state log |
+| [`x402-paywalled-api/`](x402-paywalled-api/) | x402 Paywalled API (Medium) | Atlantic x402: 3 paid routes selling live mainnet data + free routes, own facilitator; 402 → pay → 200 checked on chain; underpaid/forged/replayed → 402 |
+| [`x402-agent-buyer/`](x402-agent-buyer/) | x402 Agent Buyer (Hard) | Buys Morpho risk data within a budget and per-call cap; nonce-keyed ledger, lost answers resolved on chain, reconciled against every transfer |
 | [`invoice-to-payment/`](invoice-to-payment/) | Invoice-to-Payment Agent (Medium) | Text / JSON / EIP-681 invoices → flags (totals, payee redirection, duplicates) → unsigned payment with the reference in calldata |
 
 **Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state

@@ -625,3 +625,58 @@ Logs a clear decision trace each run: each condition's value, pass/fail, and the
 04
 Demonstrates both outcomes: one run where it fires and one where it holds.
 Reviewers score against this list. Missing items can mean partial points.
+### x402-paywalled-api
+Medium
+Payments
+x402 Paywalled API
+Build an API that charges per request with x402 on Pharos: a paid endpoint, a facilitator, and a client that pays and gets the data.
+Points
+100
++
+50
+with video
+Build on
+ai.pharos.xyz
+What you'll build
+An API that charges per request with x402 on Pharos Atlantic Testnet. It includes a paid endpoint that answers 402 Payment Required, a facilitator that verifies and settles payments, and a client that pays and gets the data. The Pharos x402 Skill can generate most of this for you.
+Requirements
+01
+Runs on Atlantic Testnet (eip155:688689), priced in test USDC.
+02
+Has at least 2 paid routes at different prices and 1 free route, such as /health.
+03
+Runs its own facilitator with /verify, /settle and /supported.
+04
+Shows the full flow in the demo: a 402, then a signed payment, then a 200 with a PAYMENT-RESPONSE header and its tx hash, linked on the explorer.
+05
+Rejects a bad or underpaid payment with another 402.
+06
+Keeps private keys in env vars or a file, never in code or prompts.
+Reviewers score against this list. Missing items can mean partial points.
+
+### x402-agent-buyer
+Hard
+Payments
+x402 Agent Buyer
+An agent that pays for what it uses: it calls x402-paywalled APIs on Pharos, pays within a budget, and finishes the job.
+Points
+200
++
+50
+with video
+Build on
+ai.pharos.xyz
+What you'll build
+An agent that pays for what it uses. Given a task, it calls x402-paywalled APIs on Pharos, reads each price, decides whether the data is worth buying, pays within a budget, and finishes the job. This is the agent-to-API payment loop that the Agent Payment Plane is built for.
+Requirements
+01
+Calls at least 2 different x402 endpoints. They can be your own or another dev's.
+02
+Enforces a spend budget and a per-call price cap, and refuses calls over either one.
+03
+Logs every payment with the price, what it bought and the tx hash, plus a running total.
+04
+Handles payment failures with retries that are safe: the same payment never counts twice.
+05
+Includes a demo task where the agent completes the job, and one where it stops because it hit the budget.
+Reviewers score against this list. Missing items can mean partial points.
