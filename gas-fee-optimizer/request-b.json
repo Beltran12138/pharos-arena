@@ -1,0 +1,9 @@
+{
+  "id": "B-deadline",
+  "note": "target 5 gwei is below the 10 gwei floor, so it can never be met: must hold, then submit at the deadline",
+  "to": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "value": "0.00001",
+  "deadline": "+90s",
+  "marginSec": 20,
+  "targetGwei": 5
+}

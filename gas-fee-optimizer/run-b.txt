@@ -1,0 +1,15 @@
+2026-10-20 09:38:12Z request B-deadline: 0.00001 PROS to 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071, gas ≈ 21000
+  price at request 10 gwei (block 20735780); target 5 gwei (set in the request)
+  deadline 2026-10-20T09:39:39.546Z; latest submit 20s before it
+2026-10-20 09:38:12Z HOLD: gas 10 gwei > target 5 gwei; holding (latest submit in 67.03600001335144s)
+2026-10-20 09:38:24Z HOLD: gas 10 gwei > target 5 gwei; holding (latest submit in 55.49399995803833s)
+2026-10-20 09:38:35Z HOLD: gas 10 gwei > target 5 gwei; holding (latest submit in 44.074000120162964s)
+2026-10-20 09:38:46Z HOLD: gas 10 gwei > target 5 gwei; holding (latest submit in 32.76600003242493s)
+2026-10-20 09:38:58Z HOLD: gas 10 gwei > target 5 gwei; holding (latest submit in 21.305999994277954s)
+2026-10-20 09:39:09Z HOLD: gas 10 gwei > target 5 gwei; holding (latest submit in 9.9760000705719s)
+2026-10-20 09:39:21Z SUBMIT: deadline in 18.438999891281128s: submitting now, whatever the price
+
+B-deadline: success in block 20735864 at 2026-10-20T09:39:23.000Z (before the deadline) https://www.pharosscan.xyz/tx/0xa2acf477b2baf43a756bbf22d7758558ae1f5a013a95eeca3116b9beb80f66ce
+  paid 10 gwei × 21000 gas = 0.00021000 PROS
+  vs price at request (10 gwei): 0.00021000 PROS → saved 0.00000000 PROS
+  vs what others paid meanwhile (avg 10.389 gwei over 9 txs): 0.00021817 PROS → saved 0.00000817 PROS

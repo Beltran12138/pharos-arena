@@ -1,0 +1,9 @@
+2026-10-20 09:37:54Z request A-favourable: 0.00001 PROS to 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071, gas ≈ 21000
+  price at request 10 gwei (block 20735759); target 10 gwei (low end of 48 samples in the last 24 h)
+  deadline 2026-10-20T09:42:52.161Z; latest submit 20s before it
+2026-10-20 09:37:55Z SUBMIT: gas 10 gwei ≤ target 10 gwei
+
+A-favourable: success in block 20735766 at 2026-10-20T09:37:57.000Z (before the deadline) https://www.pharosscan.xyz/tx/0xadd56414ddfb380bf1b28a0bda6bb99d6688f264ea4aeed55528169520092964
+  paid 10 gwei × 21000 gas = 0.00021000 PROS
+  vs price at request (10 gwei): 0.00021000 PROS → saved 0.00000000 PROS
+  vs what others paid meanwhile (avg 10.900 gwei over 7 txs): 0.00022889 PROS → saved 0.00001889 PROS

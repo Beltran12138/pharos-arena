@@ -1,0 +1,7 @@
+{
+  "id": "A-favourable",
+  "note": "self-transfer, default target: submits as soon as gas is at the low end of the last 24 h",
+  "to": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "value": "0.00001",
+  "deadline": "+300s"
+}
