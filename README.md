@@ -30,6 +30,7 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`batch-executor/`](batch-executor/) | Batch Executor (Medium) | Simulate each transfer, leave failures out, one all-or-nothing Multicall3 batch; 6 transfers for 35% less gas |
 | [`arbitrage-scanner/`](arbitrage-scanner/) | Arbitrage Scanner (Hard) | Four WPROS/USDC pools + Chainlink per scan; size-optimized net after fees, impact, gas, slippage; acts only above a threshold |
 | [`portfolio-assistant/`](portfolio-assistant/) | Portfolio Assistant (Hard) | Plain-language questions over wallet, vaults and Morpho positions, every number with contract + block |
+| [`yield-optimizer/`](yield-optimizer/) | Yield Optimizer (Hard) | 17 USDC/WPROS sources (vaults + Morpho), redemption mode from implementation code, net gain over a holding period, or stay put |
 | [`invoice-to-payment/`](invoice-to-payment/) | Invoice-to-Payment Agent (Medium) | Text / JSON / EIP-681 invoices → flags (totals, payee redirection, duplicates) → unsigned payment with the reference in calldata |
 
 **Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state

@@ -1,0 +1,8 @@
+[
+  { "id": "A-idle-usdc", "note": "10k USDC sitting in the wallet", "asset": "USDC", "amount": 10000, "current": "wallet", "holdDays": 30, "minGainUsd": 5, "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071" },
+  { "id": "B-from-morpho", "note": "10k USDC supplied to Morpho syzUSD/USDC", "asset": "USDC", "amount": 10000, "current": "0xc79579a002dbc8c535d3a87198fcbbece1a664ad82a356b0447c5bff9e16fd86", "holdDays": 30, "minGainUsd": 5, "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071" },
+  { "id": "C-short-hold", "note": "1k USDC in Morpho wsrUSD/USDC, only 7 days", "asset": "USDC", "amount": 1000, "current": "0xbea21c372be9729760844cb2d60879f5ced6a8a5bba9a538dea8801e8ac49e73", "holdDays": 7, "minGainUsd": 5, "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071" },
+  { "id": "D-stuck", "note": "1M USDC in Morpho wsrUSD/USDC: more than the market can pay out now", "asset": "USDC", "amount": 1000000, "current": "0xbea21c372be9729760844cb2d60879f5ced6a8a5bba9a538dea8801e8ac49e73", "holdDays": 30, "minGainUsd": 5, "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071" },
+  { "id": "E-dust-wpros", "note": "the real wallet's 0.0003 WPROS", "asset": "WPROS", "amount": 0.0003, "current": "wallet", "holdDays": 30, "minGainUsd": 0.01, "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071" },
+  { "id": "F-accept-unverified", "note": "as A, but the user accepts vaults whose exit terms are not readable", "asset": "USDC", "amount": 10000, "current": "wallet", "holdDays": 30, "minGainUsd": 5, "allowUnverifiedExit": true, "owner": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071" }
+]
