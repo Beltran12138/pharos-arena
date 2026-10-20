@@ -1,0 +1,27 @@
+» How do I stake PROS with a validator as a delegator to earn rewards?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    **The available docs do not document a delegator staking flow**, so they don’t provide a valid delegation transaction or command to earn delegator rewards on Pacific Mainnet.
+    
+    The [Node Management](/node-and-validator-guide/node-management) gives the staking-contract address as `0x4100000000000000000000000000000000000000`. But its documented payable method is `registerValidator`—for validator registration, not delegator staking. It says delegator stake counts toward the validator’s 1,000,000 PROS activation threshold; it does not document how to submit that stake.
+    
+    The docs also don’t specify a delegator function or ABI, validator lookup/selection procedure, reward calculation or claiming process, or delegation withdrawal/unstaking rules. The [Validator Accountability](/node-and-validator-guide/validator-accountability) describes transaction-fee rewards for participating validators, not delegator rewards.
+    
+    You can verify your RPC is on Pacific Mainnet with this runnable command. **It only checks the chain; it does not stake:**
+    
+    ```sh
+    cast chain-id --rpc-url https://rpc.pharos.xyz
+    ```
+    
+    The expected chain ID is `1672`, per [Pacific Mainnet](/getting-started/network/pacific-mainnet). I can’t give you a safe, valid `cast send` or JSON-RPC staking request from the documented information without inventing the delegation method and calldata.
+
+  Sources (fetched with getPage, used to check every fact below): Node Management <https://docs.pharos.xyz/node-and-validator-guide/node-management>; Validator Accountability <https://docs.pharos.xyz/node-and-validator-guide/validator-accountability>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; Using Binary <https://docs.pharos.xyz/node-and-validator-guide/validator-node-deployment/using-binary-deployment>; Validator Requirements <https://docs.pharos.xyz/node-and-validator-guide/validator-requirements>; Get PROS Gas <https://docs.pharos.xyz/getting-started/get-pros-gas>
+
+  → NOT COVERED: the docs give no command or request that does the stake, so I am not doing it.
+    the docs answer says: "**The available docs do not document a delegator staking flow**, so they don’t provide a valid delegation transaction or command to earn delegator rewards on Pacific Mainnet."
+    the docs answer says: "But its documented payable method is `registerValidator`—for validator registration, not delegator staking."
+    the docs answer says: "The docs also don’t specify a delegator function or ABI, validator lookup/selection procedure, reward calculation or claiming process, or delegation withdrawal/unstaking rules."
+    the docs answer says: "I can’t give you a safe, valid `cast send` or JSON-RPC staking request from the documented information without inventing the delegation method and calldata."
+
+→ NOT COVERED: nothing was executed or prepared.

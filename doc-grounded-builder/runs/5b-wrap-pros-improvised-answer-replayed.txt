@@ -1,0 +1,35 @@
+» How do I wrap 0.001 PROS into WPROS on Pharos mainnet?
+
+1. PLAN (Docs MCP)
+  The docs answer (replayed from test/fixtures/docs-answer-wrap-improvised.md, not asked now):
+    The [Token Registry](/getting-started/token-registry) lists Pharos mainnet WPROS at **`0x52c48d4213107b20bc583832b0d951fb9ca8f0b0`**. Mainnet uses chain ID `1672` and RPC `https://rpc.pharos.xyz` ([Pacific Mainnet](/getting-started/network/pacific-mainnet)).
+    
+    The docs **do not document WPROS’s ABI or wrapping method**, so they don’t confirm that `deposit()` is the right call. If you independently verify the contract ABI includes a payable `deposit()` function, this Cast command sends `0.001 PROS` (`10^15` wei):
+    
+    ```bash
+    cast send 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0 \
+      "deposit()" \
+      --value 0.001ether \
+      --private-key "$PRIVATE_KEY" \
+      --rpc-url https://rpc.pharos.xyz
+    ```
+    
+    **Do not treat that method signature as docs-confirmed.** The docs also don’t specify WPROS decimals, expected output, or wrapping events. They provide the token address, but not enough contract-interface detail to guarantee a runnable wrap transaction.
+
+  Sources (fetched with getPage, used to check every fact below): Token Registry <https://docs.pharos.xyz/getting-started/token-registry>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>
+
+  Steps taken from the commands in the answer, and where each fact comes from:
+  1. cast send 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0 "deposit()" --value 0.001ether --private-key "$PRIVATE_KEY" --rpc-url https://rpc.pharos.xyz
+       contract 0x52c48d4213107b20bc583832b0d951fb9ca8f0b0: page (https://docs.pharos.xyz/getting-started/token-registry)
+       function deposit: disclaimed (the answer says: "The docs **do not document WPROS’s ABI or wrapping method**, so they don’t confirm that `deposit()` is the right call.")
+       RPC endpoint https://rpc.pharos.xyz: page (https://docs.pharos.xyz/getting-started/network/pacific-mainnet)
+       ✗ not backed by the docs pages: function deposit → this step will not run
+
+  → NOT COVERED: no command in the docs answer that does the wrap is backed by the docs pages, so I am not doing it.
+    the docs answer says: "The docs **do not document WPROS’s ABI or wrapping method**, so they don’t confirm that `deposit()` is the right call."
+    the docs answer says: "**Do not treat that method signature as docs-confirmed.** The docs also don’t specify WPROS decimals, expected output, or wrapping events."
+
+2. EXECUTE (Chain MCP, block 20,744,801) and 3. VERIFY (direct JSON-RPC to https://rpc.pharos.xyz, the endpoint the docs name)
+  1. not run: not backed by the docs pages: function deposit
+
+→ NOT COVERED: the wrap is not documented; nothing was prepared.

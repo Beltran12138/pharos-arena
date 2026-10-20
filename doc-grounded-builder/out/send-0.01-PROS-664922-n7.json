@@ -1,0 +1,66 @@
+{
+ "id": "send-0.01-PROS-664922-n7",
+ "question": "How do I send 0.01 PROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 on Pharos mainnet?",
+ "docsAnswer": "For **native PROS**, send `0.01` with this Cast command:\n\n```bash\ncast send 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 \\\n  --value 0.01ether \\\n  --private-key \"$PRIVATE_KEY\" \\\n  --rpc-url https://rpc.pharos.xyz\n```\n\nSet `PRIVATE_KEY` in your shell first. The command sends **0.01 PROS** (`10^16` wei) and requires additional PROS for gas. Pharos Pacific Mainnet uses chain ID `1672` and RPC `https://rpc.pharos.xyz` ([Pacific Mainnet](/getting-started/network/pacific-mainnet)).\n\n**Contract address:** Native PROS has no token contract address for this transfer. The registry lists `0x52c48d4213107b20bc583832b0d951fb9ca8f0b0` as **WPROS**, the wrapped token—not native PROS ([Token Registry](/getting-started/token-registry)).\n\n**What the docs don’t document:** They don’t provide a dedicated, exact native-PROS transfer command. They provide a generic native-token `cast send` example; the command above applies that pattern to the mainnet RPC and PROS amount ([Pharos Skill Engine](/tooling-and-infrastructure/pharos-skill-engine-guide)).",
+ "sources": [
+  {
+   "title": "Pacific Mainnet",
+   "url": "https://docs.pharos.xyz/getting-started/network/pacific-mainnet"
+  },
+  {
+   "title": "Get PROS Gas",
+   "url": "https://docs.pharos.xyz/getting-started/get-pros-gas"
+  },
+  {
+   "title": "Token Registry",
+   "url": "https://docs.pharos.xyz/getting-started/token-registry"
+  },
+  {
+   "title": "x402 Pacific Mainnet",
+   "url": "https://docs.pharos.xyz/developer-guide/x402/x402-pacific-mainnet"
+  },
+  {
+   "title": "Write Your First Token",
+   "url": "https://docs.pharos.xyz/developer-guide/foundry/write-your-first-token"
+  },
+  {
+   "title": "Node Management",
+   "url": "https://docs.pharos.xyz/node-and-validator-guide/node-management"
+  }
+ ],
+ "plan": {
+  "command": "cast send 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 --value 0.01ether --private-key \"$PRIVATE_KEY\" --rpc-url https://rpc.pharos.xyz",
+  "facts": [
+   {
+    "fact": "recipient",
+    "value": "0x6649228a90bef932a1aa98e5c4412dadba8a04c5",
+    "source": "request"
+   },
+   {
+    "fact": "RPC endpoint",
+    "value": "https://rpc.pharos.xyz",
+    "source": "page",
+    "where": "https://docs.pharos.xyz/getting-started/network/pacific-mainnet"
+   }
+  ],
+  "expect": {
+   "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+   "to": "0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5",
+   "value": "10000000000000000",
+   "status": "0x1"
+  }
+ },
+ "unsigned": {
+  "chainId": 1672,
+  "type": "legacy",
+  "from": "0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071",
+  "to": "0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5",
+  "value": "10000000000000000",
+  "data": "0x",
+  "nonce": 7,
+  "gas": "25200",
+  "gasPrice": "10000000000"
+ },
+ "serialized": "0xed078502540be400826270946649228a90bef932a1aa98e5c4412dadba8a04c5872386f26fc10000808206888080",
+ "uri": "ethereum:0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5@1672?value=10000000000000000"
+}

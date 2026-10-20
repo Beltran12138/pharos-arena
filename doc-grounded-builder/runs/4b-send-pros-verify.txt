@@ -1,0 +1,13 @@
+» verify: How do I send 0.01 PROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 on Pharos mainnet?
+  plan: cast send 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 --value 0.01ether --private-key "$PRIVATE_KEY" --rpc-url https://rpc.pharos.xyz
+  tx https://www.pharosscan.xyz/tx/0xaaec0f848079a0d1c8a7401959919b42240088c7f2bc7c4b1073e5586db33dd3
+
+  ✓ receipt status (0x1 = success: the Ethereum receipt standard, EIP-658; the Pharos docs show it only in an example): 0x1 via Chain MCP, 0x1 via https://rpc.pharos.xyz
+  ✓ chain: chain 1672
+  ✓ from: 0x6ea606ec600f47411bf56df699cf695a0b0e9071
+  ✓ to: 0x6649228a90bef932a1aa98e5c4412dadba8a04c5
+  ✓ value: 0.01 PROS
+  ✓ nonce = the prepared one: 7
+  ✓ recipient balance change: 0.0002035 → 0.0102035 PROS between blocks 20748616 and 20748617
+
+→ SUCCESS against the plan (block 20,748,617, gas used 21,000)

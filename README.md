@@ -32,6 +32,7 @@ locally and broadcast through Chain MCP `send_raw_transaction`; the public RPC i
 | [`portfolio-assistant/`](portfolio-assistant/) | Portfolio Assistant (Hard) | Plain-language questions over wallet, vaults and Morpho positions, every number with contract + block |
 | [`yield-optimizer/`](yield-optimizer/) | Yield Optimizer (Hard) | 17 USDC/WPROS sources (vaults + Morpho), redemption mode from implementation code, net gain over a holding period, or stay put |
 | [`multi-protocol-aggregator/`](multi-protocol-aggregator/) | Multi-Protocol Aggregator (Hard) | Morpho + vaults behind one interface; rates, positions, routed deposit/withdraw prepared for signature; survives a protocol outage |
+| [`doc-grounded-builder/`](doc-grounded-builder/) | Doc-Grounded Builder (Hard) | "How do I …?" → Docs MCP answer → steps parsed from its own commands, each fact checked on a getPage page → Chain MCP, verified over a second channel; refuses what the docs don't back |
 | [`invoice-to-payment/`](invoice-to-payment/) | Invoice-to-Payment Agent (Medium) | Text / JSON / EIP-681 invoices → flags (totals, payee redirection, duplicates) → unsigned payment with the reference in calldata |
 
 **Finding along the way:** the same historical `eth_call` at a fixed block sometimes returns a wrong state

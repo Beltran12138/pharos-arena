@@ -1,0 +1,27 @@
+» How do I bridge 1 USDC from Pharos mainnet to Ethereum with Circle CCTP?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    **The Pharos docs don’t provide enough information for a runnable Pharos-to-Ethereum CCTP transaction.** They list the Pharos-side addresses, but not the Ethereum destination contracts or domain ID. I won’t invent those values or give you a command that could burn funds with incorrect parameters.
+    
+    For Pacific Mainnet, the documented addresses are:
+    
+    * USDC: `0xc879c018db60520f4355c26ed1a6d572cdac1815`
+    * CCTP `TokenMessengerV2`: `0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d`
+    * CCTP `MessageTransmitterV2`: `0x81D40F21F12A8F0E3252Bccb954D722d4c464B64`
+    * Pharos CCTP domain: `31`; Pharos chain ID: `1672`
+    
+    The documented flow is to call `TokenMessengerV2.depositForBurn` on Pharos, wait for Circle’s attestation, retrieve the message using Circle’s `GET /v2/messages` endpoint and the source transaction hash, then submit it to Ethereum’s `MessageTransmitterV2.receiveMessage`. One USDC is `1,000,000` base units at six-decimal precision.
+    
+    **Not documented:** Ethereum’s CCTP contract addresses and domain ID, the exact `depositForBurn` argument values and calldata, and a complete signed transaction or runnable `cast` example. The docs link to Circle’s contract interfaces but don’t include those details in the Pharos guide.
+    
+    See [Circle CCTP](/tooling-and-infrastructure/cross-chain/circle-cctp), the [Token Registry](/getting-started/token-registry), and [Pacific Mainnet](/getting-started/network/pacific-mainnet).
+
+  Sources (fetched with getPage, used to check every fact below): Circle CCTP <https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain/circle-cctp>; Token Registry <https://docs.pharos.xyz/getting-started/token-registry>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; Cross Chain Infrastructure <https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain>; Chainlink CCIP <https://docs.pharos.xyz/tooling-and-infrastructure/cross-chain/chainlink-ccip>; x402 Pacific Mainnet <https://docs.pharos.xyz/developer-guide/x402/x402-pacific-mainnet>
+
+  → NOT COVERED: the docs give no command or request that does the bridge, so I am not doing it.
+    the docs answer says: "**The Pharos docs don’t provide enough information for a runnable Pharos-to-Ethereum CCTP transaction.** They list the Pharos-side addresses, but not the Ethereum destination contracts or domain ID."
+    the docs answer says: "**Not documented:** Ethereum’s CCTP contract addresses and domain ID, the exact `depositForBurn` argument values and calldata, and a complete signed transaction or runnable `cast` example."
+    the docs answer says: "The docs link to Circle’s contract interfaces but don’t include those details in the Pharos guide."
+
+→ NOT COVERED: nothing was executed or prepared.

@@ -1,0 +1,35 @@
+» How do I check how much USDC the address 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb holds on Pharos mainnet?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    Use this read-only `cast` call:
+    
+    ```bash
+    cast call 0xc879c018db60520f4355c26ed1a6d572cdac1815 \
+      "balanceOf(address)(uint256)" \
+      0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb \
+      --rpc-url https://rpc.pharos.xyz
+    ```
+    
+    The result is the raw integer balance in token base units. The [Token Registry](/getting-started/token-registry) lists USDC at `0xc879c018db60520f4355c26ed1a6d572cdac1815`. The [Pacific Mainnet](/getting-started/network/pacific-mainnet) documents the RPC endpoint.
+    
+    **Documentation gap:** The mainnet token registry does not specify USDC decimals, and the docs do not state this address’s current balance. The [x402 Pacific Mainnet](/developer-guide/x402/x402-pacific-mainnet) uses six-decimal precision for USDC; using that convention, divide the returned integer by `1,000,000` to get USDC.
+
+  Sources (fetched with getPage, used to check every fact below): Token Registry <https://docs.pharos.xyz/getting-started/token-registry>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; x402 Pacific Mainnet <https://docs.pharos.xyz/developer-guide/x402/x402-pacific-mainnet>; Write Your First Token <https://docs.pharos.xyz/developer-guide/foundry/write-your-first-token>; Pharos Skill Engine <https://docs.pharos.xyz/tooling-and-infrastructure/pharos-skill-engine-guide>; Write Your First Token <https://docs.pharos.xyz/developer-guide/hardhat/write-your-first-token>
+
+  Steps taken from the commands in the answer, and where each fact comes from:
+  1. cast call 0xc879c018db60520f4355c26ed1a6d572cdac1815 "balanceOf(address)(uint256)" 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb --rpc-url https://rpc.pharos.xyz
+       contract 0xc879c018db60520f4355c26ed1a6d572cdac1815: page (https://docs.pharos.xyz/getting-started/token-registry)
+       function balanceOf: standard (EIP-20, on a token the docs list)
+       argument 0 0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb: request
+       RPC endpoint https://rpc.pharos.xyz: page (https://docs.pharos.xyz/getting-started/network/pacific-mainnet)
+  What the docs answer says is not documented:
+    - **Documentation gap:** The mainnet token registry does not specify USDC decimals, and the docs do not state this address’s current balance.
+
+2. EXECUTE (Chain MCP, block 20,745,180) and 3. VERIFY (direct JSON-RPC to https://rpc.pharos.xyz, the endpoint the docs name)
+  1. balanceOf(0x18573fa18fd17ddfd790b4a5b5b2977aad3b4efb) on 0xc879c018db60520f4355c26ed1a6d572cdac1815 → 1321516426712
+     verify: same call via https://rpc.pharos.xyz at the same block → identical
+     units: the answer says 6 decimals; stated on x402 Pacific Mainnet; decimals() on chain: 6
+     → 1321516.426712
+
+→ DONE: 1 of 1 steps as planned

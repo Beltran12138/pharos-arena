@@ -1,0 +1,43 @@
+» How do I send 0.01 PROS to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 on Pharos mainnet?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    For **native PROS**, send `0.01` with this Cast command:
+    
+    ```bash
+    cast send 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 \
+      --value 0.01ether \
+      --private-key "$PRIVATE_KEY" \
+      --rpc-url https://rpc.pharos.xyz
+    ```
+    
+    Set `PRIVATE_KEY` in your shell first. The command sends **0.01 PROS** (`10^16` wei) and requires additional PROS for gas. Pharos Pacific Mainnet uses chain ID `1672` and RPC `https://rpc.pharos.xyz` ([Pacific Mainnet](/getting-started/network/pacific-mainnet)).
+    
+    **Contract address:** Native PROS has no token contract address for this transfer. The registry lists `0x52c48d4213107b20bc583832b0d951fb9ca8f0b0` as **WPROS**, the wrapped token—not native PROS ([Token Registry](/getting-started/token-registry)).
+    
+    **What the docs don’t document:** They don’t provide a dedicated, exact native-PROS transfer command. They provide a generic native-token `cast send` example; the command above applies that pattern to the mainnet RPC and PROS amount ([Pharos Skill Engine](/tooling-and-infrastructure/pharos-skill-engine-guide)).
+
+  Sources (fetched with getPage, used to check every fact below): Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; Token Registry <https://docs.pharos.xyz/getting-started/token-registry>; Pharos Skill Engine <https://docs.pharos.xyz/tooling-and-infrastructure/pharos-skill-engine-guide>; Get PROS Gas <https://docs.pharos.xyz/getting-started/get-pros-gas>; x402 Pacific Mainnet <https://docs.pharos.xyz/developer-guide/x402/x402-pacific-mainnet>; Write Your First Token <https://docs.pharos.xyz/developer-guide/foundry/write-your-first-token>
+
+  Steps taken from the commands in the answer, and where each fact comes from:
+  1. cast send 0x6649228a90bef932a1aa98e5c4412dadba8a04c5 --value 0.01ether --private-key "$PRIVATE_KEY" --rpc-url https://rpc.pharos.xyz
+       recipient 0x6649228a90bef932a1aa98e5c4412dadba8a04c5: request
+       RPC endpoint https://rpc.pharos.xyz: page (https://docs.pharos.xyz/getting-started/network/pacific-mainnet)
+  What the docs answer says is not documented:
+    - **What the docs don’t document:** They don’t provide a dedicated, exact native-PROS transfer command.
+
+2. EXECUTE (Chain MCP, block 20,744,541) and 3. VERIFY (direct JSON-RPC to https://rpc.pharos.xyz, the endpoint the docs name)
+  1. send 0.01 PROS from 0x6Ea606Ec600F47411Bf56DF699cF695A0b0E9071 to 0x6649228a90bef932a1aa98e5c4412dadba8a04c5: checks before preparing
+     ✓ token known: PROS (native)
+     ✓ recipient format: 0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5
+     ✓ amount: 0.01 PROS
+     ✓ recipient not zero/burn: 0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5
+     ✓ recipient type: a regular account (no contract code)
+     ✓ balance: sender holds 4.99628 PROS, needs 0.01
+     ✓ simulation: estimate_gas from the sender succeeds: 21000 gas
+     ✓ gas: fee ≈ 0.000252 PROS; sender has 4.98628 PROS for it
+     prepared, unsigned (nonce 7, gas 25200, ≈ 0.000252 PROS fee): doc-grounded-builder/out/send-0.01-PROS-664922-n7.json
+     wallet request: ethereum:0x6649228a90Bef932A1aa98E5C4412DAdBa8a04C5@1672?value=10000000000000000
+     the owner signs it: node --env-file=.env doc-grounded-builder/sign.mjs doc-grounded-builder/out/send-0.01-PROS-664922-n7.json
+
+→ PREPARED: 1 of 1 steps as planned; the transaction waits for the owner's signature, then: builder.mjs verify <file>

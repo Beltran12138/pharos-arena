@@ -1,0 +1,39 @@
+» How do I read the current PROS/USD price on Pharos mainnet?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    Read the PROS/USD Chainlink feed on Pacific Mainnet with this read-only command:
+    
+    ```bash
+    cast call 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466 \
+      "latestAnswer()(int256)" \
+      --rpc-url https://rpc.pharos.xyz
+    ```
+    
+    The returned integer has **18 decimals**. Divide it by `10^18` to get the USD price. To check the observation timestamp, call `latestTimestamp()(uint256)` on the same address.
+    
+    * **PROS/USD proxy:** `0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466`
+    * **Shared feeds cache:** `0xd9F00c86ced2De92F6B7152b0492cb28edc4B5a8`
+    * **Feed ID:** `0x0003f73a1abb2eec1ecdde915c659cbb8f0cbb030156b75dd401fbfd5281e246`
+    
+    The proxy exposes `latestAnswer()` and `latestTimestamp()`. Check the timestamp against your acceptable staleness limit; it represents the observation time, not the on-chain transaction time. See [Chainlink Push Engine Feeds](/tooling-and-infrastructure/oracles/chainlink-pe) and [Pacific Mainnet](/getting-started/network/pacific-mainnet).
+    
+    **Not documented:** the current numeric PROS/USD value itself. Run the call against the mainnet RPC to retrieve it.
+
+  Sources (fetched with getPage, used to check every fact below): Chainlink Push Engine Feeds <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; Oracle <https://docs.pharos.xyz/tooling-and-infrastructure/oracles>; Supra <https://docs.pharos.xyz/tooling-and-infrastructure/oracles/supra>; Get PROS Gas <https://docs.pharos.xyz/getting-started/get-pros-gas>; x402 Pacific Mainnet <https://docs.pharos.xyz/developer-guide/x402/x402-pacific-mainnet>
+
+  Steps taken from the commands in the answer, and where each fact comes from:
+  1. cast call 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466 "latestAnswer()(int256)" --rpc-url https://rpc.pharos.xyz
+       contract 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466: page (https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe)
+       function latestAnswer: page (https://docs.pharos.xyz/tooling-and-infrastructure/oracles/chainlink-pe)
+       RPC endpoint https://rpc.pharos.xyz: page (https://docs.pharos.xyz/getting-started/network/pacific-mainnet)
+  What the docs answer says is not documented:
+    - **Not documented:** the current numeric PROS/USD value itself.
+
+2. EXECUTE (Chain MCP, block 20,745,218) and 3. VERIFY (direct JSON-RPC to https://rpc.pharos.xyz, the endpoint the docs name)
+  1. latestAnswer() on 0x371Ed36aEe5bFFbED1A2aa9b7deD7F4EB30F5466 → 617159191841664300
+     verify: same call via https://rpc.pharos.xyz at the same block → identical
+     units: the answer says 18 decimals; stated on Chainlink Push Engine Feeds; decimals() on chain: 18
+     → 0.6171591918416643
+
+→ DONE: 1 of 1 steps as planned

@@ -1,0 +1,37 @@
+» How do I check whether transaction 0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720 succeeded on Pharos mainnet?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    No contract address is needed. Query the receipt on the documented Pacific Mainnet RPC, then check its `status`.
+    
+    ```sh
+    curl -sS https://rpc.pharos.xyz \
+      -H 'Content-Type: application/json' \
+      --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720"],"id":1}'
+    ```
+    
+    * `"status":"0x1"` means the transaction succeeded.
+    * `"status":"0x0"` means it failed.
+    * `"result":null` means no receipt was returned. The docs don’t specify why or give a retry interval.
+    
+    To verify the RPC is on Pacific Mainnet, call `eth_chainId`; expect `"result":"0x688"` (decimal `1672`). The network’s RPC URL and chain ID are listed on [Pacific Mainnet](/getting-started/network/pacific-mainnet).
+    
+    The [JSON-RPC API Methods](/api-and-sdk/json-rpc-methods) documents `eth_getTransactionReceipt` and its receipt fields. It does **not** document the outcome of this specific hash, a `cast` command, or transaction finality/confirmation guidance.
+
+  Sources (fetched with getPage, used to check every fact below): Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; JSON-RPC API Methods <https://docs.pharos.xyz/api-and-sdk/json-rpc-methods>; RPC Infrastructure <https://docs.pharos.xyz/tooling-and-infrastructure/rpc>; Alchemy RPC <https://docs.pharos.xyz/tooling-and-infrastructure/rpc/alchemy>; Node Configuration <https://docs.pharos.xyz/node-and-validator-guide/validator-node-deployment/node-configuration>; ZAN RPC <https://docs.pharos.xyz/tooling-and-infrastructure/rpc/zan>
+
+  Steps taken from the commands in the answer, and where each fact comes from:
+  1. curl -sS https://rpc.pharos.xyz -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720"],"id":1}'
+       JSON-RPC method eth_getTransactionReceipt: page (https://docs.pharos.xyz/api-and-sdk/json-rpc-methods)
+       param 0 0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720: request
+       RPC endpoint https://rpc.pharos.xyz: page (https://docs.pharos.xyz/getting-started/network/pacific-mainnet)
+  What the docs answer says is not documented:
+    - The docs don’t specify why or give a retry interval.
+
+2. EXECUTE (Chain MCP, block 20,744,924) and 3. VERIFY (direct JSON-RPC to https://rpc.pharos.xyz, the endpoint the docs name)
+  1. eth_getTransactionReceipt(0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720) via Chain MCP get_transaction_receipt
+     status 0x1 → succeeded (the fetched docs pages show "status": "0x1" only in an example and don't define it; 0x1 = success / 0x0 = failure is the Ethereum receipt standard (EIP-658), not a Pharos docs statement); block 20,735,903, gas used 81,681, 0 logs, from 0x6ea606ec600f47411bf56df699cf695a0b0e9071 to 0xca11bde05977b3631167028862be2a173976ca11
+     verify: the docs' request sent to https://rpc.pharos.xyz → same status, block, block hash, gas and log count
+     https://www.pharosscan.xyz/tx/0xa57f932d75c8fd7231e9da9c6d087dcd0a0c4eb6e6028500dba070965b8c9720
+
+→ DONE: 1 of 1 steps as planned

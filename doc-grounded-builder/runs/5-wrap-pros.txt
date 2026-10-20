@@ -1,0 +1,17 @@
+» How do I wrap 0.001 PROS into WPROS on Pharos mainnet?
+
+1. PLAN (Docs MCP)
+  The docs answer:
+    The [Token Registry](/getting-started/token-registry) lists WPROS at **`0x52c48d4213107b20bc583832b0d951fb9ca8f0b0`**. The [Pacific Mainnet](/getting-started/network/pacific-mainnet) give RPC `https://rpc.pharos.xyz` and chain ID `1672`.
+    
+    **The docs do not document how to wrap PROS:** they provide no WPROS ABI, payable method signature, or wrapping instructions. So I can’t give a docs-verified `cast send` or JSON-RPC transaction to perform the wrap. The amount is `0.001 PROS` — `1000000000000000` wei, using the documented `10^18` wei per PROS conversion.
+    
+    Use the contract’s verified ABI or an official wrapping interface to confirm the method before sending a transaction.
+
+  Sources (fetched with getPage, used to check every fact below): Token Registry <https://docs.pharos.xyz/getting-started/token-registry>; Pacific Mainnet <https://docs.pharos.xyz/getting-started/network/pacific-mainnet>; Get PROS Gas <https://docs.pharos.xyz/getting-started/get-pros-gas>; Why Pharos <https://docs.pharos.xyz/introduction/why-pharos>; x402 Pacific Mainnet <https://docs.pharos.xyz/developer-guide/x402/x402-pacific-mainnet>; Node Management <https://docs.pharos.xyz/node-and-validator-guide/node-management>
+
+  → NOT COVERED: the docs give no command or request that does the wrap, so I am not doing it.
+    the docs answer says: "**The docs do not document how to wrap PROS:** they provide no WPROS ABI, payable method signature, or wrapping instructions."
+    the docs answer says: "So I can’t give a docs-verified `cast send` or JSON-RPC transaction to perform the wrap."
+
+→ NOT COVERED: nothing was executed or prepared.
